@@ -4,8 +4,8 @@ function Header({ categories, selectedCategories, onToggleCategory }) {
   return (
     <header className="header">
       <div className="brand">
-        <div className="brand-badge" />
-        <h1>CryptoDigest</h1>
+        <img src="/mountain.png" alt="logo" className="logo" />
+        <h1 className="brand-title">Peak Digest</h1>
       </div>
       <Tabs
         tabs={categories}

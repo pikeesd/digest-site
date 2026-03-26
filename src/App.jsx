@@ -9,6 +9,7 @@ function App() {
   const [mode, setMode] = useState("idle");
   const [selectedCategories, setSelectedCategories] = useState([]);
   const [activeCategory, setActiveCategory] = useState("");
+  const [openDropdownId, setOpenDropdownId] = useState(null);
 
   useEffect(() => {
     fetch("http://localhost:8000/api/news")
@@ -58,11 +59,15 @@ function App() {
   const restGlobal = useMemo(() => sortedNews.slice(3), [sortedNews]);
 
   const activeCategoryItems = useMemo(() => {
-    if (!activeCategory) {
-      return [];
-    }
-    return sortedNews.filter((item) => item.category === activeCategory);
-  }, [activeCategory, sortedNews]);
+    if (!activeCategory) return [];
+
+    return sortedNews.filter(
+      (item) => item.category === activeCategory
+    );
+  }, [sortedNews, activeCategory]);
+
+  const topOneCategory = activeCategoryItems[0];
+  const restAfterTopOne = activeCategoryItems.slice(1);
 
   const topThreeCategory = useMemo(
     () => activeCategoryItems.slice(0, 3),
@@ -74,13 +79,28 @@ function App() {
   );
 
   return (
-    <div className="app">
-      <Header
-        categories={categories}
-        selectedCategories={selectedCategories}
-        onToggleCategory={toggleCategory}
-      />
+    <div className={`app ${openDropdownId ? "dropdown-open" : ""}`}>
+      {mode !== "full" && (
+        <Header
+          categories={categories}
+          selectedCategories={selectedCategories}
+          onToggleCategory={toggleCategory}
+        />
+      )}
       <main className="main">
+        {mode !== "idle" && (
+          <button
+            className="back-button"
+            onClick={() => {
+              setMode("idle");
+              setSelectedCategories([]);
+              setActiveCategory("");
+              setOpenDropdownId(null);
+            }}
+          >
+            ← Back
+          </button>
+        )}
         {mode === "idle" ? (
           <div className="idle-actions">
             <button
@@ -88,7 +108,7 @@ function App() {
               className="button"
               onClick={() => setMode("full")}
             >
-              Generate full digest
+              Show full digest
             </button>
             <button
               type="button"
@@ -101,14 +121,38 @@ function App() {
           </div>
         ) : mode === "full" ? (
           <>
-            <div className="cards">
-              {topThreeGlobal.map((item, index) => (
-                <NewsCard key={`top-${index}`} item={item} />
-              ))}
+            {/* 🔥 TOP 3 */}
+            <div className="top-block">
+              <h2 className="top-title">Top 3 news today</h2>
+
+              <div className="top-cards">
+                {topThreeGlobal.map((item, index) => (
+                  <NewsCard
+                    key={`top-${index}`}
+                    item={item}
+                    isOpen={openDropdownId === `top-${index}`}
+                    onToggle={() =>
+                      setOpenDropdownId(
+                        openDropdownId === `top-${index}` ? null : `top-${index}`
+                      )
+                    }
+                  />
+                ))}
+              </div>
             </div>
+
             <div className="cards">
               {restGlobal.map((item, index) => (
-                <NewsCard key={`all-${index}`} item={item} />
+                <NewsCard
+                  key={`all-${index}`}
+                  item={item}
+                  isOpen={openDropdownId === `all-${index}`}
+                  onToggle={() =>
+                    setOpenDropdownId(
+                      openDropdownId === `all-${index}` ? null : `all-${index}`
+                    )
+                  }
+                />
               ))}
             </div>
           </>
@@ -129,19 +173,38 @@ function App() {
             {activeCategory ? (
               <section>
                 <h2>{activeCategory}</h2>
-                <div className="cards">
-                  {topThreeCategory.map((item, index) => (
+                <div className="top-block">
+                  <h2 className="top-title">Top news today</h2>
+
+                  {topOneCategory && (
                     <NewsCard
-                      key={`top-${activeCategory}-${index}`}
-                      item={item}
+                      item={topOneCategory}
+                      isOpen={openDropdownId === `top-${activeCategory}`}
+                      onToggle={() =>
+                        setOpenDropdownId(
+                          openDropdownId === `top-${activeCategory}`
+                            ? null
+                            : `top-${activeCategory}`
+                        )
+                      }
                     />
-                  ))}
+                  )}
                 </div>
+
+                {/* 📄 ОСТАЛЬНЫЕ (ВНЕ РАМКИ) */}
                 <div className="cards">
-                  {restCategory.map((item, index) => (
+                  {restAfterTopOne.map((item, index) => (
                     <NewsCard
                       key={`all-${activeCategory}-${index}`}
                       item={item}
+                      isOpen={openDropdownId === `all-${activeCategory}-${index}`}
+                      onToggle={() =>
+                        setOpenDropdownId(
+                          openDropdownId === `all-${activeCategory}-${index}`
+                            ? null
+                            : `all-${activeCategory}-${index}`
+                        )
+                      }
                     />
                   ))}
                 </div>

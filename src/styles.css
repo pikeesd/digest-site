@@ -101,8 +101,10 @@ a:hover {
 }
 
 .cards {
+  margin-top: 32px;
   display: grid;
   gap: 16px;
+  overflow: visible;
 }
 
 .card {
@@ -112,12 +114,15 @@ a:hover {
   border: 1px solid var(--border);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
   transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+  overflow: visible;
 }
 
 .card:hover {
   transform: translateY(-2px);
   border-color: rgba(246, 160, 77, 0.45);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
+  z-index: 1;
 }
 
 .card-header {
@@ -174,36 +179,6 @@ a:hover {
   padding: 36px 0;
 }
 
-.details {
-  margin-top: 16px;
-  padding: 14px 16px;
-  background: var(--surface-2);
-  border-radius: 12px;
-  border: 1px solid rgba(246, 160, 77, 0.2);
-  overflow: hidden;
-  max-height: 0;
-  opacity: 0;
-  transform: translateY(-4px);
-  transition: max-height 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
-}
-
-.details.open {
-  max-height: 240px;
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.details p {
-  margin: 0 0 8px;
-  color: var(--muted);
-  line-height: 1.5;
-}
-
-.details p strong {
-  color: var(--text);
-  font-weight: 600;
-}
-
 @media (max-width: 720px) {
   .app {
     padding: 36px 18px 64px;
@@ -212,4 +187,192 @@ a:hover {
   .card-header {
     flex-direction: column;
   }
+}
+
+.source-dropdown {
+  position: relative;
+  z-index: 10;
+}
+
+.source-button {
+  background: none;
+  border: none;
+  color: orange;
+  cursor: pointer;
+}
+
+.source-menu {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  z-index: 99999;
+  background: #111;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 8px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 120px;
+  pointer-events: auto;
+}
+
+.source-item {
+  color: white;
+  text-decoration: none;
+  padding: 4px 8px;
+}
+
+
+.source-item:hover {
+  background: #222;
+}
+
+.source-dropdown {
+  position: relative;
+  z-index: 100;
+}
+
+.source-menu:hover {
+  pointer-events: auto;
+}
+
+.source-menu {
+  isolation: isolate;
+}
+
+.dropdown-open .card {
+  pointer-events: none;
+}
+
+.card.active-dropdown {
+  pointer-events: auto;
+  z-index: 999;
+}
+
+.dropdown-open::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.back-button {
+  margin-bottom: 16px;
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 8px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.back-button:hover {
+  border-color: #f6a04d;
+  color: #f6a04d;
+}
+
+.top-block {
+  border: 1px solid rgba(246, 160, 77, 0.25);
+  border-radius: 20px;
+  padding: 24px;
+  background: linear-gradient(180deg,
+      rgba(246, 160, 77, 0.06),
+      rgba(246, 160, 77, 0.02));
+  box-shadow: 0 10px 40px rgba(246, 160, 77, 0.08);
+}
+
+.top-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  position: relative;
+}
+
+.top-item .card {
+  border: 1px solid rgba(246, 160, 77, 0.35);
+  background: linear-gradient(180deg,
+      rgba(20, 25, 35, 1),
+      rgba(15, 20, 30, 1));
+  box-shadow: 0 8px 30px rgba(246, 160, 77, 0.12);
+  width: 100%;
+}
+
+.top-item .card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(246, 160, 77, 0.6);
+  box-shadow: 0 12px 40px rgba(246, 160, 77, 0.25);
+}
+
+.top-rank {
+  font-size: 18px;
+  font-weight: 700;
+  color: #f6a04d;
+  background: rgba(246, 160, 77, 0.1);
+  border: 1px solid rgba(246, 160, 77, 0.3);
+  border-radius: 8px;
+  padding: 4px 8px;
+  min-width: 36px;
+  text-align: center;
+}
+
+.top-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.top-block {
+  padding: 32px;
+  margin-bottom: 24px;
+}
+
+.top-block .card {
+  border: 1px solid rgba(246, 160, 77, 0.4);
+  box-shadow: 0 0 40px rgba(246, 160, 77, 0.1);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: 48px;
+  height: 48px;
+
+  object-fit: cover;
+  /* 🔥 ключевая строка */
+  padding: 0;
+  /* убрать внутренние отступы */
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 0 12px rgba(246, 160, 77, 0.4),
+    0 0 24px rgba(246, 160, 77, 0.2);
+
+  border-radius: 10px;
+}
+
+.brand-title {
+  font-size: 28px;
+  font-weight: 700;
+
+  /* 🔥 градиент текст */
+  background: linear-gradient(135deg, #f6a04d, #ffcc80);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  letter-spacing: 0.5px;
+}
+
+.logo:hover {
+  transform: scale(1.08);
+  transition: 0.2s;
 }

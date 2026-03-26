@@ -1,55 +1,52 @@
 import { useState } from "react";
 
-function NewsCard({ item }) {
-  const [open, setOpen] = useState(false);
-  const [showSources, setShowSources] = useState(false);
-  const links = item.links ?? [];
-  const safeLinks = links.filter((linkItem) => linkItem?.link);
+function NewsCard({ item, isOpen, onToggle }) {
+
+
+  // убираем дубли ссылок
+  const uniqueLinks = Object.values(
+    (item.links || []).reduce((acc, curr) => {
+      if (!acc[curr.source]) {
+        acc[curr.source] = curr;
+      }
+      return acc;
+    }, {})
+  );
 
   return (
-    <article className="card">
+    <article className={`card ${isOpen ? "active-dropdown" : ""}`}>
       <div className="card-header">
         <div>
           <h3 className="card-title">{item.title}</h3>
           <div className="card-meta">{item.count} sources</div>
         </div>
-      </div>
 
-      <div className="card-actions">
-        <button onClick={() => setOpen(!open)}>
-          {open ? "Hide details" : "Show details"}
-        </button>
-        {safeLinks.length === 1 ? (
-          <a href={safeLinks[0].link} target="_blank" rel="noreferrer">
-            {safeLinks[0].source || "Source"}
-          </a>
-        ) : null}
-        {safeLinks.length > 1 ? (
-          <button onClick={() => setShowSources(!showSources)}>
-            Sources {showSources ? "▲" : "▼"}
+        {/* ✅ ОДИН dropdown */}
+        <div className="source-dropdown">
+          <button
+            className="source-button"
+            onClick={onToggle}
+          >
+            Open source ▾
           </button>
-        ) : null}
-      </div>
 
-      {safeLinks.length > 1 && showSources ? (
-        <div className="sources-list">
-          {safeLinks.map((linkItem, index) => (
-            <div key={`${linkItem.source}-${index}`}>
-              <a href={linkItem.link} target="_blank" rel="noreferrer">
-                {linkItem.source || "Source"}
-              </a>
+          {isOpen && (
+            <div className="source-menu">
+              {uniqueLinks.map((src, index) => (
+                <a
+                  key={index}
+                  href={src.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="source-item"
+                >
+                  {src.source}
+                </a>
+              ))}
             </div>
-          ))}
+          )}
         </div>
-      ) : null}
-
-      {open && (
-        <div className="details">
-          <p><strong>Summary:</strong> {item.summary?.main || "No summary"}</p>
-          <p><strong>Impact:</strong> {item.summary?.impact || "-"}</p>
-          <p><strong>Consequences:</strong> {item.summary?.consequences || "-"}</p>
-        </div>
-      )}
+      </div>
     </article>
   );
 }
