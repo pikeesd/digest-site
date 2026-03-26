@@ -39,6 +39,12 @@ a:hover {
   padding: 48px 24px 80px;
 }
 
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
 .header {
   display: flex;
   flex-direction: column;
@@ -152,6 +158,20 @@ a:hover {
 
 .button:hover {
   background: rgba(246, 160, 77, 0.24);
+}
+
+.button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+.idle-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  padding: 36px 0;
 }
 
 .details {

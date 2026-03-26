@@ -290,15 +290,21 @@ def build_digest(groups):
             "consequences": "",
         }
 
-        digest.append(
-            {
-                "title": main["title"],
-                "summary": summary,
-                "sources": sources,
-                "count": len(group["items"]),
-                "link": group["main"]["link"],
-            }
-        )
+        item = {
+            "title": main["title"],
+            "summary": summary,
+            "sources": sources,
+            "count": len(group["items"]),
+            "links": [
+                {"source": item["source"], "link": item["link"]}
+                for item in group["items"]
+            ],
+        }
+
+        if "category" in main:
+            item["category"] = main["category"]
+
+        digest.append(item)
 
     return digest
 
@@ -309,9 +315,12 @@ def format_for_output(digest):
     for item in digest:
         title = item["title"]
         count = item["count"]
+        links = item.get("links", [])
+        first_link = links[0]["link"] if links else ""
 
         lines.append(f"• {title} — {count} sources")
-        lines.append(f"  ↳ {item['link']}")
+        if first_link:
+            lines.append(f"  ↳ {first_link}")
         lines.append("")  # пустая строка для отступа
 
     return "\n".join(lines)
