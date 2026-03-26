@@ -107,7 +107,12 @@ def clean_html(text: str) -> str:
 
 def collect_from_source(name: str, url: str) -> List[Dict[str, str]]:
     """Collect and normalize entries from a single RSS source."""
-    feed = feedparser.parse(url)
+    try:
+        response = requests.get(url, timeout=5)
+        feed = feedparser.parse(response.content)
+    except Exception as e:
+        print(f"❌ Error fetching {url}: {e}")
+        return []
     if getattr(feed, "bozo", False):
         # Skip malformed feeds but keep the collector running.
         return []

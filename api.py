@@ -4,6 +4,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from rss_collector import load_sources, collect_all, group_articles, build_digest
+from fastapi.middleware.cors import CORSMiddleware
 
 import time
 import threading
@@ -57,3 +58,12 @@ def scheduler():
 def start_scheduler():
     thread = threading.Thread(target=scheduler, daemon=True)
     thread.start()
+
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # на старте ок, потом ограничим
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
