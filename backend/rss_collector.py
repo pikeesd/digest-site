@@ -8,6 +8,7 @@ import email.utils
 import json
 import sys
 import re
+import requests
 from difflib import SequenceMatcher
 from pathlib import Path
 from typing import Any, Dict, Iterable, List, Optional
