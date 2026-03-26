@@ -12,7 +12,7 @@ function App() {
   const [openDropdownId, setOpenDropdownId] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:8000/api/news")
+    fetch("https://steadfast-beauty-production-9beb.up.railway.app/api/news")
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
