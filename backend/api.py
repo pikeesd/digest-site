@@ -3,7 +3,7 @@ from pathlib import Path
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from backend.rss_collector import (
+from rss_collector import (
     load_sources,
     collect_all,
     group_articles,
