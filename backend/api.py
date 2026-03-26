@@ -44,7 +44,9 @@ def update_news():
     sources = load_sources(sources_path)
 
     articles = collect_all(sources)
+    print("ARTICLES COUNT:", len(articles))
     grouped = group_articles(articles)
+    print("GROUPED COUNT:", len(grouped))
     digest = build_digest(grouped)
 
     news_cache = digest
