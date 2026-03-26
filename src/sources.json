@@ -1,0 +1,48 @@
+{
+    "sources": [
+        {
+            "name": "CoinDesk",
+            "url": "https://www.coindesk.com/arc/outboundfeeds/rss/"
+        },
+        {
+            "name": "Cointelegraph",
+            "url": "https://cointelegraph.com/rss"
+        },
+        {
+            "name": "Decrypt",
+            "url": "https://decrypt.co/feed"
+        },
+        {
+            "name": "TheBlock",
+            "url": "https://www.theblock.co/rss.xml"
+        },
+        {
+            "name": "DLNews",
+            "url": "https://www.dlnews.com/rss.xml"
+        },
+        {
+            "name": "NewsBTC",
+            "url": "https://www.newsbtc.com/feed/"
+        },
+        {
+            "name": "ZyCrypto",
+            "url": "https://zycrypto.com/feed/"
+        },
+        {
+            "name": "Blockworks",
+            "url": "https://blockworks.co/feed"
+        },
+        {
+            "name": "CoinJournal",
+            "url": "https://coinjournal.net/feed/"
+        },
+        {
+            "name": "CryptoSlate",
+            "url": "https://cryptoslate.com/feed/"
+        },
+        {
+            "name": "UToday",
+            "url": "https://u.today/rss"
+        }
+    ]
+}
