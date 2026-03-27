@@ -5,6 +5,7 @@ import NewsCard from "./components/NewsCard.jsx";
 const categories = ["Markets", "DeFi", "AI", "Regulation", "Security"];
 
 function App() {
+  const [lastUpdate, setLastUpdate] = useState(new Date());
   const [news, setNews] = useState([]);
   const [mode, setMode] = useState("idle");
   const [selectedCategories, setSelectedCategories] = useState([]);
@@ -15,6 +16,7 @@ function App() {
     fetch("https://steadfast-beauty-production-9beb.up.railway.app/api/news")
       .then((res) => res.json())
       .then((data) => {
+        setLastUpdate(new Date());
         console.log(data);
         setNews(data);
       })
@@ -81,7 +83,7 @@ function App() {
   return (
     <div className={`app ${openDropdownId ? "dropdown-open" : ""}`}>
       {mode !== "full" && (
-        <Header
+        <Header lastUpdate={lastUpdate}
           categories={categories}
           selectedCategories={selectedCategories}
           onToggleCategory={toggleCategory}
@@ -105,7 +107,7 @@ function App() {
           <div className="idle-actions">
             <button
               type="button"
-              className="button"
+              className="button primary"
               onClick={() => setMode("full")}
             >
               Show full digest
@@ -173,41 +175,51 @@ function App() {
             {activeCategory ? (
               <section>
                 <h2>{activeCategory}</h2>
-                <div className="top-block">
-                  <h2 className="top-title">Top news today</h2>
 
-                  {topOneCategory && (
-                    <NewsCard
-                      item={topOneCategory}
-                      isOpen={openDropdownId === `top-${activeCategory}`}
-                      onToggle={() =>
-                        setOpenDropdownId(
-                          openDropdownId === `top-${activeCategory}`
-                            ? null
-                            : `top-${activeCategory}`
-                        )
-                      }
-                    />
-                  )}
-                </div>
+                {activeCategoryItems.length === 0 ? (
+                  <div className="empty-category">
+                    <p>No news in this category yet</p>
+                    <span>Updating soon...</span>
+                  </div>
+                ) : (
+                  <>
+                    <div className="top-block">
+                      <h2 className="top-title">Top news today</h2>
 
-                {/* 📄 ОСТАЛЬНЫЕ (ВНЕ РАМКИ) */}
-                <div className="cards">
-                  {restAfterTopOne.map((item, index) => (
-                    <NewsCard
-                      key={`all-${activeCategory}-${index}`}
-                      item={item}
-                      isOpen={openDropdownId === `all-${activeCategory}-${index}`}
-                      onToggle={() =>
-                        setOpenDropdownId(
-                          openDropdownId === `all-${activeCategory}-${index}`
-                            ? null
-                            : `all-${activeCategory}-${index}`
-                        )
-                      }
-                    />
-                  ))}
-                </div>
+                      {topOneCategory && (
+                        <NewsCard
+                          item={topOneCategory}
+                          isOpen={openDropdownId === `top-${activeCategory}`}
+                          onToggle={() =>
+                            setOpenDropdownId(
+                              openDropdownId === `top-${activeCategory}`
+                                ? null
+                                : `top-${activeCategory}`
+                            )
+                          }
+                        />
+                      )}
+                    </div>
+
+                    {/* 📄 ОСТАЛЬНЫЕ (ВНЕ РАМКИ) */}
+                    <div className="cards">
+                      {restAfterTopOne.map((item, index) => (
+                        <NewsCard
+                          key={`all-${activeCategory}-${index}`}
+                          item={item}
+                          isOpen={openDropdownId === `all-${activeCategory}-${index}`}
+                          onToggle={() =>
+                            setOpenDropdownId(
+                              openDropdownId === `all-${activeCategory}-${index}`
+                                ? null
+                                : `all-${activeCategory}-${index}`
+                            )
+                          }
+                        />
+                      ))}
+                    </div>
+                  </>
+                )}
               </section>
             ) : null}
           </>
@@ -218,3 +230,4 @@ function App() {
 }
 
 export default App;
+
