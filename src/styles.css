@@ -304,28 +304,18 @@ a:hover {
   top: 30px;
   right: 0;
 
-  padding: 10px;
-  border-radius: 14px;
-
-  background: linear-gradient(180deg,
-      rgba(15, 22, 33, 0.85),
-      rgba(11, 17, 26, 0.85));
-
-  backdrop-filter: blur(10px);
-  /* 🔥 стекло */
-
-  border: 1px solid rgba(246, 160, 77, 0.25);
-
-  box-shadow:
-    0 10px 40px rgba(0, 0, 0, 0.6),
-    0 0 20px rgba(246, 160, 77, 0.1);
+  background: #111;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 8px;
 
   display: flex;
   flex-direction: column;
   gap: 6px;
-  min-width: 140px;
+  min-width: 120px;
 
   z-index: 99999;
+  /* 🔥 ключ */
 }
 
 .source-item {

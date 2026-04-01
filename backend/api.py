@@ -14,15 +14,12 @@ app = FastAPI()
 # 1. Настраиваем CORS ОДИН раз
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "*"
-    ],  # Пока стоит "*", потом поменяешь на ["http://localhost:5173", "твой-домен"]
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-# Путь к файлу с результатами
 DIGEST_FILE = Path(__file__).resolve().parent / "digest.json"
 
 
@@ -42,7 +39,6 @@ def get_news():
             except json.JSONDecodeError:
                 return {"error": "File is currently being updated", "news": []}
     else:
-        # Если файл еще не создался (первый запуск)
         return {"error": "News digest is being generated. Please wait.", "news": []}
 
 
@@ -53,7 +49,6 @@ def scheduler():
     while True:
         print("🔄 Запуск сбора новостей...")
         try:
-            # Явно передаем путь к файлу в коллектор
             run_collector([str(sources_path)])
             print("✅ Сбор новостей завершен")
         except Exception as e:
