@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Simple RSS collector for crypto news feeds."""
+"""Hybrid RSS collector for crypto news feeds with AI Classification & SQLite Cache."""
 
 from __future__ import annotations
 from datetime import datetime, timedelta
@@ -7,12 +7,77 @@ from datetime import datetime, timedelta
 import email.utils
 import json
 import sys
+import os
 import re
 import requests
+import sqlite3
+import hashlib
 from difflib import SequenceMatcher
 from pathlib import Path
 from typing import Any, Dict, Iterable, List, Optional
 import feedparser
+
+# --- ИНИЦИАЛИЗАЦИЯ OPENAI И КЭША ---
+try:
+    from openai import OpenAI
+
+    # Теперь скрипт автоматически подтянет ключ из .env
+    API_KEY = os.getenv("OPENAI_API_KEY")
+    client = OpenAI(api_key=API_KEY) if API_KEY else None
+except ImportError:
+    client = None
+    print(
+        "⚠️ Библиотека openai не установлена. Будет использован старый метод классификации."
+    )
+
+DB_FILE = "news_cache.db"
+
+
+def init_db():
+    """Создает базу данных для кэширования ответов AI."""
+    conn = sqlite3.connect(DB_FILE)
+    c = conn.cursor()
+    c.execute(
+        """
+        CREATE TABLE IF NOT EXISTS category_cache (
+            hash_id TEXT PRIMARY KEY,
+            category TEXT,
+            timestamp DATETIME DEFAULT CURRENT_TIMESTAMP
+        )
+    """
+    )
+    conn.commit()
+    conn.close()
+
+
+init_db()
+
+
+def get_hash(text: str) -> str:
+    return hashlib.md5(text.encode("utf-8")).hexdigest()
+
+
+def get_from_cache(text_hash: str) -> Optional[str]:
+    conn = sqlite3.connect(DB_FILE)
+    c = conn.cursor()
+    c.execute("SELECT category FROM category_cache WHERE hash_id = ?", (text_hash,))
+    result = c.fetchone()
+    conn.close()
+    return result[0] if result else None
+
+
+def save_to_cache(text_hash: str, category: str):
+    conn = sqlite3.connect(DB_FILE)
+    c = conn.cursor()
+    c.execute(
+        "INSERT OR REPLACE INTO category_cache (hash_id, category) VALUES (?, ?)",
+        (text_hash, category),
+    )
+    conn.commit()
+    conn.close()
+
+
+# --- СТАРЫЕ КОНСТАНТЫ И ФУНКЦИИ (без изменений) ---
 
 STOPWORDS = {
     "the",
@@ -33,14 +98,6 @@ STOPWORDS = {
     "under",
 }
 
-CATEGORIES = {
-    "markets": ["bitcoin", "btc", "price", "etf", "market"],
-    "defi": ["defi", "protocol", "staking", "yield"],
-    "ai": ["ai", "agent", "model"],
-    "regulation": ["sec", "law", "regulation", "tax"],
-    "security": ["hack", "exploit", "phishing"],
-}
-
 
 def parse_date(date_str):
     try:
@@ -50,34 +107,20 @@ def parse_date(date_str):
 
 
 def load_sources(path: Path) -> List[Dict[str, str]]:
-    """Load RSS sources from a JSON file."""
     try:
         data = json.loads(path.read_text(encoding="utf-8"))
-    except FileNotFoundError:
-        raise FileNotFoundError(f"sources file not found: {path}")
-    except json.JSONDecodeError as exc:
-        raise ValueError(f"invalid JSON in sources file: {path}") from exc
+    except Exception as exc:
+        raise ValueError(f"Ошибка загрузки sources: {exc}")
 
-    sources = data.get("sources", [])
-    if not isinstance(sources, list):
-        raise ValueError("'sources' must be a list")
-
-    normalized: List[Dict[str, str]] = []
-    for item in sources:
-        if not isinstance(item, dict):
-            continue
-        name = str(item.get("name", "")).strip()
-        url = str(item.get("url", "")).strip()
-        if name and url:
-            normalized.append({"name": name, "url": url})
-    return normalized
+    return [
+        {"name": s.get("name", "").strip(), "url": s.get("url", "").strip()}
+        for s in data.get("sources", [])
+        if isinstance(s, dict)
+    ]
 
 
 def _extract_entry_text(entry: Any, key: str) -> str:
-    value = entry.get(key)
-    if value is None:
-        return ""
-    return str(value).strip()
+    return str(entry.get(key, "")).strip() if entry.get(key) is not None else ""
 
 
 def _extract_published(entry: Any) -> str:
@@ -88,8 +131,14 @@ def _extract_published(entry: Any) -> str:
     return ""
 
 
+def clean_html(text: str) -> str:
+    if not text:
+        return ""
+    clean = re.sub(r"<.*?>", "", text)
+    return re.sub(r"\s+", " ", clean).strip()
+
+
 def normalize_entry(entry: Any, source_name: str) -> Dict[str, str]:
-    """Normalize a feedparser entry into a consistent structure."""
     return {
         "title": _extract_entry_text(entry, "title"),
         "link": _extract_entry_text(entry, "link"),
@@ -102,102 +151,57 @@ def normalize_entry(entry: Any, source_name: str) -> Dict[str, str]:
     }
 
 
-def clean_html(text: str) -> str:
-    return re.sub(r"<.*?>", "", text)
-
-
 def collect_from_source(name: str, url: str) -> List[Dict[str, str]]:
-    """Collect and normalize entries from a single RSS source."""
     try:
         response = requests.get(url, timeout=5)
         feed = feedparser.parse(response.content)
+        if getattr(feed, "bozo", False):
+            return []
+        return [normalize_entry(entry, name) for entry in getattr(feed, "entries", [])]
     except Exception as e:
         print(f"❌ Error fetching {url}: {e}")
         return []
-    if getattr(feed, "bozo", False):
-        # Skip malformed feeds but keep the collector running.
-        return []
-
-    entries = getattr(feed, "entries", []) or []
-    return [normalize_entry(entry, name) for entry in entries]
 
 
 def collect_all(sources: Iterable[Dict[str, str]]) -> List[Dict[str, str]]:
-    """Collect and normalize articles from all sources."""
-    all_articles: List[Dict[str, str]] = []
+    all_articles = []
     for src in sources:
-        name = src.get("name", "").strip()
-        url = src.get("url", "").strip()
-        if not name or not url:
-            continue
-        try:
-            all_articles.extend(collect_from_source(name, url))
-        except Exception:
-            # Skip broken feeds and continue.
-            continue
+        if src.get("name") and src.get("url"):
+            all_articles.extend(collect_from_source(src["name"], src["url"]))
     return all_articles
 
 
-def filter_recent(articles, hours=72):
+def filter_recent(articles, hours=24):
+    """Фильтрует новости за последние X часов."""
     now = datetime.utcnow()
     cutoff = now - timedelta(hours=hours)
-
     filtered = []
-
     for a in articles:
         dt = parse_date(a.get("published", ""))
-
-        # если нет даты → можно оставить (или убрать позже)
-        if not dt:
+        if not dt or dt >= cutoff:
             filtered.append(a)
-            continue
-
-        if dt >= cutoff:
-            filtered.append(a)
-
     return filtered
 
 
 def normalize_title(title: str) -> str:
     title = title.lower()
-
-    #  нормализация крипто-терминов
-    title = title.replace("btc", "bitcoin")
-    title = title.replace("eth", "ethereum")
-
-    #  нормализация чисел (70k → 70000)
+    title = title.replace("btc", "bitcoin").replace("eth", "ethereum")
     title = re.sub(r"(\d+)k", lambda m: str(int(m.group(1)) * 1000), title)
-
-    #  убираем символы
     title = re.sub(r"[^a-z0-9 ]", "", title)
-
-    words = title.split()
-
-    #  убираем стоп-слова
-    words = [w for w in words if w not in STOPWORDS]
-
-    return " ".join(words)
+    return " ".join([w for w in title.split() if w not in STOPWORDS])
 
 
 def is_aggregate(title: str) -> bool:
     title = title.lower()
-
-    # 1. супер длинные заголовки
-    if len(title) > 140:
+    if len(title) > 140 or title.count(",") >= 3:
         return True
-
-    # 2. много частей → часто агрегаты
-    separators = ["|", " - ", " — ", ":"]
-    parts = sum(title.count(sep) for sep in separators)
-    if parts >= 3:
+    separators = sum(title.count(sep) for sep in ["|", " - ", " — ", ":"])
+    if separators >= 3:
         return True
-
-    # 3. ключевые слова агрегатов
     patterns = [
         "morning report",
         "crypto news",
         "roundup",
-        "here’s what happened",
         "heres what happened",
         "what happened",
         "daily",
@@ -205,14 +209,8 @@ def is_aggregate(title: str) -> bool:
         "recap",
         "top stories",
     ]
-
     if any(p in title for p in patterns):
         return True
-
-    # 4. слишком много разных тем (много запятых)
-    if title.count(",") >= 3:
-        return True
-
     return False
 
 
@@ -220,27 +218,8 @@ def similarity(a: str, b: str) -> float:
     return SequenceMatcher(None, a, b).ratio()
 
 
-def word_overlap(a: str, b: str) -> float:
-    set_a = set(a.split())
-    set_b = set(b.split())
-
-    if not set_a or not set_b:
-        return 0.0
-
-    return len(set_a & set_b) / len(set_a | set_b)
-
-
-def extract_keywords(title: str) -> set:
-    title = normalize_title(title)
-    words = set(title.split())
-
-    # убираем короткие слова (шум)
-    return {w for w in words if len(w) > 3}
-
-
 def extract_entities(title: str) -> set:
     words = set(normalize_title(title).split())
-
     important = {
         "bitcoin",
         "ethereum",
@@ -254,163 +233,173 @@ def extract_entities(title: str) -> set:
         "nasdaq",
         "ftx",
     }
-
     return words & important
 
 
 def is_similar(article1, article2):
-    t1 = normalize_title(article1["title"])
-    t2 = normalize_title(article2["title"])
+    t1, t2 = normalize_title(article1["title"]), normalize_title(article2["title"])
+    overlap = len(set(t1.split()) & set(t2.split()))
+    ent_match = (
+        len(extract_entities(article1["title"]) & extract_entities(article2["title"]))
+        > 0
+    )
 
-    words1 = set(t1.split())
-    words2 = set(t2.split())
-
-    seq_score = similarity(t1, t2)
-    overlap = len(words1 & words2)
-
-    ent1 = extract_entities(article1["title"])
-    ent2 = extract_entities(article2["title"])
-
-    entity_match = len(ent1 & ent2) > 0
-
-    # 🔥 НОВАЯ ЛОГИКА (строже)
-    if seq_score > 0.75:
+    if similarity(t1, t2) > 0.75 or overlap >= 4 or (ent_match and overlap >= 3):
         return True
-
-    if overlap >= 4:
-        return True
-
-    if entity_match and overlap >= 3:
-        return True
-
     return False
 
 
 def deduplicate_articles(articles: List[Dict[str, str]]) -> List[Dict[str, str]]:
-    unique = []
-    seen = set()
-
+    unique, seen = [], set()
     for article in articles:
         title = normalize_title(article["title"])
-
-        # только почти точные дубли
-        if title in seen:
-            continue
-
-        seen.add(title)
-        unique.append(article)
-
+        if title not in seen:
+            seen.add(title)
+            unique.append(article)
     return unique
 
 
 def group_articles(articles):
     groups = []
-
     for article in articles:
         article["is_aggregate"] = is_aggregate(article["title"])
 
     for article in articles:
         added = False
-
         for group in groups:
             if is_similar(article, group["main"]):
                 group["items"].append(article)
-
-                # 🔥 СРАЗУ обновляем main
                 group["items"].sort(
                     key=lambda x: (
-                        x.get("is_aggregate", False),  # False лучше чем True
-                        -len(x.get("summary", "")),  # потом по качеству
+                        x.get("is_aggregate", False),
+                        -len(x.get("summary", "")),
                     )
                 )
-
                 group["main"] = group["items"][0]
-
                 added = True
                 break
-
         if not added:
             groups.append({"main": article, "items": [article]})
-
     return groups
 
 
-def build_structured_summary(group):
-    texts = []
+def shorten(text, max_len=200):
+    if not text or len(text) <= max_len:
+        return text or ""
+    return text[:max_len].rsplit(" ", 1)[0] + "..."
 
-    for item in group["items"]:
-        if item.get("summary"):
-            texts.append(item["summary"])
 
-    full_text = " ".join(texts).lower()
+# --- НОВЫЙ БЛОК: ГИБРИДНАЯ КЛАССИФИКАЦИЯ ---
 
-    # очень простая логика (MVP)
-    main = full_text[:200] if full_text else ""
 
-    impact = ""
-    if "price" in full_text or "market" in full_text:
-        impact = "Affects market"
+def detect_category_fallback(text: str) -> str:
+    """Старая логика на правилах (запасной вариант)."""
+    text = text.lower()
+    if any(w in text for w in ["hack", "exploit", "breach", "attack"]):
+        return "Security"
+    if any(w in text for w in ["sec", "law", "regulation", "government"]):
+        return "Regulation"
+    if any(w in text for w in ["ai", "artificial intelligence", "openai"]):
+        return "AI"
+    if any(w in text for w in ["defi", "staking", "yield", "protocol"]):
+        return "DeFi"
+    if any(w in text for w in ["bitcoin", "btc", "price", "market", "eth"]):
+        return "Markets"
+    return "Other"
 
-    consequences = ""
-    if "risk" in full_text or "drop" in full_text:
-        consequences = "May lead to volatility"
 
-    return {"main": main, "impact": impact, "consequences": consequences}
+def get_category_hybrid(title: str, summary: str) -> str:
+    """Гибридная классификация: Кэш -> AI -> Fallback."""
+    combined_text = f"Title: {title}\nSummary: {summary}"
+    text_hash = get_hash(title)  # Хешируем только тайтл, он обычно уникален для группы
+
+    # 1. Проверяем кэш
+    cached = get_from_cache(text_hash)
+    if cached:
+        return cached
+
+    # 2. Если нет OpenAI, используем Fallback
+    if not client:
+        cat = detect_category_fallback(combined_text)
+        save_to_cache(text_hash, cat)
+        return cat
+
+    # 3. Запрос к OpenAI
+    system_prompt = """
+    Classify the crypto news into exactly ONE category from this list: Security, Regulation, AI, DeFi, Markets, Other.
+    Rules by priority:
+    1. Security: Hacks, exploits, stolen funds, vulnerabilities.
+    2. Regulation: SEC, laws, taxes, court cases, government.
+    3. AI: Artificial Intelligence, agents, models in crypto.
+    4. DeFi: Protocols, DEX, staking (if not a hack).
+    5. Markets: Price drops/pumps, ETFs, trading.
+    6. Other: Partnerships, generic news.
+    Return ONLY JSON: {"category": "Name"}
+    """
+
+    try:
+        response = client.chat.completions.create(
+            model="gpt-4o-mini",
+            messages=[
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": combined_text},
+            ],
+            response_format={"type": "json_object"},
+            timeout=10,
+        )
+
+        result = json.loads(response.choices[0].message.content)
+        category = result.get("category", "Other")
+
+        # Валидация
+        valid_categories = ["Security", "Regulation", "AI", "DeFi", "Markets", "Other"]
+        if category not in valid_categories:
+            category = "Other"
+
+        # Сохраняем в кэш
+        save_to_cache(text_hash, category)
+        return category
+
+    except Exception as e:
+        print(f"⚠️ Ошибка OpenAI: {e}. Используем fallback.")
+        cat = detect_category_fallback(combined_text)
+        return cat
+
+
+# --- СБОРКА ДАЙДЖЕСТА ---
 
 
 def build_digest(groups):
     digest = []
-
     for group in groups:
         main = group["main"]
         sources = list(set(item["source"] for item in group["items"]))
+        clean_summ = clean_html(main.get("summary", ""))
+        short_summary = shorten(clean_summ)
 
-        raw_summary = main.get("summary", "")
-        clean_summary = clean_html(raw_summary)
-        short_summary = shorten(clean_summary)
-
-        category = detect_category(main.get("title", "") + " " + clean_summary)
+        # Вызываем гибридную систему!
+        category = get_category_hybrid(main.get("title", ""), clean_summ)
 
         item = {
             "title": main["title"],
+            "category": category,
             "summary": {
                 "main": short_summary if short_summary else main["title"],
-                "impact": "",
-                "consequences": "",
             },
             "sources": sources,
-            "count": len(set(item["source"] for item in group["items"])),
+            "count": len(group["items"]),
             "links": [
-                {"source": item["source"], "link": item["link"]}
-                for item in group["items"]
+                {"source": i["source"], "link": i["link"]} for i in group["items"]
             ],
+            "published": main.get("published", ""),
         }
-
-        item["category"] = category
-
         digest.append(item)
-
     return digest
 
 
-def format_for_output(digest):
-    lines = []
-
-    for item in digest:
-        title = item["title"]
-        count = item["count"]
-        links = item.get("links", [])
-        first_link = links[0]["link"] if links else ""
-
-        lines.append(f"• {title} — {count} sources")
-        if first_link:
-            lines.append(f"  ↳ {first_link}")
-        lines.append("")  # пустая строка для отступа
-
-    return "\n".join(lines)
-
-
 def main(argv: Optional[List[str]] = None) -> int:
+    init_db()  # Инициализируем кэш
+
     args = argv or sys.argv[1:]
     sources_path = Path(args[0]) if args else Path("sources.json")
 
@@ -420,100 +409,51 @@ def main(argv: Optional[List[str]] = None) -> int:
         print(f"error: {exc}")
         return 1
 
-    articles = collect_all(sources)  # ← ВАЖНО
+    print("Fetching feeds...")
+    raw_articles = collect_all(sources)
 
+    # 1. Фильтр по времени (оставляем только за последние 24 часа для свежести)
+    articles = filter_recent(raw_articles, hours=24)
     raw_count = len(articles)
 
-    dedup_count = len(articles)
-
+    # 2. Группировка
     groups = group_articles(articles)
-    for g in groups:
-        print("COLLECTOR LOADED")
-        print("MAIN:", g["main"]["title"])
-        print("COUNT:", len(g["items"]))
-        print("---")
 
-    from collections import defaultdict
+    # 3. ОТСЕВ МУСОРА: Выбрасываем группы-агрегаторы до отправки в AI
+    clean_groups = [
+        g
+        for g in groups
+        if not g["main"].get("is_aggregate", False) and g["main"]["title"]
+    ]
 
-    grouped_by_category = defaultdict(list)
+    print(f"Raw (last 24h): {raw_count}")
+    print(f"Grouped & Cleaned (no aggregates): {len(clean_groups)}")
 
-    for g in groups:
-        title = g["main"]["title"]
-        category = detect_category(title)
+    # 4. Классификация и сборка дайджеста
+    digest = build_digest(clean_groups)
 
-        grouped_by_category[category].append(g)
+    # Сортируем по важности (количеству источников)
+    digest = sorted(digest, key=lambda x: x["count"], reverse=True)
 
-    groups = [g for g in groups if g["main"]["title"]]
+    # 5. Формируем финальный JSON для сайта с метаданными
+    final_output = {
+        "metadata": {
+            "last_updated": datetime.utcnow().isoformat() + "Z",
+            "total_news": len(digest),
+            "timeframe_hours": 24,
+        },
+        "news": digest,
+    }
 
-    group_count = len(groups)
+    # Сохраняем для фронтенда
+    with open("digest.json", "w", encoding="utf-8") as f:
+        json.dump(final_output, f, indent=2, ensure_ascii=False)
 
-    print(f"Raw: {raw_count}")
-    print(f"After dedup: {dedup_count}")
-    print(f"Grouped: {group_count}")
+    print("\n✅ Успешно! Файл digest.json обновлен.")
+    print(f"Время обновления (UTC): {final_output['metadata']['last_updated']}")
 
-    for category, items in grouped_by_category.items():
-        digest = build_digest(items)
-        digest = sorted(digest, key=lambda x: x["count"], reverse=True)
-
-        print(f"\n=== {category.upper()} ===")
-        print(format_for_output(digest[:5]))
-
-    # print(f"Final digest: {len(digest)} news")
-    # print(f"Removed duplicates: {raw_count - dedup_count}")
-    # print("Top news:")
-    # print(digest[0]["title"])
-    # print("\nTop 3 news:")
-    # for item in digest[:3]:
-    # print(f"- {item['title']} ({item['count']} sources)")
-
-    # with open("digest.json", "w", encoding="utf-8") as f:
-    # json.dump(digest, f, indent=2, ensure_ascii=False)
-
-    # formatted = format_for_output(digest)
-
-    # print("\n=== DIGEST ===\n")
-    # print(formatted)
+    return 0
 
 
 if __name__ == "__main__":
     raise SystemExit(main())
-
-
-def clean_html(text):
-    if not text:
-        return ""
-
-    # удалить HTML теги
-    clean = re.sub(r"<.*?>", "", text)
-
-    # убрать лишние пробелы
-    clean = re.sub(r"\s+", " ", clean).strip()
-
-    return clean
-
-
-def shorten(text, max_len=200):
-    if not text:
-        return ""
-
-    if len(text) <= max_len:
-        return text
-
-    return text[:max_len].rsplit(" ", 1)[0] + "..."
-
-
-def detect_category(text):
-    text = text.lower()
-
-    if any(word in text for word in ["bitcoin", "btc", "price", "market", "eth"]):
-        return "Markets"
-    if any(word in text for word in ["defi", "staking", "yield", "protocol"]):
-        return "DeFi"
-    if any(word in text for word in ["ai", "artificial intelligence", "openai"]):
-        return "AI"
-    if any(word in text for word in ["sec", "law", "regulation", "government"]):
-        return "Regulation"
-    if any(word in text for word in ["hack", "exploit", "breach", "attack"]):
-        return "Security"
-
-    return "Other"

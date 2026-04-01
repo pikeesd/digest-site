@@ -1,233 +1,228 @@
 import { useEffect, useMemo, useState } from "react";
-import Header from "./components/Header.jsx";
 import NewsCard from "./components/NewsCard.jsx";
 
 const categories = ["Markets", "DeFi", "AI", "Regulation", "Security"];
 
 function App() {
+  // 1. Состояния данных и навигации
   const [lastUpdate, setLastUpdate] = useState(new Date());
   const [news, setNews] = useState([]);
-  const [mode, setMode] = useState("idle");
-  const [selectedCategories, setSelectedCategories] = useState([]);
+  const [mode, setMode] = useState("idle"); // idle, full, niches
   const [activeCategory, setActiveCategory] = useState("");
   const [openDropdownId, setOpenDropdownId] = useState(null);
+  const [timeFilter, setTimeFilter] = useState(24);
+  const [serverMessage, setServerMessage] = useState("");
 
+  // 2. Состояния интерфейса
+  const [isNichesOpen, setIsNichesOpen] = useState(false);
+  const [timeAgo, setTimeAgo] = useState("just now");
+  const [isOpen, setIsOpen] = useState(false);
+
+  // Загрузка данных с сервера
   useEffect(() => {
-    fetch("https://steadfast-beauty-production-9beb.up.railway.app/api/news")
+    fetch("http://localhost:8000/api/news")
       .then((res) => res.json())
       .then((data) => {
-        setLastUpdate(new Date());
-        console.log(data);
-        setNews(data);
+        if (data.error) {
+          setServerMessage("AI is analyzing fresh news...");
+          return;
+        }
+        if (data.metadata?.last_updated) {
+          setLastUpdate(new Date(data.metadata.last_updated));
+        }
+        setNews(data.news || []);
+        setServerMessage("");
       })
-      .catch((err) => console.error(err));
+      .catch(() => setServerMessage("Connecting to server..."));
   }, []);
 
-  const toggleCategory = (category) => {
-    setSelectedCategories((prev) =>
-      prev.includes(category)
-        ? prev.filter((item) => item !== category)
-        : [...prev, category]
-    );
-  };
-
+  // Таймер для обновления надписи "Live • X min ago"
   useEffect(() => {
-    if (mode !== "niches") {
-      return;
-    }
-    if (!selectedCategories.length) {
-      setActiveCategory("");
-      return;
-    }
-    if (!selectedCategories.includes(activeCategory)) {
-      setActiveCategory(selectedCategories[0]);
-    }
-  }, [mode, selectedCategories, activeCategory]);
+    const calculateTime = () => {
+      const diffMs = new Date() - lastUpdate;
+      const diffMins = Math.floor(diffMs / 60000);
+      const diffHours = Math.floor(diffMins / 60);
 
-  const filteredNews = useMemo(() => {
-    if (mode !== "niches") {
-      return news;
-    }
-    return news.filter((item) => selectedCategories.includes(item.category));
-  }, [mode, news, selectedCategories]);
+      if (diffMins < 1) return "just now";
+      if (diffMins < 60) return `${diffMins} min ago`;
+      if (diffHours < 24) return `${diffHours} hours ago`;
+      return lastUpdate.toLocaleDateString();
+    };
 
+    setTimeAgo(calculateTime());
+    const interval = setInterval(() => {
+      setTimeAgo(calculateTime());
+    }, 60000);
+
+    return () => clearInterval(interval);
+  }, [lastUpdate]);
+
+  // Фильтрация по времени (2h, 10h, 24h)
+  const timeFilteredNews = useMemo(() => {
+    if (timeFilter === 24) return news;
+    const cutoff = new Date().getTime() - timeFilter * 60 * 60 * 1000;
+    return news.filter(item => new Date(item.published).getTime() >= cutoff);
+  }, [news, timeFilter]);
+
+  // Сортировка и фильтрация по категориям
   const sortedNews = useMemo(() => {
-    return [...filteredNews].sort(
-      (a, b) => (b.count ?? 0) - (a.count ?? 0)
-    );
-  }, [filteredNews]);
+    const filtered = mode === "niches"
+      ? timeFilteredNews.filter(item => item.category === activeCategory)
+      : timeFilteredNews;
+    return [...filtered].sort((a, b) => (b.count ?? 0) - (a.count ?? 0));
+  }, [timeFilteredNews, mode, activeCategory]);
 
-  const topThreeGlobal = useMemo(() => sortedNews.slice(0, 3), [sortedNews]);
-  const restGlobal = useMemo(() => sortedNews.slice(3), [sortedNews]);
-
-  const activeCategoryItems = useMemo(() => {
-    if (!activeCategory) return [];
-
-    return sortedNews.filter(
-      (item) => item.category === activeCategory
-    );
-  }, [sortedNews, activeCategory]);
-
-  const topOneCategory = activeCategoryItems[0];
-  const restAfterTopOne = activeCategoryItems.slice(1);
-
-  const topThreeCategory = useMemo(
-    () => activeCategoryItems.slice(0, 3),
-    [activeCategoryItems]
-  );
-  const restCategory = useMemo(
-    () => activeCategoryItems.slice(3),
-    [activeCategoryItems]
-  );
+  // Разделение на ТОП и остальные
+  const topCount = timeFilter === 24 ? 3 : 1;
+  const topGlobal = sortedNews.slice(0, topCount);
+  const restGlobal = sortedNews.slice(topCount);
 
   return (
-    <div className={`app ${openDropdownId ? "dropdown-open" : ""}`}>
-      {mode !== "full" && (
-        <Header lastUpdate={lastUpdate}
-          categories={categories}
-          selectedCategories={selectedCategories}
-          onToggleCategory={toggleCategory}
-        />
-      )}
-      <main className="main">
-        {mode !== "idle" && (
-          <button
-            className="back-button"
-            onClick={() => {
-              setMode("idle");
-              setSelectedCategories([]);
-              setActiveCategory("");
-              setOpenDropdownId(null);
-            }}
-          >
-            ← Back
-          </button>
-        )}
-        {mode === "idle" ? (
-          <div className="idle-actions">
-            <button
-              type="button"
-              className="button primary"
-              onClick={() => setMode("full")}
-            >
-              Show full digest
-            </button>
-            <button
-              type="button"
-              className="button"
-              onClick={() => setMode("niches")}
-              disabled={selectedCategories.length === 0}
-            >
-              Generate digest by niches
-            </button>
-          </div>
-        ) : mode === "full" ? (
-          <>
-            {/* 🔥 TOP 3 */}
-            <div className="top-block">
-              <h2 className="top-title">Top 3 news today</h2>
+    <div className={`app-layout ${isNichesOpen ? "dropdown-open" : ""}`}>
 
-              <div className="top-cards">
-                {topThreeGlobal.map((item, index) => (
-                  <NewsCard
-                    key={`top-${index}`}
-                    item={item}
-                    isOpen={openDropdownId === `top-${index}`}
-                    onToggle={() =>
-                      setOpenDropdownId(
-                        openDropdownId === `top-${index}` ? null : `top-${index}`
-                      )
-                    }
-                  />
+      {/* Оверлей затемнения при открытии выбора ниш */}
+      {isNichesOpen && <div className="page-overlay" onClick={() => setIsNichesOpen(false)}></div>}
+
+      {/* ЛЕВАЯ ПАНЕЛЬ (САЙДБАР) */}
+      <aside className="sidebar">
+        <div className="brand">
+          <img src="/mountain.png" alt="logo" className="logo" />
+          <div className="brand-info">
+            <h1 className="brand-title">Peak Digest</h1>
+            <div className="live-indicator">
+              <span className="live-dot"></span>
+              {/* ✅ Теперь здесь живое время */}
+              Live • {timeAgo}
+            </div>
+          </div>
+        </div>
+
+        <div className="side-nav">
+          <button
+            className={`button primary btn-large ${mode === "full" ? "active" : ""}`}
+            onClick={() => { setMode("full"); setIsNichesOpen(false); }}
+          >
+            Show full digest
+          </button>
+
+          <div className="dropdown-area">
+            <button
+              className="button btn-large btn-secondary"
+              onClick={() => {
+                // 1. Переключаем видимость меню ниш
+                setIsNichesOpen(!isNichesOpen);
+                // 2. 🔥 ГЛАВНОЕ: Сбрасываем ID открытой карточки, чтобы закрыть "Open source"
+                setOpenDropdownId(null);
+              }}
+            >
+              Generate by niches <svg
+                className={`icon ${isOpen ? "open" : ""}`}
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M6 9l6 6 6-6"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  fill="none"
+                />
+              </svg>
+            </button>
+
+            {isNichesOpen && (
+              <div className="niches-menu">
+                {categories.map((cat) => (
+                  <button
+                    key={cat}
+                    className={`menu-item ${activeCategory === cat ? "selected" : ""}`}
+                    onClick={() => {
+                      setActiveCategory(cat);
+                      setMode("niches");
+                      setIsNichesOpen(false);
+                    }}
+                  >
+                    {cat}
+                  </button>
                 ))}
               </div>
-            </div>
+            )}
+          </div>
+        </div>
+      </aside>
 
-            <div className="cards">
-              {restGlobal.map((item, index) => (
-                <NewsCard
-                  key={`all-${index}`}
-                  item={item}
-                  isOpen={openDropdownId === `all-${index}`}
-                  onToggle={() =>
-                    setOpenDropdownId(
-                      openDropdownId === `all-${index}` ? null : `all-${index}`
-                    )
-                  }
-                />
-              ))}
-            </div>
-          </>
-        ) : (
-          <>
+      {/* ПРАВАЯ ЧАСТЬ (КОНТЕНТ) */}
+      <main className="main-content">
+
+        {mode !== "idle" && (
+          <div className="top-action-bar">
+            <button className="back-button" onClick={() => { setMode("idle"); setTimeFilter(24); }}>
+              ← Back
+            </button>
+
             <div className="tabs">
-              {selectedCategories.map((category) => (
+              {[2, 10, 24].map((h) => (
                 <button
-                  key={category}
-                  type="button"
-                  className={`tab${activeCategory === category ? " active" : ""}`}
-                  onClick={() => setActiveCategory(category)}
+                  key={h}
+                  className={`tab ${timeFilter === h ? "active" : ""}`}
+                  onClick={() => setTimeFilter(h)}
                 >
-                  {category}
+                  {h}h
                 </button>
               ))}
             </div>
-            {activeCategory ? (
-              <section>
-                <h2>{activeCategory}</h2>
-
-                {activeCategoryItems.length === 0 ? (
-                  <div className="empty-category">
-                    <p>No news in this category yet</p>
-                    <span>Updating soon...</span>
-                  </div>
-                ) : (
-                  <>
-                    <div className="top-block">
-                      <h2 className="top-title">Top news today</h2>
-
-                      {topOneCategory && (
-                        <NewsCard
-                          item={topOneCategory}
-                          isOpen={openDropdownId === `top-${activeCategory}`}
-                          onToggle={() =>
-                            setOpenDropdownId(
-                              openDropdownId === `top-${activeCategory}`
-                                ? null
-                                : `top-${activeCategory}`
-                            )
-                          }
-                        />
-                      )}
-                    </div>
-
-                    {/* 📄 ОСТАЛЬНЫЕ (ВНЕ РАМКИ) */}
-                    <div className="cards">
-                      {restAfterTopOne.map((item, index) => (
-                        <NewsCard
-                          key={`all-${activeCategory}-${index}`}
-                          item={item}
-                          isOpen={openDropdownId === `all-${activeCategory}-${index}`}
-                          onToggle={() =>
-                            setOpenDropdownId(
-                              openDropdownId === `all-${activeCategory}-${index}`
-                                ? null
-                                : `all-${activeCategory}-${index}`
-                            )
-                          }
-                        />
-                      ))}
-                    </div>
-                  </>
-                )}
-              </section>
-            ) : null}
-          </>
+          </div>
         )}
+
+        <div className="content-scroll">
+          {serverMessage ? (
+            <div className="status-msg"><h2>{serverMessage}</h2></div>
+          ) : mode === "idle" ? (
+            <div className="empty-state">
+              <h2>Ready to peak?</h2>
+              <span>Choose your digest type on the left to start.</span>
+            </div>
+          ) : sortedNews.length === 0 ? (
+            <div className="empty-category">
+              <p>No news in this timeframe yet</p>
+              <span>Try selecting a longer period (e.g., 24h) or check back later.</span>
+            </div>
+          ) : (
+            <div className="cards-container">
+              <div className="top-block">
+                <h2 className="card-title" style={{ marginBottom: '20px', fontSize: '24px' }}>
+                  {mode === "full" ? "Top news today" : `${activeCategory} Top`}
+                </h2>
+                <div className="top-cards">
+                  {topGlobal.map((item, i) => (
+                    <NewsCard
+                      key={`top-${i}`}
+                      item={item}
+                      isOpen={openDropdownId === `top-${i}`}
+                      onToggle={() => setOpenDropdownId(openDropdownId === `top-${i}` ? null : `top-${i}`)}
+                    />
+                  ))}
+                </div>
+              </div>
+
+              {restGlobal.length > 0 && (
+                <div className="cards" style={{ marginTop: '40px' }}>
+                  {restGlobal.map((item, i) => (
+                    <NewsCard
+                      key={`rest-${i}`}
+                      item={item}
+                      isOpen={openDropdownId === `rest-${i}`}
+                      onToggle={() => setOpenDropdownId(openDropdownId === `rest-${i}` ? null : `rest-${i}`)}
+                    />
+                  ))}
+                </div>
+              )}
+            </div>
+          )}
+        </div>
       </main>
     </div>
   );
 }
 
 export default App;
-
