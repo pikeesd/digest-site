@@ -17,6 +17,10 @@ from pathlib import Path
 from typing import Any, Dict, Iterable, List, Optional
 import feedparser
 
+from dotenv import load_dotenv
+
+load_dotenv()
+
 # --- ИНИЦИАЛИЗАЦИЯ OPENAI И КЭША ---
 try:
     from openai import OpenAI
@@ -58,6 +62,7 @@ def get_hash(text: str) -> str:
 
 
 def get_from_cache(text_hash: str) -> Optional[str]:
+    init_db()
     conn = sqlite3.connect(DB_FILE)
     c = conn.cursor()
     c.execute("SELECT category FROM category_cache WHERE hash_id = ?", (text_hash,))

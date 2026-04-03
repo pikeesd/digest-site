@@ -2,3 +2,5 @@ fastapi
 uvicorn
 requests
 feedparser
+openai
+python-dotenv
