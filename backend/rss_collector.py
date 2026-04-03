@@ -326,15 +326,30 @@ def get_category_hybrid(title: str, summary: str) -> str:
 
     # 3. Запрос к OpenAI
     system_prompt = """
-    Classify the crypto news into exactly ONE category from this list: Security, Regulation, AI, DeFi, Markets, Other.
-    Rules by priority:
-    1. Security: Hacks, exploits, stolen funds, vulnerabilities.
-    2. Regulation: SEC, laws, taxes, court cases, government.
-    3. AI: Artificial Intelligence, agents, models in crypto.
-    4. DeFi: Protocols, DEX, staking (if not a hack).
-    5. Markets: Price drops/pumps, ETFs, trading.
-    6. Other: Partnerships, generic news.
-    Return ONLY JSON: {"category": "Name"}
+    Identify and classify crypto news into EXACTLY ONE category. 
+    Strictly follow these definitions and priorities:
+
+    1. SECURITY: Critical focus on hacks, exploits, rug pulls, smart contract vulnerabilities, or stolen funds. 
+       - EXCLUDE: General risk warnings or legal cases (those go to Regulation).
+
+    2. REGULATION: Any interaction with government, law, or authority. SEC, CFTC, lawsuits (e.g., Ripple vs SEC), ETF approvals, taxes, and policy changes.
+       - PRIORITY: If a news piece is about a court case involving a DeFi protocol, it MUST be 'Regulation', not 'DeFi'.
+
+    3. AI (Artificial Intelligence): Strictly technology-centric. LLMs, NVIDIA/AI chips in crypto, decentralized compute (Render, Akash), AI agents, or Machine Learning.
+       - STRICT RULE: DO NOT classify general market analysis or price pumps as 'AI' just because they mention 'algorithmic trading'. If it's about Bitcoin's price drop, it is 'Markets'.
+
+    4. DEFI: Focus on yield farming, DEXs (Uniswap, PancakeSwap), lending (Aave, Compound), and liquid staking (Lido). 
+       - EXCLUDE: If it's a hack of a DeFi protocol, it's 'Security'. If it's a lawsuit against a DeFi dev, it's 'Regulation'.
+
+    5. MARKETS: Price action (BTC/ETH pumps/dumps), market sentiment, institutional adoption, exchange listings, and macro-financial trends.
+       - RULE: This is the catch-all for price-related news that isn't a legal or security issue.
+
+    6. OTHER: General partnerships, rebranding, community events, or non-crypto tech.
+
+    OUTPUT RULES:
+    - Return ONLY valid JSON: {"category": "CategoryName"}
+    - Do not explain your choice.
+    - If a news piece fits two categories, pick the one with the LOWER number in the priority list above.
     """
 
     try:
