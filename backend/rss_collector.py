@@ -293,19 +293,19 @@ def shorten(text, max_len=200):
 
 
 def detect_category_fallback(text: str) -> str:
-    """Старая логика на правилах (запасной вариант)."""
+    """Безопасный fallback, если OpenAI недоступен."""
     text = text.lower()
+    # Используем пробелы вокруг ' ai ', чтобы не ловить слово 'mail' или 'chain'
+    if any(w in text for w in [" ai ", "artificial intelligence", "openai", "gpt-4"]):
+        return "AI"
     if any(w in text for w in ["hack", "exploit", "breach", "attack"]):
         return "Security"
-    if any(w in text for w in ["sec", "law", "regulation", "government"]):
+    if any(w in text for w in ["sec ", "law ", "regulation", "cftc"]):
         return "Regulation"
-    if any(w in text for w in ["ai", "artificial intelligence", "openai"]):
-        return "AI"
-    if any(w in text for w in ["defi", "staking", "yield", "protocol"]):
+    if any(w in text for w in ["defi", "dex ", "staking", "yield"]):
         return "DeFi"
-    if any(w in text for w in ["bitcoin", "btc", "price", "market", "eth"]):
-        return "Markets"
-    return "Other"
+    # По умолчанию для крипты лучше ставить Markets, а не AI
+    return "Markets"
 
 
 def get_category_hybrid(title: str, summary: str) -> str:
@@ -414,6 +414,9 @@ def build_digest(groups):
 
 def main(argv: Optional[List[str]] = None) -> int:
     init_db()  # Инициализируем кэш
+
+    if os.path.exists(DB_FILE):
+        os.remove(DB_FILE)
 
     args = argv or sys.argv[1:]
     sources_path = Path(args[0]) if args else Path("sources.json")
