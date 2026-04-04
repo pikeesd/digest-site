@@ -43,6 +43,26 @@
         {
             "name": "UToday",
             "url": "https://u.today/rss"
+        },
+        {
+            "name": "Decrypt AI",
+            "url": "https://decrypt.co/resources/technology/ai/feed"
+        },
+        {
+            "name": "The Defiant",
+            "url": "https://thedefiant.io/api/feed"
+        },
+        {
+            "name": "OpenAI Official",
+            "url": "https://openai.com/news/rss.xml"
+        },
+        {
+            "name": "TechCrunch AI",
+            "url": "https://techcrunch.com/category/artificial-intelligence/feed/"
+        },
+        {
+            "name": "Messari",
+            "url": "https://messari.io/rss"
         }
     ]
 }
