@@ -331,30 +331,35 @@ def get_category_hybrid(title: str, summary: str) -> str:
 
     # 3. Запрос к OpenAI
     system_prompt = """
-    Identify and classify crypto news into EXACTLY ONE category. 
-    Strictly follow these definitions and priorities:
+    Identify and classify crypto/tech news into EXACTLY ONE category. 
+    Focus on the CORE INTENT of the article, not just mentioned keywords.
 
-    1. SECURITY: Critical focus on hacks, exploits, rug pulls, smart contract vulnerabilities, or stolen funds. 
-       - EXCLUDE: General risk warnings or legal cases (those go to Regulation).
+    1. SECURITY: Hacks, smart contract exploits, stolen funds, and major vulnerabilities. 
+       - EXCLUDE: Legal lawsuits against hackers (that is Regulation).
 
-    2. REGULATION: Any interaction with government, law, or authority. SEC, CFTC, lawsuits (e.g., Ripple vs SEC), ETF approvals, taxes, and policy changes.
-       - PRIORITY: If a news piece is about a court case involving a DeFi protocol, it MUST be 'Regulation', not 'DeFi'.
+    2. REGULATION: SEC/CFTC actions, court cases, crypto-laws, taxes, and government policy.
+       - RULE: If it's a legal battle, it's Regulation, even if it involves an AI or DeFi company.
 
-    3. AI (Artificial Intelligence): Strictly technology-centric. LLMs, NVIDIA/AI chips in crypto, decentralized compute (Render, Akash), AI agents, or Machine Learning.
-       - STRICT RULE: DO NOT classify general market analysis or price pumps as 'AI' just because they mention 'algorithmic trading'. If it's about Bitcoin's price drop, it is 'Markets'.
+    3. AI (Artificial Intelligence): Use the "Technology First" rule.
+       - INCLUDE: Large Language Models (LLMs), AI Agents, Neural Networks, AI-specific hardware (NVIDIA/ASIC for AI), Decentralized Compute (DePIN for AI), and AI-Blockchain integration.
+       - STRICT EXCLUSION (The "Finance Hole"): DO NOT classify as AI if the news is about:
+         a) Financial reports of AI companies (earnings, stock price, selling BTC).
+         b) General layoffs in tech companies (like the MARA case).
+         c) Pure price speculation or "AI-coin" rallies without technical updates.
+         d) Using "algorithms" for simple trading or prediction markets.
 
-    4. DEFI: Focus on yield farming, DEXs (Uniswap, PancakeSwap), lending (Aave, Compound), and liquid staking (Lido). 
-       - EXCLUDE: If it's a hack of a DeFi protocol, it's 'Security'. If it's a lawsuit against a DeFi dev, it's 'Regulation'.
+    4. DEFI: Liquid staking, DEX updates, lending protocols, and yield strategies.
+       - EXCLUDE: If a DeFi protocol is hacked, it's Security.
 
-    5. MARKETS: Price action (BTC/ETH pumps/dumps), market sentiment, institutional adoption, exchange listings, and macro-financial trends.
-       - RULE: This is the catch-all for price-related news that isn't a legal or security issue.
+    5. MARKETS: Price action, Bitcoin/Ethereum ETFs, macro-economics, and institutional trading.
+       - RULE: This is the default for any news about prices, market rallies, or "death crosses".
 
-    6. OTHER: General partnerships, rebranding, community events, or non-crypto tech.
+    6. OTHER: General news, branding, and partnerships not fitting above.
 
     OUTPUT RULES:
     - Return ONLY valid JSON: {"category": "CategoryName"}
-    - Do not explain your choice.
-    - If a news piece fits two categories, pick the one with the LOWER number in the priority list above.
+    - PRIORITY: If a news piece fits multiple categories, choose the one with the LOWEST number in the list.
+    - If unsure between Markets and AI, choose Markets.
     """
 
     try:
