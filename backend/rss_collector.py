@@ -34,7 +34,8 @@ except ImportError:
         "⚠️ Библиотека openai не установлена. Будет использован старый метод классификации."
     )
 
-DB_FILE = "news_cache.db"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DB_FILE = os.path.join(BASE_DIR, "news_cache.db")
 
 
 def init_db():
@@ -298,18 +299,59 @@ def shorten(text, max_len=200):
 
 
 def detect_category_fallback(text: str) -> str:
-    """Безопасный fallback, если OpenAI недоступен."""
+    """Улучшенный безопасный fallback с приоритетом рынков над ИИ."""
     text = text.lower()
-    # Используем пробелы вокруг ' ai ', чтобы не ловить слово 'mail' или 'chain'
-    if any(w in text for w in [" ai ", "artificial intelligence", "openai", "gpt-4"]):
-        return "AI"
-    if any(w in text for w in ["hack", "exploit", "breach", "attack"]):
-        return "Security"
-    if any(w in text for w in ["sec ", "law ", "regulation", "cftc"]):
+
+    # 1. Сначала отсекаем MARKETS (цены, биткоин, майнеры, финансы)
+    # Это уберет MARA и новости про падение BTC из раздела AI
+    market_keywords = [
+        "price",
+        "bitcoin",
+        "btc",
+        "eth",
+        "market",
+        "trading",
+        "analyst",
+        "rally",
+        "slashes",
+        "miner",
+        "stock",
+        "sell",
+        "buy",
+        "bullish",
+        "bearish",
+    ]
+    if any(w in text for w in market_keywords):
+        return "Markets"
+
+    # 2. Потом REGULATION (законы, суды)
+    if any(w in text for w in ["sec ", "law ", "regulation", "cftc", "sues", "court"]):
         return "Regulation"
-    if any(w in text for w in ["defi", "dex ", "staking", "yield"]):
+
+    # 3. Только ТЕПЕРЬ проверяем на AI (строго)
+    # Ищем упоминания технологий, а не просто буквы 'ai'
+    ai_keywords = [
+        "artificial intelligence",
+        "openai",
+        "gpt-4",
+        "llm",
+        "neural network",
+        "anthropic",
+        "claud",
+    ]
+    # Проверка на ' ai ' с пробелами, чтобы не поймать 'chain' или 'main'
+    if " ai " in text or any(w in text for w in ai_keywords):
+        return "AI"
+
+    # 4. SECURITY
+    if any(w in text for w in ["hack", "exploit", "breach", "attack", "stolen"]):
+        return "Security"
+
+    # 5. DEFI
+    if any(w in text for w in ["defi", "dex ", "staking", "yield", "lending"]):
         return "DeFi"
-    # По умолчанию для крипты лучше ставить Markets, а не AI
+
+    # По умолчанию — Markets, так как это самая частая тема в крипте
     return "Markets"
 
 
@@ -477,7 +519,7 @@ def main(argv: Optional[List[str]] = None) -> int:
     with open("digest.json", "w", encoding="utf-8") as f:
         json.dump(final_output, f, indent=2, ensure_ascii=False)
 
-    print("\n✅ Успешно! Файл digest.json обновлен.")
+    print("\n Файл digest.json обновлен.")
     print(f"Время обновления (UTC): {final_output['metadata']['last_updated']}")
 
     return 0

@@ -1,10 +1,11 @@
 import { useEffect, useMemo, useState } from "react";
 import NewsCard from "./components/NewsCard.jsx";
+import Fuse from 'fuse.js';
 
 const categories = ["Markets", "DeFi", "AI", "Regulation", "Security"];
 
 function App() {
-  // 1. Состояния данных и навигации
+  // --- 1. ВСЕ СОСТОЯНИЯ (STATE) ---
   const [lastUpdate, setLastUpdate] = useState(new Date());
   const [news, setNews] = useState([]);
   const [mode, setMode] = useState("idle"); // idle, full, niches
@@ -12,13 +13,13 @@ function App() {
   const [openDropdownId, setOpenDropdownId] = useState(null);
   const [timeFilter, setTimeFilter] = useState(24);
   const [serverMessage, setServerMessage] = useState("");
+  const [searchQuery, setSearchQuery] = useState("");
 
-  // 2. Состояния интерфейса
   const [isNichesOpen, setIsNichesOpen] = useState(false);
   const [timeAgo, setTimeAgo] = useState("just now");
   const [isOpen, setIsOpen] = useState(false);
 
-  // Загрузка данных с сервера
+  // --- 2. ЭФФЕКТЫ (ЗАГРУЗКА И ТАЙМЕРЫ) ---
   useEffect(() => {
     fetch("https://steadfast-beauty-production-9beb.up.railway.app/api/news")
       .then((res) => res.json())
@@ -36,35 +37,31 @@ function App() {
       .catch(() => setServerMessage("Connecting to server..."));
   }, []);
 
-  // Таймер для обновления надписи "Live • X min ago"
   useEffect(() => {
     const calculateTime = () => {
       const diffMs = new Date() - lastUpdate;
       const diffMins = Math.floor(diffMs / 60000);
       const diffHours = Math.floor(diffMins / 60);
-
       if (diffMins < 1) return "just now";
       if (diffMins < 60) return `${diffMins} min ago`;
       if (diffHours < 24) return `${diffHours} hours ago`;
       return lastUpdate.toLocaleDateString();
     };
-
     setTimeAgo(calculateTime());
-    const interval = setInterval(() => {
-      setTimeAgo(calculateTime());
-    }, 60000);
-
+    const interval = setInterval(() => setTimeAgo(calculateTime()), 60000);
     return () => clearInterval(interval);
   }, [lastUpdate]);
 
-  // Фильтрация по времени (2h, 10h, 24h)
+  // --- 3. ВЫЧИСЛЕНИЯ (ЦЕПОЧКА ФИЛЬТРАЦИИ) ---
+
+  // А. Фильтр по времени
   const timeFilteredNews = useMemo(() => {
     if (timeFilter === 24) return news;
     const cutoff = new Date().getTime() - timeFilter * 60 * 60 * 1000;
     return news.filter(item => new Date(item.published).getTime() >= cutoff);
   }, [news, timeFilter]);
 
-  // Сортировка и фильтрация по категориям
+  // Б. Фильтр по категориям и базовая сортировка
   const sortedNews = useMemo(() => {
     const filtered = mode === "niches"
       ? timeFilteredNews.filter(item => item.category === activeCategory)
@@ -72,10 +69,23 @@ function App() {
     return [...filtered].sort((a, b) => (b.count ?? 0) - (a.count ?? 0));
   }, [timeFilteredNews, mode, activeCategory]);
 
-  // Разделение на ТОП и остальные
+  // В. Инициализация поискового движка на базе отфильтрованных новостей
+  const fuse = useMemo(() => new Fuse(sortedNews, {
+    keys: ["title", "summary.main"],
+    threshold: 0.3,
+    distance: 100,
+  }), [sortedNews]);
+
+  // Г. Финальный результат с учетом поиска
+  const finalNews = useMemo(() => {
+    if (!searchQuery) return sortedNews;
+    return fuse.search(searchQuery).map(result => result.item);
+  }, [searchQuery, sortedNews, fuse]);
+
+  // Д. Разделение на ТОП и остальные (используем finalNews для живого поиска)
   const topCount = timeFilter === 24 ? 3 : 1;
-  const topGlobal = sortedNews.slice(0, topCount);
-  const restGlobal = sortedNews.slice(topCount);
+  const topGlobal = finalNews.slice(0, topCount);
+  const restGlobal = finalNews.slice(topCount);
 
   return (
     <div className={`app-layout ${isNichesOpen ? "dropdown-open" : ""}`}>
@@ -96,6 +106,7 @@ function App() {
             </div>
           </div>
         </div>
+
 
         <div className="side-nav">
           <button
@@ -151,15 +162,33 @@ function App() {
         </div>
       </aside>
 
+
       {/* ПРАВАЯ ЧАСТЬ (КОНТЕНТ) */}
       <main className="main-content">
 
         {mode !== "idle" && (
           <div className="top-action-bar">
+            {/* Левая часть: кнопка Back */}
             <button className="back-button" onClick={() => { setMode("idle"); setTimeFilter(24); }}>
               ← Back
             </button>
 
+            {/* ЦЕНТРАЛЬНАЯ ЧАСТЬ: ПОИСК */}
+            <div className="search-wrapper">
+              <span className="search-icon">🔍</span>
+              <input
+                type="text"
+                placeholder="Search news..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="global-search-input"
+              />
+              {searchQuery && (
+                <button className="clear-search-btn" onClick={() => setSearchQuery("")}>✕</button>
+              )}
+            </div>
+
+            {/* Правая часть: фильтры времени */}
             <div className="tabs">
               {[2, 10, 24].map((h) => (
                 <button
@@ -173,6 +202,7 @@ function App() {
             </div>
           </div>
         )}
+
 
         <div className="content-scroll">
           {serverMessage ? (

@@ -724,3 +724,54 @@ body.dropdown-open::before {
 .icon.open {
   transform: rotate(180deg);
 }
+
+/* Делаем бар гибким, чтобы поиск был по центру */
+.top-action-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 15px 0;
+}
+
+.search-wrapper {
+  position: relative;
+  flex: 1;
+  /* Поиск заберет всё свободное место в центре */
+  max-width: 400px;
+  /* Но не будет шире 400px */
+  display: flex;
+  align-items: center;
+}
+
+.global-search-input {
+  width: 100%;
+  padding: 8px 35px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: white;
+  outline: none;
+}
+
+.global-search-input:focus {
+  border-color: #ff9d00;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.search-icon {
+  position: absolute;
+  left: 12px;
+  font-size: 14px;
+  opacity: 0.5;
+}
+
+.clear-search-btn {
+  position: absolute;
+  right: 10px;
+  background: none;
+  border: none;
+  color: white;
+  opacity: 0.5;
+  cursor: pointer;
+}
