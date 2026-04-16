@@ -1,6 +1,3317 @@
 {
-  "news": [],
   "metadata": {
-    "last_updated": ""
-  }
+    "last_updated": "2026-04-16T16:08:27.637063Z",
+    "total_news": 177,
+    "timeframe_hours": 24,
+    "briefing": "Bitcoin's surge to $76,000, driven by record performances in tech stocks, underscores a robust correlation between crypto and traditional market trends. Sentiment remains bullish, with institutional investments flowing into Bitcoin ETFs and significant movements in stablecoins, reflecting growing confidence in the crypto sector. As regulatory landscapes evolve, particularly in the UK, stakeholders should brace for potential shifts that could further shape market dynamics and opportunities."
+  },
+  "news": [
+    {
+      "title": "Bitcoin Hits $76K As Tech Stocks Push Wall Street To Fresh Records",
+      "category": "Other",
+      "summary": {
+        "main": "Fundstrat&#8217;s chief investment officer, Tom Lee, says the next big move in markets won&#8217;t be led by stocks — it&#8217;ll be driven by crypto. Speaking Wednesday on CNBC&#8217;s..."
+      },
+      "sources": [
+        "NewsBTC",
+        "TheBlock",
+        "Cointelegraph",
+        "CoinDesk"
+      ],
+      "count": 4,
+      "links": [
+        {
+          "source": "NewsBTC",
+          "link": "https://www.newsbtc.com/news/bitcoin/bitcoin-hits-76k-as-tech-stocks-push-wall-street-to-fresh-records/"
+        },
+        {
+          "source": "Cointelegraph",
+          "link": "https://cointelegraph.com/news/bitcoin-near-term-selling-pressure-after-rally-76k-cryptoquant?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+        },
+        {
+          "source": "TheBlock",
+          "link": "https://www.theblock.co/post/397664/cryptoquant-bitcoin-rally-profit-taking-risk?utm_source=rss&utm_medium=rss"
+        },
+        {
+          "source": "CoinDesk",
+          "link": "https://www.coindesk.com/markets/2026/04/16/bitcoin-is-testing-a-level-that-capped-its-rally-in-january"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 14:00:04 +0000"
+    },
+    {
+      "title": "Drift secures up to $127 million from Tether for user recovery, pivots from Circle’s USDC to USDT after $280 million exploit",
+      "category": "Other",
+      "summary": {
+        "main": "Drift Protocol said it has secured up to $127.5 million from Tether to support user recovery after the April 1 exploit."
+      },
+      "sources": [
+        "TheBlock",
+        "Decrypt",
+        "CoinDesk"
+      ],
+      "count": 3,
+      "links": [
+        {
+          "source": "TheBlock",
+          "link": "https://www.theblock.co/post/397735/drift-127-million-tether-recovery-pivots-circle-usdc-usdt-280-million-exploit?utm_source=rss&utm_medium=rss"
+        },
+        {
+          "source": "Decrypt",
+          "link": "https://decrypt.co/364589/drift-tether-148-million-recovery-plan-ditches-circle-usdc"
+        },
+        {
+          "source": "CoinDesk",
+          "link": "https://www.coindesk.com/business/2026/04/16/drift-gets-usd148-million-funding-from-tether-and-partners-as-it-replaces-circle-stablecoin-with-usdt-after-massive-exploit"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 09:30:48 -0400"
+    },
+    {
+      "title": "South Korea to pilot blockchain-based deposit tokens for government spending",
+      "category": "Other",
+      "summary": {
+        "main": "South Korea's Ministry of Finance and Economy is launching a new pilot to substitute government expense credit cards with deposit tokens."
+      },
+      "sources": [
+        "Cointelegraph",
+        "TheBlock",
+        "CoinDesk"
+      ],
+      "count": 3,
+      "links": [
+        {
+          "source": "TheBlock",
+          "link": "https://www.theblock.co/post/397688/south-korea-deposit-token-pilot?utm_source=rss&utm_medium=rss"
+        },
+        {
+          "source": "Cointelegraph",
+          "link": "https://cointelegraph.com/news/south-korea-pilot-tokenized-deposits-government-spending?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+        },
+        {
+          "source": "CoinDesk",
+          "link": "https://www.coindesk.com/policy/2026/04/16/south-korea-to-test-blockchain-deposit-tokens-for-government-spending-in-q4"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 03:14:40 -0400"
+    },
+    {
+      "title": "Circle CEO sees ‘tremendous opportunity’ for yuan stablecoin despite China curbs",
+      "category": "Other",
+      "summary": {
+        "main": "Circle’s Jeremy Allaire sees “tremendous” room for a yuan stablecoin, despite China banning most private yuan tokens and pushing its CBDC to challenge US dollar stablecoins."
+      },
+      "sources": [
+        "Cointelegraph",
+        "TheBlock",
+        "CoinDesk"
+      ],
+      "count": 3,
+      "links": [
+        {
+          "source": "Cointelegraph",
+          "link": "https://cointelegraph.com/news/circle-allaire-sees-tremendous-opportunity-yuan-stablecoin?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+        },
+        {
+          "source": "TheBlock",
+          "link": "https://www.theblock.co/post/397692/circle-ceo-allaire-sees-opportunity-yuan-stablecoin?utm_source=rss&utm_medium=rss"
+        },
+        {
+          "source": "CoinDesk",
+          "link": "https://www.coindesk.com/policy/2026/04/16/circle-ceo-says-china-could-launch-yuan-stablecoin-within-3-to-5-years-as-currency-race-heats-up"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 12:22:05 +0100"
+    },
+    {
+      "title": "Tech stocks push Nasdaq, S&P 500 to record highs as Bitcoin taps $75K",
+      "category": "Other",
+      "summary": {
+        "main": "Tech stocks helped drive the Nasdaq to 24,016 and the S&amp;P 500 to 7,022 as Bitcoin climbed nearly 10% over the past two weeks."
+      },
+      "sources": [
+        "Cointelegraph",
+        "CoinDesk"
+      ],
+      "count": 3,
+      "links": [
+        {
+          "source": "Cointelegraph",
+          "link": "https://cointelegraph.com/news/tech-stocks-push-nasdaq-sp500-record-highs-as-bitcoin-taps-75k?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+        },
+        {
+          "source": "CoinDesk",
+          "link": "https://www.coindesk.com/markets/2026/04/16/bitcoin-steady-as-s-and-p-500-hits-record-but-options-market-isn-t-buying-the-peace-trade"
+        },
+        {
+          "source": "CoinDesk",
+          "link": "https://www.coindesk.com/markets/2026/04/15/bitcoin-capped-at-usd75-000-as-nasdaq-and-s-and-p-500-fly-to-new-record-highs"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 05:54:52 +0100"
+    },
+    {
+      "title": "Morning Minute: Bitcoin Devs Propose New Quantum Solution",
+      "category": "AI",
+      "summary": {
+        "main": "BIP-361 would freeze the Bitcoin most at risk of seizure from quantum exploits. But will the community go for it?"
+      },
+      "sources": [
+        "UToday",
+        "Decrypt",
+        "CoinDesk"
+      ],
+      "count": 3,
+      "links": [
+        {
+          "source": "Decrypt",
+          "link": "https://decrypt.co/364570/morning-minute-bitcoin-devs-propose-new-quantum-solution"
+        },
+        {
+          "source": "CoinDesk",
+          "link": "https://www.coindesk.com/tech/2026/04/16/bitcoin-devs-float-quantum-tripwire-that-triggers-coin-freeze-only-if-attack-is-proven"
+        },
+        {
+          "source": "UToday",
+          "link": "https://u.today/bitcoin-pushes-200-day-return-to-87000-amid-quantum-fears-xrp-prices-rare-double-bottom-opportunity"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 12:04:17 +0000"
+    },
+    {
+      "title": "DoubleZero rolls out Edge, a low-latency onchain data delivery service on its global fiber DePIN infrastructure",
+      "category": "AI",
+      "summary": {
+        "main": "Edge is a permissionless platform delivering ultra-fast onchain market data over DoubleZero's global fiber network."
+      },
+      "sources": [
+        "TheBlock",
+        "CoinDesk"
+      ],
+      "count": 2,
+      "links": [
+        {
+          "source": "TheBlock",
+          "link": "https://www.theblock.co/post/397715/doublezero-rolls-out-edge-a-low-latency-onchain-data-delivery-service-on-its-global-fiber-depin-infrastructure?utm_source=rss&utm_medium=rss"
+        },
+        {
+          "source": "CoinDesk",
+          "link": "https://www.coindesk.com/tech/2026/04/16/wall-street-trading-tech-is-coming-to-crypto-as-doublezero-rolls-out-high-speed-data-for-solana"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 09:00:00 -0400"
+    },
+    {
+      "title": "Bitcoin holds near $75,000 as short-term holders look for profit opportunities",
+      "category": "Other",
+      "summary": {
+        "main": "Bitcoin holds near $75,000 as short-term holders look for profit opportunities"
+      },
+      "sources": [
+        "CoinDesk"
+      ],
+      "count": 2,
+      "links": [
+        {
+          "source": "CoinDesk",
+          "link": "https://www.coindesk.com/markets/2026/04/16/bitcoin-holds-near-usd75-000-as-short-term-holders-look-for-profit-opportunities"
+        },
+        {
+          "source": "CoinDesk",
+          "link": "https://www.coindesk.com/markets/2026/04/16/bitcoin-rally-is-taking-a-breather-near-usd75-000-onchain-data-shows-why"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 10:49:59 +0000"
+    },
+    {
+      "title": "Bitcoin ETFs add $186M as Morgan Stanley’s MSBT inflows top $100M in first six trading days",
+      "category": "Other",
+      "summary": {
+        "main": "U.S. spot bitcoin ETFs added $186 million in their second straight day of positive flows, as Morgan Stanley's MSBT topped WisdomTree's fund."
+      },
+      "sources": [
+        "TheBlock",
+        "CoinDesk"
+      ],
+      "count": 2,
+      "links": [
+        {
+          "source": "TheBlock",
+          "link": "https://www.theblock.co/post/397730/bitcoin-etfs-add-186m-as-morgan-stanleys-msbt-inflows-top-100m-in-first-six-trading-days?utm_source=rss&utm_medium=rss"
+        },
+        {
+          "source": "CoinDesk",
+          "link": "https://www.coindesk.com/markets/2026/04/16/morgan-stanley-s-bitcoin-etf-reaches-usd100m-in-first-week-marking-the-bank-s-strongest-launch"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 09:32:38 -0400"
+    },
+    {
+      "title": "Crypto fund manager questioned in Zanzibar police probe into fiancee’s death: reports",
+      "category": "Other",
+      "summary": {
+        "main": "Zanzibar police are investigating the death of influencer Ashly Robinson, with crypto fund manager Joe McCann reportedly being questioned."
+      },
+      "sources": [
+        "TheBlock",
+        "CoinDesk"
+      ],
+      "count": 2,
+      "links": [
+        {
+          "source": "TheBlock",
+          "link": "https://www.theblock.co/post/397721/crypto-fund-manager-questioned-in-zanzibar-police-probe-into-fiancees-death-reports?utm_source=rss&utm_medium=rss"
+        },
+        {
+          "source": "CoinDesk",
+          "link": "https://www.coindesk.com/business/2026/04/16/crypto-fund-manager-probed-in-the-suspicious-death-of-his-fiance-s-death-in-zanzibar"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 08:38:32 -0400"
+    },
+    {
+      "title": "Adam Back Pushes for Optional Upgrades to Quantum-Proof Bitcoin",
+      "category": "Other",
+      "summary": {
+        "main": "The Blockstream CEO’s approach contrasts with BIP-361, a proposal that would implement mandatory freezes of quantum-vulnerable Bitcoin."
+      },
+      "sources": [
+        "Decrypt",
+        "CoinDesk"
+      ],
+      "count": 2,
+      "links": [
+        {
+          "source": "Decrypt",
+          "link": "https://decrypt.co/364562/adam-back-pushes-for-optional-upgrades-to-quantum-proof-bitcoin"
+        },
+        {
+          "source": "CoinDesk",
+          "link": "https://www.coindesk.com/tech/2026/04/16/bitcoin-s-quantum-debate-splits-as-adam-back-pushes-optional-upgrades-over-forced-freeze"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 10:45:27 +0000"
+    },
+    {
+      "title": "Ripple taps Kyobo Life to enable real-time government bond settlements in Korea",
+      "category": "Other",
+      "summary": {
+        "main": "Partnership cuts bond settlement time from two days to near real-time. Bond settlements will use blockchain to reduce risk and remove intermediaries. Impact expands into payments, liquidity, and..."
+      },
+      "sources": [
+        "CoinDesk",
+        "CoinJournal"
+      ],
+      "count": 2,
+      "links": [
+        {
+          "source": "CoinJournal",
+          "link": "https://coinjournal.net/news/ripple-taps-kyobo-life-to-enable-real-time-government-bond-settlements-in-korea/"
+        },
+        {
+          "source": "CoinDesk",
+          "link": "https://www.coindesk.com/business/2026/04/16/ripple-partners-with-korea-s-kyobo-life-to-tokenize-government-bond-settlement"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 08:07:52 +0000"
+    },
+    {
+      "title": "Solana Institute-backed super PAC pours $8 million against Sherrod Brown in Ohio race",
+      "category": "Other",
+      "summary": {
+        "main": "Sentinel Action Fund has received backing from the Solana Institute and Multicoin Capital, a crypto-focused venture capital firm."
+      },
+      "sources": [
+        "TheBlock",
+        "CoinDesk"
+      ],
+      "count": 2,
+      "links": [
+        {
+          "source": "TheBlock",
+          "link": "https://www.theblock.co/post/397681/super-pac-8-million-sherrod-brown?utm_source=rss&utm_medium=rss"
+        },
+        {
+          "source": "CoinDesk",
+          "link": "https://www.coindesk.com/policy/2026/04/15/solana-policy-institute-backed-pac-spends-millions-to-jam-sherrod-brown-s-senate-run"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 01:01:11 -0400"
+    },
+    {
+      "title": "Crypto PAC Fellowship discloses $11M from Cantor Fitzgerald and Anchorage Digital",
+      "category": "Other",
+      "summary": {
+        "main": "The committee, led by Tether’s head of government affairs, reported spending $3 million on advertising through a company co-founded by Tether US CEO Bo Hines."
+      },
+      "sources": [
+        "Cointelegraph",
+        "TheBlock"
+      ],
+      "count": 2,
+      "links": [
+        {
+          "source": "Cointelegraph",
+          "link": "https://cointelegraph.com/news/crypto-pac-fellowship-discloses-11m-from-cantor-fitzgerald-and-anchorage-digital?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+        },
+        {
+          "source": "TheBlock",
+          "link": "https://www.theblock.co/post/397655/former-lutnick-run-cantor-fitzgerald-donates-10-million-to-crypto-pac-led-by-tether-exec?utm_source=rss&utm_medium=rss"
+        }
+      ],
+      "published": "Wed, 15 Apr 2026 22:52:26 +0100"
+    },
+    {
+      "title": "UK Sets Path to Crypto Regulation With FCA Consultation",
+      "category": "Other",
+      "summary": {
+        "main": "The regulator is seeking feedback on its interpretation of regulated cryptoasset activities under rules set to take effect in October 2027."
+      },
+      "sources": [
+        "TheBlock",
+        "Decrypt"
+      ],
+      "count": 2,
+      "links": [
+        {
+          "source": "Decrypt",
+          "link": "https://decrypt.co/364568/uk-sets-path-to-crypto-regulation-with-fca-consultation"
+        },
+        {
+          "source": "TheBlock",
+          "link": "https://www.theblock.co/post/397711/uk-fca-seeks-fresh-feedback-on-crypto-rules?utm_source=rss&utm_medium=rss"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 11:57:45 +0000"
+    },
+    {
+      "title": "Here’s The Next Key Bitcoin Price Resistance To Worry About",
+      "category": "Other",
+      "summary": {
+        "main": "The Bitcoin price is approaching a critical resistance zone as a crypto analyst warns of a potential volatility spike ahead. Apparently, an important liquidity cluster is stuck to this key level,..."
+      },
+      "sources": [
+        "NewsBTC"
+      ],
+      "count": 2,
+      "links": [
+        {
+          "source": "NewsBTC",
+          "link": "https://www.newsbtc.com/news/bitcoin/next-key-bitcoin-price-resistance/"
+        },
+        {
+          "source": "NewsBTC",
+          "link": "https://www.newsbtc.com/news/bitcoin/retail-investors-bitcoin-big-dogs/"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 12:30:04 +0000"
+    },
+    {
+      "title": "Bitcoin Double Bottom Formation Eyes $82,500 Rally – Breakout Or Rejection Next?",
+      "category": "Other",
+      "summary": {
+        "main": "As Bitcoin (BTC) attempts to hold the $74,000-$75,000 area, an analyst suggested that the flagship crypto could see another 10% rally toward a key area, but warned that this level could be the..."
+      },
+      "sources": [
+        "NewsBTC",
+        "CryptoSlate"
+      ],
+      "count": 2,
+      "links": [
+        {
+          "source": "NewsBTC",
+          "link": "https://www.newsbtc.com/news/bitcoin/bitcoin-double-bottom-formation-82500-rally/"
+        },
+        {
+          "source": "CryptoSlate",
+          "link": "https://cryptoslate.com/goldman-sachs-wants-to-turn-bitcoin-into-an-income-product/"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 07:00:09 +0000"
+    },
+    {
+      "title": "Canva’s AI assistant can now call various tools to make designs for you",
+      "category": "AI",
+      "summary": {
+        "main": "The latest version of Canva's AI assistant lets users create editable designs with text prompts."
+      },
+      "sources": [
+        "TechCrunch AI"
+      ],
+      "count": 2,
+      "links": [
+        {
+          "source": "TechCrunch AI",
+          "link": "https://techcrunch.com/2026/04/16/canvas-ai-assistant-can-now-call-various-tools-to-make-designs-for-you/"
+        },
+        {
+          "source": "TechCrunch AI",
+          "link": "https://techcrunch.com/2026/04/16/robloxs-ai-assistant-gets-new-agentic-tools-to-plan-build-and-test-games/"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 13:00:00 +0000"
+    },
+    {
+      "title": "Crypto for Advisors: Tokenization’s evolution",
+      "category": "Other",
+      "summary": {
+        "main": "Crypto for Advisors: Tokenization’s evolution"
+      },
+      "sources": [
+        "CoinDesk"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "CoinDesk",
+          "link": "https://www.coindesk.com/coindesk-indices/2026/04/15/crypto-for-advisors-tokenization-s-evolution"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 15:00:00 +0000"
+    },
+    {
+      "title": "Bitcoin slides back below $74,000 as breakout to higher levels fails again",
+      "category": "Other",
+      "summary": {
+        "main": "Bitcoin slides back below $74,000 as breakout to higher levels fails again"
+      },
+      "sources": [
+        "CoinDesk"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "CoinDesk",
+          "link": "https://www.coindesk.com/markets/2026/04/16/bitcoin-slides-back-below-usd74-000-as-breakout-to-higher-levels-fails-again"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 14:46:48 +0000"
+    },
+    {
+      "title": "The 24-hour trap: Why the UK’s new crypto rules could catch some firms off guard",
+      "category": "Other",
+      "summary": {
+        "main": "The 24-hour trap: Why the UK’s new crypto rules could catch some firms off guard"
+      },
+      "sources": [
+        "CoinDesk"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "CoinDesk",
+          "link": "https://www.coindesk.com/policy/2026/04/16/uk-s-financial-watchdog-releases-sweeping-crypto-asset-framework-for-final-consultation"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 14:40:02 +0000"
+    },
+    {
+      "title": "VerifiedX brings privacy layer to Bitcoin as institutional demand for confidentiality grows",
+      "category": "Other",
+      "summary": {
+        "main": "VerifiedX brings privacy layer to Bitcoin as institutional demand for confidentiality grows"
+      },
+      "sources": [
+        "CoinDesk"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "CoinDesk",
+          "link": "https://www.coindesk.com/tech/2026/04/16/verifiedx-brings-privacy-layer-to-bitcoin-as-institutional-demand-for-confidentiality-grows"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 14:00:00 +0000"
+    },
+    {
+      "title": "CoinDesk 20 performance update: Ethereum (ETH) price drops 1.3% as index trades lower",
+      "category": "Other",
+      "summary": {
+        "main": "CoinDesk 20 performance update: Ethereum (ETH) price drops 1.3% as index trades lower"
+      },
+      "sources": [
+        "CoinDesk"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "CoinDesk",
+          "link": "https://www.coindesk.com/coindesk-indices/2026/04/16/coindesk-20-performance-update-ethereum-eth-price-drops-1-3-as-index-trades-lower"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 13:20:14 +0000"
+    },
+    {
+      "title": "Keep an eye on XRP, Plasma, DOGE as bitcoin drifts",
+      "category": "Other",
+      "summary": {
+        "main": "Keep an eye on XRP, Plasma, DOGE as bitcoin drifts"
+      },
+      "sources": [
+        "CoinDesk"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "CoinDesk",
+          "link": "https://www.coindesk.com/daybook-us/2026/04/16/keep-an-eye-on-xrp-plasma-doge-as-bitcoin-drifts"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 11:22:36 +0000"
+    },
+    {
+      "title": "Bitcoin funding rates hit most negative since 2023, history suggests bottom is in",
+      "category": "Other",
+      "summary": {
+        "main": "Bitcoin funding rates hit most negative since 2023, history suggests bottom is in"
+      },
+      "sources": [
+        "CoinDesk"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "CoinDesk",
+          "link": "https://www.coindesk.com/markets/2026/04/16/bitcoin-funding-rates-hit-most-negative-since-2023-history-suggests-bottom-is-in"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 11:14:46 +0000"
+    },
+    {
+      "title": "Buying coffee with bitcoin is easy, the resulting tax burden is not",
+      "category": "Other",
+      "summary": {
+        "main": "Buying coffee with bitcoin is easy, the resulting tax burden is not"
+      },
+      "sources": [
+        "CoinDesk"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "CoinDesk",
+          "link": "https://www.coindesk.com/policy/2026/04/16/buying-coffee-with-bitcoin-is-easy-the-resulting-tax-burden-is-not"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 08:48:30 +0000"
+    },
+    {
+      "title": "The CLARITY Act breakthrough: Why JPMorgan says the U.S. crypto rulebook is ‘close to completion’",
+      "category": "Other",
+      "summary": {
+        "main": "The CLARITY Act breakthrough: Why JPMorgan says the U.S. crypto rulebook is ‘close to completion’"
+      },
+      "sources": [
+        "CoinDesk"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "CoinDesk",
+          "link": "https://www.coindesk.com/policy/2026/04/15/jpmorgan-says-clarity-close-to-deal-as-stablecoin-fight-enters-final-stage"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 08:32:33 +0000"
+    },
+    {
+      "title": "Dogecoin jumps 4.5% to nearly 10-cents, outperforming bitcoin and ether",
+      "category": "Other",
+      "summary": {
+        "main": "Dogecoin jumps 4.5% to nearly 10-cents, outperforming bitcoin and ether"
+      },
+      "sources": [
+        "CoinDesk"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "CoinDesk",
+          "link": "https://www.coindesk.com/markets/2026/04/16/dogecoin-jumps-4-5-to-nearly-10-cents-outperforming-bitcoin-and-ether"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 05:32:40 +0000"
+    },
+    {
+      "title": "Tether announces $150M recovery program for Drift Protocol",
+      "category": "Other",
+      "summary": {
+        "main": "The Drift Protocol will use the $150 million to relaunch and restore user funds following a $280 million exploit earlier in April."
+      },
+      "sources": [
+        "Cointelegraph"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Cointelegraph",
+          "link": "https://cointelegraph.com/news/tether-150m-recovery-drift-protocol?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 16:20:03 +0100"
+    },
+    {
+      "title": "UAE investors buy AI dip, keep crypto exposure despite conflict",
+      "category": "Other",
+      "summary": {
+        "main": "UAE investors are buying the AI and tech dip, keeping exposure to software, chips and crypto as the Iran conflict stress-tests the Gulf’s bid to be a global tech hub."
+      },
+      "sources": [
+        "Cointelegraph"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Cointelegraph",
+          "link": "https://cointelegraph.com/news/uae-investors-double-down-on-ai-digital-assets?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 14:59:12 +0100"
+    },
+    {
+      "title": "OneCoin’s fallout lingers as US victims get a shot at recovery",
+      "category": "Other",
+      "summary": {
+        "main": "Investors in the cryptocurrency Ponzi scheme OneCoin may finally get some relief through a Department of Justice program, some 12 years after the project launched."
+      },
+      "sources": [
+        "Cointelegraph"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Cointelegraph",
+          "link": "https://cointelegraph.com/news/onecoin-fallout-lingers-us-victims-recovery?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 14:28:01 +0100"
+    },
+    {
+      "title": "Why Australia’s $17B crypto opportunity depends on regulation",
+      "category": "Other",
+      "summary": {
+        "main": "Australia’s A$24B digital asset opportunity hinges on regulation. Clear rules could drive tokenized markets, faster payments and institutional investment."
+      },
+      "sources": [
+        "Cointelegraph"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Cointelegraph",
+          "link": "https://cointelegraph.com/news/australia-tokenized-finance-regulatory-framework?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 14:26:21 +0100"
+    },
+    {
+      "title": "Naver-Dunamu filing sets IPO committee, listing timeline for fintech group",
+      "category": "Other",
+      "summary": {
+        "main": "The corrected filing details timeline, caveats and conditions tied to a potential Naver Financial IPO after the Dunamu share swap deal."
+      },
+      "sources": [
+        "Cointelegraph"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Cointelegraph",
+          "link": "https://cointelegraph.com/news/naver-dunamu-filing-ipo-committee-listing-window?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 14:25:40 +0100"
+    },
+    {
+      "title": "Ukraine arrests FBI-wanted cybercrime suspect, seizes $11M in assets",
+      "category": "Other",
+      "summary": {
+        "main": "Ukrainian authorities detained a suspect linked to a $100 million cybercrime network targeting the US and Europe, seizing $11 million in assets, of which $3 million was in cryptocurrency."
+      },
+      "sources": [
+        "Cointelegraph"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Cointelegraph",
+          "link": "https://cointelegraph.com/news/ukraine-arrests-suspect-100m-cybercrime-ring-11m-seized-crypto?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 14:00:51 +0100"
+    },
+    {
+      "title": "AllUnity takes MiCA-regulated euro stablecoin EURAU further into DeFi",
+      "category": "Other",
+      "summary": {
+        "main": "AllUnity says it is expanding EURAU stablecoin liquidity pools across major DEXs such as Uniswap and Raydium, with trading pairs against USDT and USDT0."
+      },
+      "sources": [
+        "Cointelegraph"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Cointelegraph",
+          "link": "https://cointelegraph.com/news/allunity-mica-regulated-euro-stablecoin-eurau-defi?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 13:47:29 +0100"
+    },
+    {
+      "title": "Adam Back says Bitcoin’s post-quantum shift may reveal true Satoshi stash",
+      "category": "Other",
+      "summary": {
+        "main": "Back said at Paris Blockchain Week that Bitcoin’s post-quantum shift may reveal the true size of the stash held by Satoshi Nakamoto, estimated at between 500,000 and 1 million BTC."
+      },
+      "sources": [
+        "Cointelegraph"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Cointelegraph",
+          "link": "https://cointelegraph.com/news/bitcoin-post-quantum-migration-reveal-satoshi-coins-adam-back?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 13:23:08 +0100"
+    },
+    {
+      "title": "Europe’s Bitcoin treasury playbook won’t be a copy of Strategy: PBW 2026",
+      "category": "Other",
+      "summary": {
+        "main": "Executives at Paris Blockchain Week said European firms interested in Bitcoin treasury strategies are working around shallower capital markets and tighter constraints than in the US."
+      },
+      "sources": [
+        "Cointelegraph"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Cointelegraph",
+          "link": "https://cointelegraph.com/news/europe-bitcoin-treasury-model-not-copy-strategy-pbw?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 12:55:00 +0100"
+    },
+    {
+      "title": "French minister says new measures are coming after crypto kidnappings",
+      "category": "Other",
+      "summary": {
+        "main": "Jean-Didier Berger said at Paris Blockchain Week that France is preparing new steps to protect crypto holders as wrench attacks and kidnappings keep mounting."
+      },
+      "sources": [
+        "Cointelegraph"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Cointelegraph",
+          "link": "https://cointelegraph.com/news/french-minister-measures-crypto-wrench-attacks-kidnappings?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 11:53:04 +0100"
+    },
+    {
+      "title": "Study finds almost no crypto protocols disclose market-maker terms",
+      "category": "Other",
+      "summary": {
+        "main": "A review of over 150 crypto protocols finds fewer than 1% disclose market-making arrangements, revealing a major transparency gap in token trading structures."
+      },
+      "sources": [
+        "Cointelegraph"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Cointelegraph",
+          "link": "https://cointelegraph.com/news/crypto-market-maker-disclosure-study-novora-report?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 10:58:54 +0100"
+    },
+    {
+      "title": "US should scrap crypto capital gains tax to fuel currency competition: Cato",
+      "category": "Other",
+      "summary": {
+        "main": "Crypto users in the US are required to pay capital gains taxes on cryptocurrencies, stifling their usefulness as a currency, argued a Washington DC-based think tank."
+      },
+      "sources": [
+        "Cointelegraph"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Cointelegraph",
+          "link": "https://cointelegraph.com/news/congress-remove-bitcoin-capital-gains-tax-currency-competition-cato?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 07:30:37 +0100"
+    },
+    {
+      "title": "Trump’s World Liberty under fire for ‘absurd’ token unlock plan",
+      "category": "Other",
+      "summary": {
+        "main": "Major World Liberty Financial investor Justin Sun called a plan to lock tokens for up to four years “the most absurd governance scams I have ever seen.”"
+      },
+      "sources": [
+        "Cointelegraph"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Cointelegraph",
+          "link": "https://cointelegraph.com/news/trump-world-liberty-under-fire-token-unlock-plan?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 07:04:51 +0100"
+    },
+    {
+      "title": "Morgan Stanley’s Bitcoin fund overtakes WisdomTree after 6 trading days",
+      "category": "Other",
+      "summary": {
+        "main": "The Morgan Stanley Bitcoin Trust is also within striking distance of overtaking three other US spot Bitcoin ETFs that launched in January 2024."
+      },
+      "sources": [
+        "Cointelegraph"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Cointelegraph",
+          "link": "https://cointelegraph.com/news/morgan-stanley-bitcoin-etf-sees-sixth-straight-inflow?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 07:02:21 +0100"
+    },
+    {
+      "title": "China already has compute to train its own Mythos-like AI: Nvidia CEO",
+      "category": "AI",
+      "summary": {
+        "main": "The amount of capacity and the type of compute it was trained on is “abundantly available in China,” said the Nvidia CEO."
+      },
+      "sources": [
+        "Cointelegraph"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Cointelegraph",
+          "link": "https://cointelegraph.com/news/china-has-compute-train-its-own-mythos-ai-nvidia-ceo?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 06:53:02 +0100"
+    },
+    {
+      "title": "CFTC probes oil futures trades tied to Trump's moves in Iran: Report",
+      "category": "Other",
+      "summary": {
+        "main": "The CFTC is investigating trades that took place before the US delayed strikes on Iranian energy infrastructure on March 23 and agreed to a ceasefire with Iran on April 7."
+      },
+      "sources": [
+        "Cointelegraph"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Cointelegraph",
+          "link": "https://cointelegraph.com/news/cftc-probes-oil-futures-trades-ahead-trump-iran-moves?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 05:38:03 +0100"
+    },
+    {
+      "title": "BitMEX pitches ‘canary fund’ alternative to Bitcoin quantum coin freeze",
+      "category": "Other",
+      "summary": {
+        "main": "It may be appropriate to attempt to mitigate the extent of the freeze as much as possible, even at the cost of greater complexity, said BitMEX."
+      },
+      "sources": [
+        "Cointelegraph"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Cointelegraph",
+          "link": "https://cointelegraph.com/news/bitmex-pitches-bitcoin-canary-fund-instead-of-quantum-coin-freeze?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 04:56:48 +0100"
+    },
+    {
+      "title": "Bitcoin should prepare now, even if quantum is 'lab experiment,’ Adam Back says",
+      "category": "Other",
+      "summary": {
+        "main": "Back said the safest approach is to build optional upgrades that would allow Bitcoin to migrate to quantum-resistant cryptography once it's needed."
+      },
+      "sources": [
+        "Cointelegraph"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Cointelegraph",
+          "link": "https://cointelegraph.com/news/bitcoiners-should-prepare-quantum-now-adam-back?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 02:14:54 +0100"
+    },
+    {
+      "title": "Ether open interest sees 26% increase as markets rally: Are traders into ETH again?",
+      "category": "Other",
+      "summary": {
+        "main": "Institutional investors are buying Ether again, but a handful of factors could slow market momentum and negatively impact ETH’s rally."
+      },
+      "sources": [
+        "Cointelegraph"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Cointelegraph",
+          "link": "https://cointelegraph.com/news/ether-open-interest-sees-26percent-increase-as-markets-rally-are-traders-into-eth-again?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+        }
+      ],
+      "published": "Wed, 15 Apr 2026 23:15:00 +0100"
+    },
+    {
+      "title": "Bitcoin traders cash out 63K BTC profit as price rallied above $76K: Will the market rebound?",
+      "category": "Other",
+      "summary": {
+        "main": "Short-term Bitcoin traders took profit on 63,000 BTC over the past 24-hours. Will profit-taking continue to stall the rally?"
+      },
+      "sources": [
+        "Cointelegraph"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Cointelegraph",
+          "link": "https://cointelegraph.com/news/bitcoin-traders-cash-out-63k-btc-profits-as-price-rallied-above-dollar76k?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+        }
+      ],
+      "published": "Wed, 15 Apr 2026 22:17:06 +0100"
+    },
+    {
+      "title": "Bitnomial launches Injective futures in US, with eyes on ETF eligibility",
+      "category": "Other",
+      "summary": {
+        "main": "The contracts mark Injective’s first entry into US-regulated derivatives markets and could help support a spot ETF following a filing from Canary Capital."
+      },
+      "sources": [
+        "Cointelegraph"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Cointelegraph",
+          "link": "https://cointelegraph.com/news/injective-futures-go-live-on-cftc-regulated-us-exchange-opening-etf-pathway?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+        }
+      ],
+      "published": "Wed, 15 Apr 2026 22:13:03 +0100"
+    },
+    {
+      "title": "Kalshi to create ‘portal for parents‘ on prediction markets: Report",
+      "category": "AI",
+      "summary": {
+        "main": "CEO Tarek Mansour said in an interview that Kalshi would prevent kids from using a parent’s ID to skirt its age restrictions by launching a parent portal and AI verification."
+      },
+      "sources": [
+        "Cointelegraph"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Cointelegraph",
+          "link": "https://cointelegraph.com/news/kalshi-parents-monitoring-minors-prediction-markets?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+        }
+      ],
+      "published": "Wed, 15 Apr 2026 21:44:41 +0100"
+    },
+    {
+      "title": "Bitwise debuts Avalanche ETP offering AVAX exposure and yield",
+      "category": "Other",
+      "summary": {
+        "main": "The product is designed to generate yield by participating in network validation, adding an income component to passive exposure."
+      },
+      "sources": [
+        "Cointelegraph"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Cointelegraph",
+          "link": "https://cointelegraph.com/news/bitwise-launches-avalanche-etp-with-staking-feature?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+        }
+      ],
+      "published": "Wed, 15 Apr 2026 21:07:42 +0100"
+    },
+    {
+      "title": "CoreWeave signs $6B deal with Jane Street to provide AI compute power",
+      "category": "AI",
+      "summary": {
+        "main": "Jane Street said it needs GPU-based computing power to keep its trading and research operations competitive amid growing adoption of AI."
+      },
+      "sources": [
+        "Cointelegraph"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Cointelegraph",
+          "link": "https://cointelegraph.com/news/coreweave-6b-deal-jane-street-ai-compute?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+        }
+      ],
+      "published": "Wed, 15 Apr 2026 20:30:52 +0100"
+    },
+    {
+      "title": "Polkadot-Ethereum Bridge Hack Losses Were 10x Worse Than Reported, Team Admits",
+      "category": "Other",
+      "summary": {
+        "main": "Polkadot bridge protocol Hyperbridge said losses from this week's hack were 10x worse than originally reported, tallying about $2.5 million."
+      },
+      "sources": [
+        "Decrypt"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Decrypt",
+          "link": "https://decrypt.co/364588/polkadot-ethereum-bridge-hack-losses-10x-worse-team-admits"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 15:28:22 +0000"
+    },
+    {
+      "title": "French Police Rescue Mother and Child After $400K Crypto Ransom Kidnapping",
+      "category": "Other",
+      "summary": {
+        "main": "Elite French police rescued a mother and child after kidnappers targeted the family's crypto wealth in the latest “wrench attack.”"
+      },
+      "sources": [
+        "Decrypt"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Decrypt",
+          "link": "https://decrypt.co/364582/french-police-rescue-mother-child-400k-crypto-ransom-kidnapping"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 14:46:38 +0000"
+    },
+    {
+      "title": "Snap Cuts 1,000 Jobs, Aims to Save $500 Million as AI Reshapes Operations",
+      "category": "AI",
+      "summary": {
+        "main": "Social media company Snap is restructuring operations to focus on profitability as AI tools reshape how teams work across key initiatives."
+      },
+      "sources": [
+        "Decrypt"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Decrypt",
+          "link": "https://decrypt.co/364581/snap-cuts-1000-jobs-save-500-million-ai-reshapes-operations"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 14:28:33 +0000"
+    },
+    {
+      "title": "Exchange Inflows Spike as Bitcoin Faces $76K Headwinds",
+      "category": "Other",
+      "summary": {
+        "main": "On-chain data show increased selling pressure, with Bitcoin exchange inflows and large-holder deposits spiking to multi-month highs."
+      },
+      "sources": [
+        "Decrypt"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Decrypt",
+          "link": "https://decrypt.co/364565/exchange-inflows-spike-as-bitcoin-faces-76k-headwinds"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 11:33:43 +0000"
+    },
+    {
+      "title": "Google's Latest AI Update Makes Industrial Robots Way Smarter—Here's How",
+      "category": "AI",
+      "summary": {
+        "main": "The new Google Gemini Robotics AI model gives robots improved spatial reasoning and task planning abilities for industrial applications."
+      },
+      "sources": [
+        "Decrypt"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Decrypt",
+          "link": "https://decrypt.co/364521/google-ai-update-makes-industrial-robots-way-smarter"
+        }
+      ],
+      "published": "Wed, 15 Apr 2026 21:31:35 +0000"
+    },
+    {
+      "title": "Will Maine Governor Janet Mills Sign Nation's First AI Data Center Ban Into Law?",
+      "category": "Other",
+      "summary": {
+        "main": "Maine's moratorium on AI data centers would last for over a year. Will the governor, embroiled in a tough Senate primary, sign it into law?"
+      },
+      "sources": [
+        "Decrypt"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Decrypt",
+          "link": "https://decrypt.co/364518/will-maine-governor-janet-mills-sign-first-ai-data-center-ban"
+        }
+      ],
+      "published": "Wed, 15 Apr 2026 21:14:00 +0000"
+    },
+    {
+      "title": "You Switched to Claude Over Surveillance Fears. Now It Wants Your Passport",
+      "category": "AI",
+      "summary": {
+        "main": "Anthropic quietly rolled out government ID and selfie verification for Claude—a first among major AI chatbots, and a peculiar pivot for a company whose privacy stance just drove a record wave of..."
+      },
+      "sources": [
+        "Decrypt"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Decrypt",
+          "link": "https://decrypt.co/364509/claude-anthropic-government-id-kyc-privacy"
+        }
+      ],
+      "published": "Wed, 15 Apr 2026 20:37:38 +0000"
+    },
+    {
+      "title": "World Liberty Wants WLFI Locked Beyond Trump's Second Term—Investors Aren't Thrilled",
+      "category": "Other",
+      "summary": {
+        "main": "World Liberty Financial's early supporters vented frustrations after the Trump-backed crypto venture released a four-year vesting schedule."
+      },
+      "sources": [
+        "Decrypt"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Decrypt",
+          "link": "https://decrypt.co/364504/world-liberty-wants-wlfi-locked-beyond-trump-second-term"
+        }
+      ],
+      "published": "Wed, 15 Apr 2026 20:32:18 +0000"
+    },
+    {
+      "title": "'Killing Satoshi': $70M Bitcoin Film Starring Casey Affleck Will Make Heavy Use of AI",
+      "category": "AI",
+      "summary": {
+        "main": "A $70 million feature film focusing on Bitcoin and the hunt for creator Satoshi Nakamoto will lean heavily on AI tools."
+      },
+      "sources": [
+        "Decrypt"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Decrypt",
+          "link": "https://decrypt.co/364505/killing-satoshi-70m-bitcoin-film-starring-casey-affleck-will-make-heavy-use-of-ai"
+        }
+      ],
+      "published": "Wed, 15 Apr 2026 20:12:48 +0000"
+    },
+    {
+      "title": "Free Qwen Is Dead: Alibaba Shuts Down Qwen Code Free Tier",
+      "category": "AI",
+      "summary": {
+        "main": "Alibaba shut down Qwen Code's free tier today, following MiniMax's license bait-and-switch. The idea that Chinese labs are the \"open-source good guys\" is crumbling fast."
+      },
+      "sources": [
+        "Decrypt"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Decrypt",
+          "link": "https://decrypt.co/364501/alibaba-shuts-down-free-tier-qwen-code"
+        }
+      ],
+      "published": "Wed, 15 Apr 2026 19:01:59 +0000"
+    },
+    {
+      "title": "Try a LattAI? Starbucks Debuts ChatGPT App for AI Drink Suggestions",
+      "category": "AI",
+      "summary": {
+        "main": "Starbucks’ ChatGPT integration lets customers describe their mood or upload photos to receive AI-generated drink picks."
+      },
+      "sources": [
+        "Decrypt"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Decrypt",
+          "link": "https://decrypt.co/364491/starbucks-debuts-chatgpt-app-ai-drink-suggestions"
+        }
+      ],
+      "published": "Wed, 15 Apr 2026 18:04:35 +0000"
+    },
+    {
+      "title": "Anthropic Preps Opus 4.7 and Full-Stack AI Studio—While Sitting on Something Much Scarier",
+      "category": "AI",
+      "summary": {
+        "main": "Leaked models, a new design tool, and an unreleaseable cyber weapon walk into a press cycle."
+      },
+      "sources": [
+        "Decrypt"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Decrypt",
+          "link": "https://decrypt.co/364483/anthropic-opus-47-full-stack-ai-studio-mythos"
+        }
+      ],
+      "published": "Wed, 15 Apr 2026 17:55:17 +0000"
+    },
+    {
+      "title": "Tom Lee's BitMine Posts $3.8 Billion Quarterly Loss Due to Ethereum Price Plunge",
+      "category": "Other",
+      "summary": {
+        "main": "Leading Ethereum treasury firm BitMine Immersion Technologies posted a major loss thanks to unrealized losses on its ETH."
+      },
+      "sources": [
+        "Decrypt"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Decrypt",
+          "link": "https://decrypt.co/364472/tom-lees-bitmine-posts-3-8-billion-loss-ethereum-price-plunge"
+        }
+      ],
+      "published": "Wed, 15 Apr 2026 17:17:41 +0000"
+    },
+    {
+      "title": "eToro Acquires Self-Custody Crypto Wallet Firm Zengo for $70 Million",
+      "category": "Other",
+      "summary": {
+        "main": "The deal signals eToro's strategic push into self-custody solutions amid growing demand for non-custodial crypto infrastructure."
+      },
+      "sources": [
+        "Decrypt"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Decrypt",
+          "link": "https://decrypt.co/364464/etoro-acquires-self-custody-crypto-wallet-firm-70-million"
+        }
+      ],
+      "published": "Wed, 15 Apr 2026 16:40:20 +0000"
+    },
+    {
+      "title": "Pakistan Lifts 8-Year Crypto Banking Ban Following Trump Family, Binance Deals",
+      "category": "Other",
+      "summary": {
+        "main": "Banks in Pakistan can now provide services to registered crypto firms—but not trade crypto themselves—after a 2018 ban was rescinded."
+      },
+      "sources": [
+        "Decrypt"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Decrypt",
+          "link": "https://decrypt.co/364463/pakistan-lifts-8-year-crypto-banking-ban-trump-binance-deals"
+        }
+      ],
+      "published": "Wed, 15 Apr 2026 16:15:48 +0000"
+    },
+    {
+      "title": "Elon Musk’s X Money stands to disrupt payments and pressure PayPal, but crypto plans may hit regulatory hurdles: Mizuho",
+      "category": "Other",
+      "summary": {
+        "main": "X launched a new feature this week where users can view financial data on stocks and cryptocurrencies directly."
+      },
+      "sources": [
+        "TheBlock"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "TheBlock",
+          "link": "https://www.theblock.co/post/397771/elon-musk-x-money-disrupt-payments-pressure-paypal-crypto-regulatory-hurdles-mizuho?utm_source=rss&utm_medium=rss"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 11:57:43 -0400"
+    },
+    {
+      "title": "Ethereum Foundation exec Josh Stark is stepping down",
+      "category": "Other",
+      "summary": {
+        "main": "The move comes amid ongoing changes at the EF, including a renewed focus on scaling and developing the Ethereum mainnet."
+      },
+      "sources": [
+        "TheBlock"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "TheBlock",
+          "link": "https://www.theblock.co/post/397777/ethereum-foundation-exec-josh-stark-is-stepping-down?utm_source=rss&utm_medium=rss"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 11:40:47 -0400"
+    },
+    {
+      "title": "Polkadot-based Hyperbridge revises exploit losses to $2.5 million, ten times initial estimate",
+      "category": "Other",
+      "summary": {
+        "main": "Hyperbridge has raised its loss estimate from $237,000 to $2.5 million after a Token Gateway exploit, with some funds traced to Binance."
+      },
+      "sources": [
+        "TheBlock"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "TheBlock",
+          "link": "https://www.theblock.co/post/397773/polkadot-hyperbridge-exploit-losses-2-5-million-ten-times-initial-estimate?utm_source=rss&utm_medium=rss"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 11:34:23 -0400"
+    },
+    {
+      "title": "AI agents make card purchases with new Mastercard–Lobster.cash integration",
+      "category": "AI",
+      "summary": {
+        "main": "Payments companies are increasingly investing in new tools that will enable agents to safely execute transactions."
+      },
+      "sources": [
+        "TheBlock"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "TheBlock",
+          "link": "https://www.theblock.co/post/397755/ai-agents-make-card-purchases-with-new-mastercard-lobster-cash-integration?utm_source=rss&utm_medium=rss"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 10:36:27 -0400"
+    },
+    {
+      "title": "Charles Schwab begins rollout of spot bitcoin, ethereum trading platform",
+      "category": "Other",
+      "summary": {
+        "main": "The new platform, called Schwab Crypto, will roll out over the coming weeks and will only support bitcoin and ethereum at first."
+      },
+      "sources": [
+        "TheBlock"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "TheBlock",
+          "link": "https://www.theblock.co/post/397756/charles-schwab-begins-rollout-spot-bitcoin-ethereum-trading-platform?utm_source=rss&utm_medium=rss"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 10:24:10 -0400"
+    },
+    {
+      "title": "‘Bitcoin taxes make no sense’: Washington think tank argues US rules hinder everyday payments",
+      "category": "Other",
+      "summary": {
+        "main": "The Cato Institute says U.S. bitcoin tax rules are overly complex and discourage everyday use despite growing crypto adoption."
+      },
+      "sources": [
+        "TheBlock"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "TheBlock",
+          "link": "https://www.theblock.co/post/397703/bitcoin-taxes-make-no-sense-washington-think-tank-argues-us-rules-hinder-everyday-payments?utm_source=rss&utm_medium=rss"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 06:43:08 -0400"
+    },
+    {
+      "title": "Bitcoin miner HIVE lines up $75 million note offering to fund AI infrastructure expansion",
+      "category": "AI",
+      "summary": {
+        "main": "HIVE Digital plans a $75 million zero-coupon note offering to fund GPUs and data centers as it moves to the TSX."
+      },
+      "sources": [
+        "TheBlock"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "TheBlock",
+          "link": "https://www.theblock.co/post/397698/bitcoin-miner-hive-75-million-note-offering-gpu-data-center-expansion?utm_source=rss&utm_medium=rss"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 06:18:21 -0400"
+    },
+    {
+      "title": "‘Absurd governance scam’: World Liberty Financial’s new proposal prompts harsh criticism from Justin Sun and other holders",
+      "category": "Other",
+      "summary": {
+        "main": "Tron Founder Justin Sun issued harsh criticism of the new proposal, calling it one of the 'most absurd governance scams.'"
+      },
+      "sources": [
+        "TheBlock"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "TheBlock",
+          "link": "https://www.theblock.co/post/397675/world-liberty-financial-new-proposal-criticism-justin-sun?utm_source=rss&utm_medium=rss"
+        }
+      ],
+      "published": "Wed, 15 Apr 2026 23:19:37 -0400"
+    },
+    {
+      "title": "Tether backs Stablecoin Development Corporation’s $134 million private placement used to acquire SKY tokens",
+      "category": "Other",
+      "summary": {
+        "main": "The Stablecoin Development Corporation is a publicly-traded holding company with an approximately 2.15 billion SKY token treasury."
+      },
+      "sources": [
+        "TheBlock"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "TheBlock",
+          "link": "https://www.theblock.co/post/397654/tether-stablecoin-development-corporation-134-million-private-placement-acquire-sky-tokens?utm_source=rss&utm_medium=rss"
+        }
+      ],
+      "published": "Wed, 15 Apr 2026 16:44:33 -0400"
+    },
+    {
+      "title": "Ethereum DEX aggregator market grows more competitive as Kyber, CowSwap rise",
+      "category": "Other",
+      "summary": {
+        "main": "Kyber currently leads with ~30% market share, followed by CowSwap at 22%, while 1inch has seen its share decline to 15% over the same period."
+      },
+      "sources": [
+        "TheBlock"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "TheBlock",
+          "link": "https://www.theblock.co/post/397278/ethereum-dex-aggregator-competitive-kyber-cowswap-gain?utm_source=rss&utm_medium=rss"
+        }
+      ],
+      "published": "Wed, 15 Apr 2026 16:30:35 -0400"
+    },
+    {
+      "title": "Hyperliquid’s HIP‑3 Open Interest Skyrockets— Is 24/7 Tokenized Equity About To Rewrite Wall Street?",
+      "category": "Other",
+      "summary": {
+        "main": "Hyperliquid’s HIP‑3 open interest is pushing toward the multi‑billion mark, led by not just crypto perps but synthetic equities and index products. Hyperliquid’s HIP-3 New ATH Following Bitget Wallet..."
+      },
+      "sources": [
+        "NewsBTC"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "NewsBTC",
+          "link": "https://www.newsbtc.com/news/hyperliquids-hip%e2%80%913-open-interest-skyrockets-24-7-tokenized-equity/"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 15:30:53 +0000"
+    },
+    {
+      "title": "Bitcoin Bulls Eye $78,000, But Glassnode Urges Caution",
+      "category": "Other",
+      "summary": {
+        "main": "Bitcoin has climbed back toward a key on-chain resistance zone, but Glassnode says the move still looks more like a fragile rebound than the start of a fully convincing trend shift. In its latest The..."
+      },
+      "sources": [
+        "NewsBTC"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "NewsBTC",
+          "link": "https://www.newsbtc.com/bitcoin-news/bitcoin-bulls-78000-glassnode-urges-caution/"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 11:00:32 +0000"
+    },
+    {
+      "title": "Ethereum Retail Hands Still In Disbelief, Keep Selling Into Strength",
+      "category": "Other",
+      "summary": {
+        "main": "On-chain data shows the small Ethereum hands have sold into the latest price surge, a sign that retail traders don&#8217;t believe that the rally will last. Ethereum Retail Supply Has Seen A Notable..."
+      },
+      "sources": [
+        "NewsBTC"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "NewsBTC",
+          "link": "https://www.newsbtc.com/news/ethereum/ethereum-retail-hands-disbelief-selling-strength/"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 08:00:04 +0000"
+    },
+    {
+      "title": "Bitcoin Policy Institute Maps Out Strategy For US Stablecoin Supremacy Across 5 Policy Areas",
+      "category": "Other",
+      "summary": {
+        "main": "The Bitcoin Policy Institute (BPI) has released a new policy proposal for the United States aimed at establishing what it calls “stablecoin supremacy.” The proposal, published on Wednesday, is..."
+      },
+      "sources": [
+        "NewsBTC"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "NewsBTC",
+          "link": "https://www.newsbtc.com/crypto/bitcoin-policy-institute-maps-out-strategy-for-us-stablecoin-supremacy-across-5-policy-areas/"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 06:00:37 +0000"
+    },
+    {
+      "title": "Solana (SOL) Upside Builds, $90 Now Key Battleground",
+      "category": "Other",
+      "summary": {
+        "main": "Solana found support at $82.50 and corrected some losses. SOL price is now consolidating above $85 and might aim for a steady increase. SOL price started a decent recovery wave above $84 and $85..."
+      },
+      "sources": [
+        "NewsBTC"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "NewsBTC",
+          "link": "https://www.newsbtc.com/analysis/solana-sol-upside-builds-90/"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 05:08:16 +0000"
+    },
+    {
+      "title": "WLFI Moves To Unlock 62B Tokens While Tightening Supply With Burns",
+      "category": "Other",
+      "summary": {
+        "main": "World Liberty Financial has put 4.52 billion WLFI tokens on the table for an immediate burn if a new unlock plan passes, a move tied to the founder, team, adviser and partner pool. Related Reading:..."
+      },
+      "sources": [
+        "NewsBTC"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "NewsBTC",
+          "link": "https://www.newsbtc.com/news/wlfi-moves-to-unlock-62b-tokens-while-tightening-supply-with-burns/"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 05:00:49 +0000"
+    },
+    {
+      "title": "Solana’s Economic Activity Surpasses $1 Trillion for the First Time in History — Details",
+      "category": "Other",
+      "summary": {
+        "main": "Solana’s economic activity surpassed $1 trillion in the first quarter of 2026, marking the first time the network has reached that threshold."
+      },
+      "sources": [
+        "ZyCrypto"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "ZyCrypto",
+          "link": "https://zycrypto.com/solanas-economic-activity-surpasses-1-trillion-for-the-first-time-in-history-details/"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 11:11:32 +0000"
+    },
+    {
+      "title": "Bitcoin Bull Score Index Reaches Highest Level Since October 2025. Here’s More",
+      "category": "Other",
+      "summary": {
+        "main": "Within 72 hours, several on-chain metrics flagged as red drivers have flipped, fueling the market resurgence."
+      },
+      "sources": [
+        "ZyCrypto"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "ZyCrypto",
+          "link": "https://zycrypto.com/bitcoin-bull-score-index-reaches-highest-level-since-october-2025-heres-more/"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 06:42:27 +0000"
+    },
+    {
+      "title": "Cardano’s Network Usage Soars, Suggesting ADA Likely on the Verge of a Mega Price Bump",
+      "category": "Other",
+      "summary": {
+        "main": "This development could help lift its native token ADA from recent weakness, according to one of the network’s largest staking providers."
+      },
+      "sources": [
+        "ZyCrypto"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "ZyCrypto",
+          "link": "https://zycrypto.com/cardanos-network-usage-soars-suggesting-ada-likely-on-the-verge-of-a-mega-price-bump/"
+        }
+      ],
+      "published": "Wed, 15 Apr 2026 17:39:17 +0000"
+    },
+    {
+      "title": "Expert Says Ethereum Technically Ready for Bull Rally After Reclaiming Key Moving Average",
+      "category": "Other",
+      "summary": {
+        "main": "‬Ethereum could be set for a bull rally, with technical indicators pointing to a critical juncture, according to a prominent market analyst."
+      },
+      "sources": [
+        "ZyCrypto"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "ZyCrypto",
+          "link": "https://zycrypto.com/expert-says-ethereum-technically-ready-for-bull-rally-after-reclaiming-key-moving-average/"
+        }
+      ],
+      "published": "Wed, 15 Apr 2026 17:30:23 +0000"
+    },
+    {
+      "title": "Venezuela’s sanctions are stablecoins’ proof of concept",
+      "category": "Other",
+      "summary": {
+        "main": "Banned from the dollar system, the country uses digital dollars instead"
+      },
+      "sources": [
+        "Blockworks"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Blockworks",
+          "link": "https://blockworks.co/news/venezuelas-sanctions-stablecoins"
+        }
+      ],
+      "published": "2026-01-07T14:00:00.000Z"
+    },
+    {
+      "title": "The Strategy playbook looks different in 2026",
+      "category": "Other",
+      "summary": {
+        "main": "The treasury company now holds 673,783 BTC, but flow is more likely to be episodic in this year’s financial climate"
+      },
+      "sources": [
+        "Blockworks"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Blockworks",
+          "link": "https://blockworks.co/news/strategy-playbook-2026"
+        }
+      ],
+      "published": "2026-01-06T17:36:33.000Z"
+    },
+    {
+      "title": "Ranger’s ICO starts today, and MetaDAO eyes a reset",
+      "category": "Other",
+      "summary": {
+        "main": "Ranger’s Jan 6–10 sale could re-accelerate MetaDAO volumes and revenue"
+      },
+      "sources": [
+        "Blockworks"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Blockworks",
+          "link": "https://blockworks.co/news/rangers-ico-metadao"
+        }
+      ],
+      "published": "2026-01-06T15:07:05.000Z"
+    },
+    {
+      "title": "ETH derivatives reset and the next retail trade",
+      "category": "Other",
+      "summary": {
+        "main": "ETH derivatives show a disciplined rebuild of risk, with rising open interest pointing to healthier leverage"
+      },
+      "sources": [
+        "Blockworks"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Blockworks",
+          "link": "https://blockworks.co/news/eth-derivatives-reset"
+        }
+      ],
+      "published": "2026-01-05T15:14:17.000Z"
+    },
+    {
+      "title": "Friday charts: Finding good news, in spite of bad headlines",
+      "category": "Other",
+      "summary": {
+        "main": "2025 was far from perfect, but much better than we think it was."
+      },
+      "sources": [
+        "Blockworks"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Blockworks",
+          "link": "https://blockworks.co/news/friday-charts-finding-good-news-in-spite-of-bad-headlines"
+        }
+      ],
+      "published": "2026-01-02T23:41:06.000Z"
+    },
+    {
+      "title": "DePIN and crypto gaming led a surprising end-of-year rebound",
+      "category": "Other",
+      "summary": {
+        "main": "BTC finished the week up 1.6%, while L2s, RWAs and the treasury trade continued to grind lower"
+      },
+      "sources": [
+        "Blockworks"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Blockworks",
+          "link": "https://blockworks.co/news/depin-gaming-surprising-rebound"
+        }
+      ],
+      "published": "2026-01-02T16:53:02.000Z"
+    },
+    {
+      "title": "Canton’s $6T RWA rails and Lighter’s Hyperliquid multiple",
+      "category": "Other",
+      "summary": {
+        "main": "DTCC moves DTC-custodied Treasuries onchain via Canton, while Lighter’s LIT launches trading at a fees multiple in Hyperliquid territory"
+      },
+      "sources": [
+        "Blockworks"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Blockworks",
+          "link": "https://blockworks.co/news/cantons-rwa-rails"
+        }
+      ],
+      "published": "2026-01-01T18:00:00.000Z"
+    },
+    {
+      "title": "The long wait for crypto’s “coffee pot” moment",
+      "category": "Other",
+      "summary": {
+        "main": "In the 90s, rapt audiences worldwide watched a coffee pot — will that fascination ever turn to crypto?"
+      },
+      "sources": [
+        "Blockworks"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Blockworks",
+          "link": "https://blockworks.co/news/cryptos-coffee-pot-moment"
+        }
+      ],
+      "published": "2026-01-01T14:00:00.000Z"
+    },
+    {
+      "title": "Failure is an option in crypto finance",
+      "category": "Other",
+      "summary": {
+        "main": "Some systems improve by failing — and crypto has no choice"
+      },
+      "sources": [
+        "Blockworks"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Blockworks",
+          "link": "https://blockworks.co/news/failure-is-an-option"
+        }
+      ],
+      "published": "2026-01-01T00:18:58.000Z"
+    },
+    {
+      "title": "Yield Basis is making native BTC yield a reality",
+      "category": "Other",
+      "summary": {
+        "main": "Yield Basis introduces an IL-free AMM design that already dominates BTC DEX liquidity"
+      },
+      "sources": [
+        "Blockworks"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Blockworks",
+          "link": "https://blockworks.co/news/yield-basis-native-btc-yield"
+        }
+      ],
+      "published": "2025-12-31T19:20:49.000Z"
+    },
+    {
+      "title": "Users are the best investors to have",
+      "category": "Other",
+      "summary": {
+        "main": "Maybe tokenholders don’t need the rights that corporate shareholders have come to expect"
+      },
+      "sources": [
+        "Blockworks"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Blockworks",
+          "link": "https://blockworks.co/news/users-are-the-best-investors-to-have"
+        }
+      ],
+      "published": "2025-12-31T17:13:32.000Z"
+    },
+    {
+      "title": "A sleeper in the perps category",
+      "category": "Other",
+      "summary": {
+        "main": "As Hyperliquid and Lighter battle for perps DEX dominance, Boros could capture the structural upside"
+      },
+      "sources": [
+        "Blockworks"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Blockworks",
+          "link": "https://blockworks.co/news/boros-sleeper-perps"
+        }
+      ],
+      "published": "2025-12-30T17:50:45.000Z"
+    },
+    {
+      "title": "The old story of investing in new technology",
+      "category": "Other",
+      "summary": {
+        "main": "Investors are often right about the future, but wrong about the returns"
+      },
+      "sources": [
+        "Blockworks"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Blockworks",
+          "link": "https://blockworks.co/news/the-old-story-of-investing-in-new-technology"
+        }
+      ],
+      "published": "2025-12-30T15:24:59.000Z"
+    },
+    {
+      "title": "2025 Reflections",
+      "category": "Other",
+      "summary": {
+        "main": "A look back at 2025, reflections on our industry, and what it means for Blockworks in 2026"
+      },
+      "sources": [
+        "Blockworks"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Blockworks",
+          "link": "https://blockworks.co/news/blockworks-2025-reflections"
+        }
+      ],
+      "published": "2025-12-30T14:31:28.000Z"
+    },
+    {
+      "title": "The perps wars are heating up",
+      "category": "Other",
+      "summary": {
+        "main": "Hyperliquid’s weekly volume trails newer rivals as a Lighter airdrop looms"
+      },
+      "sources": [
+        "Blockworks"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Blockworks",
+          "link": "https://blockworks.co/news/perps-wars-heating-up"
+        }
+      ],
+      "published": "2025-12-29T16:13:32.000Z"
+    },
+    {
+      "title": "Gold and silver won 2025",
+      "category": "Other",
+      "summary": {
+        "main": "Gold is having its best year since 1979, while many DeFi names are trading near multi-year lows"
+      },
+      "sources": [
+        "Blockworks"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Blockworks",
+          "link": "https://blockworks.co/news/gold-silver-won-2025"
+        }
+      ],
+      "published": "2025-12-26T15:42:48.000Z"
+    },
+    {
+      "title": "Maple’s fundamentals are driving outperformance",
+      "category": "Other",
+      "summary": {
+        "main": "Maple is outperforming peers on growth, yield, and revenue — while benefiting from limited supply overhang and clear value accrual"
+      },
+      "sources": [
+        "Blockworks"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Blockworks",
+          "link": "https://blockworks.co/news/maples-fundamentals"
+        }
+      ],
+      "published": "2025-12-23T19:54:37.000Z"
+    },
+    {
+      "title": "The incredible, incomprehensible, possibly impossible world of trillion-dollar tech valuations",
+      "category": "Other",
+      "summary": {
+        "main": "Will mega-unicorns collectively earn the trillions of dollars of revenue required to justify their valuations?"
+      },
+      "sources": [
+        "Blockworks"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Blockworks",
+          "link": "https://blockworks.co/news/trillion-dollar-tech-valuations"
+        }
+      ],
+      "published": "2025-12-22T18:49:43.000Z"
+    },
+    {
+      "title": "The year new tokens died",
+      "category": "Other",
+      "summary": {
+        "main": "2025 saw a huge compression in the valuation of new tokens, with the steepest losses in infrastructure and gaming"
+      },
+      "sources": [
+        "Blockworks"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Blockworks",
+          "link": "https://blockworks.co/news/year-new-tokens-died"
+        }
+      ],
+      "published": "2025-12-22T16:27:50.000Z"
+    },
+    {
+      "title": "Grinch rally: Crypto indices track lower through the week",
+      "category": "Other",
+      "summary": {
+        "main": "The AI sector was the top loser on the week, trading down -26%"
+      },
+      "sources": [
+        "Blockworks"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Blockworks",
+          "link": "https://blockworks.co/news/grinch-rally"
+        }
+      ],
+      "published": "2025-12-19T18:50:02.000Z"
+    },
+    {
+      "title": "A holiday guide to explaining crypto to your relatives",
+      "category": "Other",
+      "summary": {
+        "main": "Spoiler alert: talking about crypto to normies is still really hard"
+      },
+      "sources": [
+        "Blockworks"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Blockworks",
+          "link": "https://blockworks.co/news/explaining-crypto-to-relatives"
+        }
+      ],
+      "published": "2025-12-19T15:46:06.000Z"
+    },
+    {
+      "title": "Coinbase embeds Solana trading",
+      "category": "Other",
+      "summary": {
+        "main": "The platform turns to onchain rails for Solana assets while crypto M&amp;A and fundraising surge to cycle highs"
+      },
+      "sources": [
+        "Blockworks"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Blockworks",
+          "link": "https://blockworks.co/news/coinbase-embeds-solana-trading"
+        }
+      ],
+      "published": "2025-12-19T03:27:13.000Z"
+    },
+    {
+      "title": "Robinhood’s leap shows the prediction-market arms race is underway",
+      "category": "Other",
+      "summary": {
+        "main": "Robinhood is pushing deeper into high-margin market design, joining competitors like Kalshi and DraftKings"
+      },
+      "sources": [
+        "Blockworks"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Blockworks",
+          "link": "https://blockworks.co/news/robinhoods-leap-shows-the-prediction-market-arms-race-is-underway"
+        }
+      ],
+      "published": "2025-12-18T20:02:16.000Z"
+    },
+    {
+      "title": "The competitive advantage of not knowing you’re wrong",
+      "category": "Other",
+      "summary": {
+        "main": "When not knowing the odds improves your chances"
+      },
+      "sources": [
+        "Blockworks"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Blockworks",
+          "link": "https://blockworks.co/news/not-knowing-youre-wrong"
+        }
+      ],
+      "published": "2025-12-18T16:12:30.000Z"
+    },
+    {
+      "title": "The network is the innovation",
+      "category": "Other",
+      "summary": {
+        "main": "What Thomas Edison actually invented — and what it tells us about the future of crypto"
+      },
+      "sources": [
+        "Blockworks"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Blockworks",
+          "link": "https://blockworks.co/news/the-network-is-the-innovation"
+        }
+      ],
+      "published": "2025-12-17T16:06:37.000Z"
+    },
+    {
+      "title": "Another week, another MetaDAO advertisement",
+      "category": "Other",
+      "summary": {
+        "main": "Meanwhile, recent acquisitions continue to neglect tokenholders"
+      },
+      "sources": [
+        "Blockworks"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Blockworks",
+          "link": "https://blockworks.co/news/metadao-advertisement"
+        }
+      ],
+      "published": "2025-12-16T17:00:00.000Z"
+    },
+    {
+      "title": "A man’s blockchain is his castle",
+      "category": "Other",
+      "summary": {
+        "main": "But who gets a key to the gate?"
+      },
+      "sources": [
+        "Blockworks"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Blockworks",
+          "link": "https://blockworks.co/news/mans-blockchain-castle"
+        }
+      ],
+      "published": "2025-12-16T15:22:36.000Z"
+    },
+    {
+      "title": "Capital gets selective",
+      "category": "Other",
+      "summary": {
+        "main": "Unit economics inflect, institutional capital shows up onchain, and market structure continues to evolve"
+      },
+      "sources": [
+        "Blockworks"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Blockworks",
+          "link": "https://blockworks.co/news/capital-gets-selective"
+        }
+      ],
+      "published": "2025-12-15T15:44:01.000Z"
+    },
+    {
+      "title": "Friday charts: The many, many architects of AI",
+      "category": "AI",
+      "summary": {
+        "main": "Throughout its billions of searches, Google’s goal has always been to train and hone its algorithms"
+      },
+      "sources": [
+        "Blockworks"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Blockworks",
+          "link": "https://blockworks.co/news/architects-of-ai"
+        }
+      ],
+      "published": "2025-12-12T22:36:59.000Z"
+    },
+    {
+      "title": "BTC is up and L1s are down as flows turn messy again",
+      "category": "Other",
+      "summary": {
+        "main": "The Nasdaq slipped yesterday after disappointing Q3 revenue from Oracle"
+      },
+      "sources": [
+        "Blockworks"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Blockworks",
+          "link": "https://blockworks.co/news/flows-turn-messy-again"
+        }
+      ],
+      "published": "2025-12-12T18:00:00.000Z"
+    },
+    {
+      "title": "Links: Trading, valuations, and the end of crypto’s ‘golden age’",
+      "category": "Other",
+      "summary": {
+        "main": "It’s getting harder and harder to trade crypto like the good ol’ days"
+      },
+      "sources": [
+        "Blockworks"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Blockworks",
+          "link": "https://blockworks.co/news/links-trading-valuations-golden-age"
+        }
+      ],
+      "published": "2025-12-12T15:24:30.000Z"
+    },
+    {
+      "title": "Fixing crypto’s broken investor relations",
+      "category": "Other",
+      "summary": {
+        "main": "Lightspeed IR, launched with the Solana Foundation, aims to give allocators a single surface for diligence and communication"
+      },
+      "sources": [
+        "Blockworks"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Blockworks",
+          "link": "https://blockworks.co/news/fixing-investor-relations"
+        }
+      ],
+      "published": "2025-12-11T20:37:17.000Z"
+    },
+    {
+      "title": "Dollar dominance can’t be manufactured",
+      "category": "Other",
+      "summary": {
+        "main": "Stablecoins are no substitute for what makes the dollar dominant"
+      },
+      "sources": [
+        "Blockworks"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Blockworks",
+          "link": "https://blockworks.co/news/dollar-dominance"
+        }
+      ],
+      "published": "2025-12-11T17:11:37.000Z"
+    },
+    {
+      "title": "Blockworks launches investor relations platform with Solana",
+      "category": "Other",
+      "summary": {
+        "main": "Crypto tokens need better investor relations infrastructure; today, Blockworks solves that."
+      },
+      "sources": [
+        "Blockworks"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Blockworks",
+          "link": "https://blockworks.co/news/blockworks-solana-investor-relations-platform"
+        }
+      ],
+      "published": "2025-12-11T13:28:59.000Z"
+    },
+    {
+      "title": "ETFs flash a bid, HumidiFi tokenizes",
+      "category": "Other",
+      "summary": {
+        "main": "BTC leads a broad crypto bid as ETFs post their strongest inflow in weeks"
+      },
+      "sources": [
+        "Blockworks"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Blockworks",
+          "link": "https://blockworks.co/news/etfs-flash-humidifi-tokenizes"
+        }
+      ],
+      "published": "2025-12-10T20:05:42.000Z"
+    },
+    {
+      "title": "Beam-me-up money",
+      "category": "AI",
+      "summary": {
+        "main": "Quantum teleportation could make money a physical resource again"
+      },
+      "sources": [
+        "Blockworks"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Blockworks",
+          "link": "https://blockworks.co/news/beam-me-up-money"
+        }
+      ],
+      "published": "2025-12-10T15:55:35.000Z"
+    },
+    {
+      "title": "Analyzing Jup Lend vs. Kamino",
+      "category": "Other",
+      "summary": {
+        "main": "The exchange between Kamino and Jupiter has escalated from healthy competition to a clear public dispute"
+      },
+      "sources": [
+        "Blockworks"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Blockworks",
+          "link": "https://blockworks.co/news/jup-lend-vs-kamino"
+        }
+      ],
+      "published": "2025-12-09T21:03:44.000Z"
+    },
+    {
+      "title": "Rangebound markets, resilient onchain lending",
+      "category": "Other",
+      "summary": {
+        "main": "Crypto lags behind TradFi benchmarks, but trends in stablecoins, deposits and loans point to durable multi-year growth"
+      },
+      "sources": [
+        "Blockworks"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Blockworks",
+          "link": "https://blockworks.co/news/rangebound-markets-resilient"
+        }
+      ],
+      "published": "2025-12-09T18:38:30.000Z"
+    },
+    {
+      "title": "The productivity bull case for almost everything",
+      "category": "Other",
+      "summary": {
+        "main": "And the bear case for bitcoin"
+      },
+      "sources": [
+        "Blockworks"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Blockworks",
+          "link": "https://blockworks.co/news/productivity-bull-case"
+        }
+      ],
+      "published": "2025-12-09T15:54:37.000Z"
+    },
+    {
+      "title": "Risk back on the table as crypto ETFs bounce back",
+      "category": "Other",
+      "summary": {
+        "main": "Kalshi raises a billion dollars, and Trump’s new Fed Chair pick is imminent"
+      },
+      "sources": [
+        "Blockworks"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Blockworks",
+          "link": "https://blockworks.co/news/risk-back-on-table"
+        }
+      ],
+      "published": "2025-12-08T15:44:01.000Z"
+    },
+    {
+      "title": "Illuminating progress: Is a $140K income ‘poor’?",
+      "category": "Other",
+      "summary": {
+        "main": "Bad math makes headlines: real progress, a history of candlelight, and “the worst poverty analysis…ever seen”"
+      },
+      "sources": [
+        "Blockworks"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Blockworks",
+          "link": "https://blockworks.co/news/illuminating-progress"
+        }
+      ],
+      "published": "2025-12-05T22:29:37.000Z"
+    },
+    {
+      "title": "Solana tokens see gains amidst weeklong crypto slump",
+      "category": "Other",
+      "summary": {
+        "main": "Despite a soft market backdrop, Solana DeFi tokens showed relative strength, with Sanctum leading the pack"
+      },
+      "sources": [
+        "Blockworks"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Blockworks",
+          "link": "https://blockworks.co/news/crypto-weeklong-slump"
+        }
+      ],
+      "published": "2025-12-05T16:06:36.000Z"
+    },
+    {
+      "title": "Thursday links: Prediction markets, agent hackers, quantum risks",
+      "category": "AI",
+      "summary": {
+        "main": "Anthropic researchers report that their AI agents successfully exploited 56% of vulnerable smart contracts"
+      },
+      "sources": [
+        "Blockworks"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Blockworks",
+          "link": "https://blockworks.co/news/agent-hackers-quantum-risks"
+        }
+      ],
+      "published": "2025-12-04T22:41:47.000Z"
+    },
+    {
+      "title": "Hyperliquid: The frontend wars",
+      "category": "Other",
+      "summary": {
+        "main": "Nearly 40% of Hyperliquid’s daily active users trade through third-party frontends rather than the native UI"
+      },
+      "sources": [
+        "Blockworks"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Blockworks",
+          "link": "https://blockworks.co/news/hyperliquid-the-frontend-wars"
+        }
+      ],
+      "published": "2025-12-04T20:51:50.000Z"
+    },
+    {
+      "title": "After Monad’s TGE, can the chain turn hype into long-term conversion?",
+      "category": "Other",
+      "summary": {
+        "main": "The data paint a complicated picture about user activity and the Monad ecosystem"
+      },
+      "sources": [
+        "Blockworks"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Blockworks",
+          "link": "https://blockworks.co/news/after-monad-tge"
+        }
+      ],
+      "published": "2025-12-04T18:23:56.000Z"
+    },
+    {
+      "title": "Too funded to fail: Crypto needs a forest fire",
+      "category": "Other",
+      "summary": {
+        "main": "For new growth, crypto may need to shed tired norms like over-raising and the hoarding of investment resources"
+      },
+      "sources": [
+        "Blockworks"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Blockworks",
+          "link": "https://blockworks.co/news/forest-fire"
+        }
+      ],
+      "published": "2025-12-04T16:07:23.000Z"
+    },
+    {
+      "title": "Ethereum’s Fusaka upgrade lands today",
+      "category": "Other",
+      "summary": {
+        "main": "Ethereum rolls out Fusaka, setting the stage for a stronger blob fee market and renewed deflationary potential"
+      },
+      "sources": [
+        "Blockworks"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Blockworks",
+          "link": "https://blockworks.co/news/fusaka-update-today"
+        }
+      ],
+      "published": "2025-12-03T17:05:47.000Z"
+    },
+    {
+      "title": "The sci-fi future of onchain assets and smart locks",
+      "category": "Other",
+      "summary": {
+        "main": "Futuristic DeFi is stuck inside the computer. An old idea might be its escape hatch"
+      },
+      "sources": [
+        "Blockworks"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Blockworks",
+          "link": "https://blockworks.co/news/the-sci-fi-future-of-onchain-assets-and-smart-locks"
+        }
+      ],
+      "published": "2025-12-03T16:03:42.000Z"
+    },
+    {
+      "title": "Strategy stress, liquidity strain",
+      "category": "Other",
+      "summary": {
+        "main": "Money market indicators are flashing liquidity stress again as crypto underperforms equities"
+      },
+      "sources": [
+        "Blockworks"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Blockworks",
+          "link": "https://blockworks.co/news/strategy-stress-liquidity-strain"
+        }
+      ],
+      "published": "2025-12-02T17:12:19.000Z"
+    },
+    {
+      "title": "Privacy is not a ‘natural’ right — it’s an invention",
+      "category": "Other",
+      "summary": {
+        "main": "From passageways to penumbras: a history of private life"
+      },
+      "sources": [
+        "Blockworks"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Blockworks",
+          "link": "https://blockworks.co/news/privacy-right-invention"
+        }
+      ],
+      "published": "2025-12-02T15:01:15.000Z"
+    },
+    {
+      "title": "Chiliz price surges amid adoption in South Korea and UEFA Champions League excitement",
+      "category": "Other",
+      "summary": {
+        "main": "Chiliz price rose more than 13% to above $0.0433. Korea&#8217;s Naver Pay has onboarded nearly 1 million users to the Chiliz Chain. Top European teams with fan tokens have advanced in the UEFA..."
+      },
+      "sources": [
+        "CoinJournal"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "CoinJournal",
+          "link": "https://coinjournal.net/news/chiliz-price-surges-amid-adoption-in-south-korea-and-uefa-champions-league-excitement/"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 14:04:30 +0000"
+    },
+    {
+      "title": "BNB price outlook as quarterly burn cuts supply to 134.7M",
+      "category": "Other",
+      "summary": {
+        "main": "BNB price hovers near $620 as bulls target a fresh short-term rally. The 35th quarterly burn has reduced BNB supply to 134.7 million. A shift in macro and geopolitical conditions could bolster BNB..."
+      },
+      "sources": [
+        "CoinJournal"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "CoinJournal",
+          "link": "https://coinjournal.net/news/bnb-price-outlook-as-quarterly-burn-cuts-supply-to-134-7m/"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 12:48:44 +0000"
+    },
+    {
+      "title": "WLFI token outlook as 4.52B burn, 62.28B unlock reshape tokenomics",
+      "category": "Other",
+      "summary": {
+        "main": "World Liberty Financial is reshaping WLFI token supply. About 4.52 billion insider tokens may be burned if the vote passes. WLFI token price stays volatile, driven by governance vote expectations...."
+      },
+      "sources": [
+        "CoinJournal"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "CoinJournal",
+          "link": "https://coinjournal.net/news/wlfi-token-outlook-as-4-52b-burn-62-28b-unlock-reshape-tokenomics/"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 09:11:05 +0000"
+    },
+    {
+      "title": "(CAKE) tops $1.60, bullish sentiment grows amid rising Open Interest",
+      "category": "Other",
+      "summary": {
+        "main": "Key takeaways PancakeSwap is holding above the key support level at $1.55, hinting at an upside move ahead. Rising open interest alongside positive funding rates signals increasing participation...."
+      },
+      "sources": [
+        "CoinJournal"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "CoinJournal",
+          "link": "https://coinjournal.net/news/cake-tops-1-60-bullish-sentiment-grows-amid-rising-open-interest/"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 08:26:45 +0000"
+    },
+    {
+      "title": "Pepe (PEPE) surges 9%, drawing interest from whales",
+      "category": "Other",
+      "summary": {
+        "main": "Key takeaways PEPE is up 9% in the last 24 hours, making it one of the best performers among the top 50 cryptocurrencies by market cap. The rally comes amid renewed interest from whales and retail..."
+      },
+      "sources": [
+        "CoinJournal"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "CoinJournal",
+          "link": "https://coinjournal.net/news/pepe-pepe-surges-9-drawing-interest-from-whales/"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 07:40:24 +0000"
+    },
+    {
+      "title": "Bitcoin’s recovery hits a Fed ceiling with no sign of cheaper money",
+      "category": "Other",
+      "summary": {
+        "main": "Bitcoin's latest recovery has pushed the flagship digital asset back toward the $75,000 level, tracking a broader return in risk appetite as hopes for de-escalation in the Middle East lifted global..."
+      },
+      "sources": [
+        "CryptoSlate"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "CryptoSlate",
+          "link": "https://cryptoslate.com/bitcoins-recovery-hits-fed-ceiling-with-no-cheaper-money-rates/"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 16:00:02 +0000"
+    },
+    {
+      "title": "Why S&P 500’s $6 trillion melt up rally exposes Bitcoin amid range-bound weakness",
+      "category": "Other",
+      "summary": {
+        "main": "Traditional equities like the S&#038;P 500 are staging a historic comeback, shaking off weeks of geopolitical anxiety to chart new all-time highs. Yet Bitcoin, which has historically been a..."
+      },
+      "sources": [
+        "CryptoSlate"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "CryptoSlate",
+          "link": "https://cryptoslate.com/ai-stock-rally-leaves-bitcoin-behind/"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 14:05:22 +0000"
+    },
+    {
+      "title": "Bitcoin’s quantum migration plan forces the network to choose between frozen and stolen coins",
+      "category": "Other",
+      "summary": {
+        "main": "Bitcoin's debate about quantum computers produced a published draft with real political consequences on Apr. 14. Bitcoin Improvement Proposal 361 (BIP 361), titled &#8220;Post Quantum Migration and..."
+      },
+      "sources": [
+        "CryptoSlate"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "CryptoSlate",
+          "link": "https://cryptoslate.com/bitcoins-quantum-migration-plan-forces-the-community-to-choose-between-frozen-and-stolen-coins/"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 12:45:17 +0000"
+    },
+    {
+      "title": "Why the SEC just gave self custody crypto apps 5 years to get traditional broker licenses",
+      "category": "Other",
+      "summary": {
+        "main": "The SEC moved the crypto market structure forward on Apr. 13 without waiting for Congress to act. The agency's Division of Trading and Markets published a staff statement on Covered User Interfaces,..."
+      },
+      "sources": [
+        "CryptoSlate"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "CryptoSlate",
+          "link": "https://cryptoslate.com/sec-lets-some-crypto-trading-apps-skip-broker-licenses/"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 10:55:58 +0000"
+    },
+    {
+      "title": "Bitcoin is squeezing into the $78k ‘True Market Mean’ with Fed and retail data set to decide next move",
+      "category": "Other",
+      "summary": {
+        "main": "Bitcoin is pushing up against a patch of resistance right as the bigger economic picture gets trickier. The price is pushing toward $75,000, with some important on-chain sellers stepping in and two..."
+      },
+      "sources": [
+        "CryptoSlate"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "CryptoSlate",
+          "link": "https://cryptoslate.com/bitcoin-nears-78k-true-market-mean-fed-retail-data-next-move/"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 09:31:25 +0000"
+    },
+    {
+      "title": "Trump family’s WLFI starts damage control but its new plan leaves holders who refuse the new terms locked indefinitely",
+      "category": "Other",
+      "summary": {
+        "main": "WLFI’s new unlock proposal feels like a move to contain a crisis, but the bigger issue is still about who actually holds the reins and how governance really works. World Liberty Financial is back on..."
+      },
+      "sources": [
+        "CryptoSlate"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "CryptoSlate",
+          "link": "https://cryptoslate.com/trump-familys-wlfi-starts-damage-control-but-its-new-plan-leaves-holders-who-refuse-the-new-terms-locked-indefinitely/"
+        }
+      ],
+      "published": "Wed, 15 Apr 2026 18:30:22 +0000"
+    },
+    {
+      "title": "Ripple's RLUSD Listed on Leading Crypto Exchange",
+      "category": "Other",
+      "summary": {
+        "main": "Ripple's stablecoin, RLUSD, is listed on major crypto exchange Bitrue, allowing users to use the stablecoin as collateral on the platform."
+      },
+      "sources": [
+        "UToday"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "UToday",
+          "link": "https://u.today/ripples-rlusd-listed-on-leading-crypto-exchange"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 15:44:00 +0000"
+    },
+    {
+      "title": "Sui (SUI) Market Position Improves After 37% Spike in Volume: Reviewing the Project's Prospects",
+      "category": "Other",
+      "summary": {
+        "main": "Sui's market performance is getting better following the recovery of trading volume."
+      },
+      "sources": [
+        "UToday"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "UToday",
+          "link": "https://u.today/sui-sui-market-position-improves-after-37-spike-in-volume-reviewing-the-projects-prospects"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 14:05:00 +0000"
+    },
+    {
+      "title": "61,000 BTC Sold Amid Miner Sell-Off, Trend Raises Questions",
+      "category": "Other",
+      "summary": {
+        "main": "Bitcoin miner reserves have fallen by 61,000 BTC since the start of this cycle."
+      },
+      "sources": [
+        "UToday"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "UToday",
+          "link": "https://u.today/61000-btc-sold-amid-miner-sell-off-trend-raises-questions"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 13:42:00 +0000"
+    },
+    {
+      "title": "BlackRock Adds $505 Million of Bitcoin in New Buying Spree",
+      "category": "Other",
+      "summary": {
+        "main": "BlackRock has purchased over half a million dollars worth of Bitcoin as institutional demand returns and the BlackRock IBIT begins to thrive again."
+      },
+      "sources": [
+        "UToday"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "UToday",
+          "link": "https://u.today/blackrock-adds-505-million-of-bitcoin-in-new-buying-spree"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 11:30:00 +0000"
+    },
+    {
+      "title": "Ripple Developers React to Solana's XRP Post, Something to Watch Out For?",
+      "category": "Other",
+      "summary": {
+        "main": "Solana tweeted \"XRP\" in a new post, catching the attention of the crypto community."
+      },
+      "sources": [
+        "UToday"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "UToday",
+          "link": "https://u.today/ripple-developers-react-to-solanas-xrp-post-something-to-watch-out-for"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 10:59:00 +0000"
+    },
+    {
+      "title": "82.5 Billion Shiba Inu (SHIB) Removed in 24 Hours After Price Paints It Green",
+      "category": "Other",
+      "summary": {
+        "main": "Shiba Inu is rapidly descending on the market, with a solid removal of capital from exchanges."
+      },
+      "sources": [
+        "UToday"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "UToday",
+          "link": "https://u.today/825-billion-shiba-inu-shib-removed-in-24-hours-after-price-paints-it-green"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 10:12:00 +0000"
+    },
+    {
+      "title": "'Have Fun Stealing Satoshi Coins': Cardano's Hoskinson Mocks Bitcoin Quantum Soft Fork, Warns About North Korea in 2033",
+      "category": "Other",
+      "summary": {
+        "main": "Cardano's Charles Hoskinson slams BIP-361, warning that freezing 1.7 million BTC, including Satoshi's Bitcoin, to stop a 2033 North Korean quantum attack violates the core principles of sound money."
+      },
+      "sources": [
+        "UToday"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "UToday",
+          "link": "https://u.today/have-fun-stealing-satoshi-coins-cardanos-hoskinson-mocks-bitcoin-quantum-soft-fork-warns-about"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 09:44:00 +0000"
+    },
+    {
+      "title": "Ethereum-Based NFT Platform Halts Operations",
+      "category": "Other",
+      "summary": {
+        "main": "Prominent Ethereum-based NFT platform Foundation has suddenly halted operations after digital art gallery Blackdove unexpectedly reversed its recent acquisition."
+      },
+      "sources": [
+        "UToday"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "UToday",
+          "link": "https://u.today/ethereum-based-nft-platform-halts-operations"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 08:27:12 +0000"
+    },
+    {
+      "title": "XRP Finally Breaks $1.40 Mark: Is It Finally Bullish?",
+      "category": "Other",
+      "summary": {
+        "main": "XRP has finally regained some strength on the market, which helped it cross the $1.40 price mark."
+      },
+      "sources": [
+        "UToday"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "UToday",
+          "link": "https://u.today/xrp-finally-breaks-140-mark-is-xrp-finally-bullish"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 08:21:00 +0000"
+    },
+    {
+      "title": "Hayes Questions If Bitcoin Bottom Is In",
+      "category": "Other",
+      "summary": {
+        "main": "Arthur Hayes has noted that the flagship cryptocurrency is showing massive strength by decoupling from the U.S. SaaS sector."
+      },
+      "sources": [
+        "UToday"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "UToday",
+          "link": "https://u.today/hayes-questions-if-bitcoin-bottom-is-in"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 05:45:48 +0000"
+    },
+    {
+      "title": "Bitcoin's Failed $75,000 Entry: What's Next? XRP's Silent Uptrend Originates, Zcash (ZEC) Adds 166% in Key Flow Metric: Crypto Market Review",
+      "category": "Other",
+      "summary": {
+        "main": "Despite the lack of bearish pressure on the market, top-tier assets are seeing the possibility of a proper price recovery."
+      },
+      "sources": [
+        "UToday"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "UToday",
+          "link": "https://u.today/bitcoins-failed-75000-entry-whats-next-xrps-silent-uptrend-originates-zcash-zec-adds-166-in-key"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 00:01:00 +0000"
+    },
+    {
+      "title": "XRP Signals Breakout Setup, Shiba Inu (SHIB) Crosses 1 Trillion Threshold, Ethereum Outpaces Bitcoin — U.Today Crypto Digest",
+      "category": "Other",
+      "summary": {
+        "main": "Crypto news digest: XRP whales accumulate 20 million coins; SHIB just crossed one trillion threshold; Ethereum outpaces Bitcoin."
+      },
+      "sources": [
+        "UToday"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "UToday",
+          "link": "https://u.today/xrp-signals-breakout-setup-shiba-inu-shib-crosses-1-trillion-threshold-ethereum-outpaces-bitcoin"
+        }
+      ],
+      "published": "Wed, 15 Apr 2026 21:34:21 +0000"
+    },
+    {
+      "title": "Mow: Strategy's Purchasing Price to Be New BTC Floor",
+      "category": "Other",
+      "summary": {
+        "main": "Corporate whale Strategy Inc.'s $75,577 average purchase price will serve as the new permanent price floor for Bitcoin, according to the prominent analyst.."
+      },
+      "sources": [
+        "UToday"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "UToday",
+          "link": "https://u.today/mow-strategys-purchasing-price-to-be-new-btc-floor"
+        }
+      ],
+      "published": "Wed, 15 Apr 2026 20:47:30 +0000"
+    },
+    {
+      "title": "Ripple Tests Out XRP Cashtag",
+      "category": "Other",
+      "summary": {
+        "main": "Ripple is flexing its massive social media muscle to test drive X's highly anticipated financial overhaul."
+      },
+      "sources": [
+        "UToday"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "UToday",
+          "link": "https://u.today/ripple-tests-out-xrp-cashtag"
+        }
+      ],
+      "published": "Wed, 15 Apr 2026 19:12:38 +0000"
+    },
+    {
+      "title": "Cardano Founder Questions Bitcoins Post Quantum Defense Plan",
+      "category": "Other",
+      "summary": {
+        "main": "The ongoing debate over Bitcoin's vulnerability to quantum computing has sparked a high-profile clash between two of the cryptocurrency industry's most prominent figures.."
+      },
+      "sources": [
+        "UToday"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "UToday",
+          "link": "https://u.today/cardano-founder-questions-bitcoins-post-quantum-defense-plan"
+        }
+      ],
+      "published": "Wed, 15 Apr 2026 17:05:39 +0000"
+    },
+    {
+      "title": "Accelerating the cyber defense ecosystem that protects us all",
+      "category": "AI",
+      "summary": {
+        "main": "Leading security firms and enterprises join OpenAI’s Trusted Access for Cyber, using GPT-5.4-Cyber and $10M in API grants to strengthen global cyber defense."
+      },
+      "sources": [
+        "OpenAI Official"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "OpenAI Official",
+          "link": "https://openai.com/index/accelerating-cyber-defense-ecosystem"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 00:00:00 GMT"
+    },
+    {
+      "title": "Google is now targeting bad ads over bad actors",
+      "category": "Other",
+      "summary": {
+        "main": "Google blocked 8.3 billion ads in 2025 but suspended fewer advertisers."
+      },
+      "sources": [
+        "TechCrunch AI"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "TechCrunch AI",
+          "link": "https://techcrunch.com/2026/04/16/google-blocked-more-ads-but-banned-fewer-advertisers-as-ai-reshapes-enforcement/"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 15:00:00 +0000"
+    },
+    {
+      "title": "Runway CEO says AI could help Hollywood make 50 films instead of one $100M blockbuster",
+      "category": "AI",
+      "summary": {
+        "main": "Runway’s CEO says AI could help studios make dozens of films for the cost of one, betting volume will boost hit-making odds."
+      },
+      "sources": [
+        "TechCrunch AI"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "TechCrunch AI",
+          "link": "https://techcrunch.com/2026/04/16/runway-ceo-says-ai-could-help-hollywood-make-50-films-instead-of-one-100m-blockbuster/"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 14:14:29 +0000"
+    },
+    {
+      "title": "Meta raises Quest 3 and Quest 3S prices due to RAM shortage",
+      "category": "Other",
+      "summary": {
+        "main": "Starting April 19, the price of the Meta Quest 3S (128GB) and Meta Quest 3S (256GB) will go up by $50 to $349.99 and $449.99, respectively. The price of the Meta Quest 3 is going up by $100 to..."
+      },
+      "sources": [
+        "TechCrunch AI"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "TechCrunch AI",
+          "link": "https://techcrunch.com/2026/04/16/meta-raises-quest-3-and-quest-3s-prices-due-to-ram-shortage/"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 13:49:32 +0000"
+    },
+    {
+      "title": "This simulation startup wants to be the Cursor for physical AI",
+      "category": "AI",
+      "summary": {
+        "main": "Antioch raised a $8.5 million seed round to create simulation tools for a new generation of robot builders."
+      },
+      "sources": [
+        "TechCrunch AI"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "TechCrunch AI",
+          "link": "https://techcrunch.com/2026/04/16/this-simulation-startup-wants-to-be-the-cursor-for-physical-ai/"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 12:30:00 +0000"
+    },
+    {
+      "title": "DeepL, known for text translation, now wants to translate your voice",
+      "category": "AI",
+      "summary": {
+        "main": "DeepL says its tech could be used for real-time translation with meeting tools like Zoom and Microsoft Teams"
+      },
+      "sources": [
+        "TechCrunch AI"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "TechCrunch AI",
+          "link": "https://techcrunch.com/2026/04/16/deepl-known-for-text-translation-now-wants-to-translate-your-voice/"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 08:00:00 +0000"
+    },
+    {
+      "title": "OpenAI updates its Agents SDK to help enterprises build safer, more capable agents",
+      "category": "AI",
+      "summary": {
+        "main": "OpenAI has expanded the capabilities of its agent-building toolkit, as agentic AI continues to grow in popularity."
+      },
+      "sources": [
+        "TechCrunch AI"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "TechCrunch AI",
+          "link": "https://techcrunch.com/2026/04/15/openai-updates-its-agents-sdk-to-help-enterprises-build-safer-more-capable-agents/"
+        }
+      ],
+      "published": "Wed, 15 Apr 2026 19:28:36 +0000"
+    },
+    {
+      "title": "Hightouch reaches $100M ARR fueled by marketing tools powered by AI",
+      "category": "AI",
+      "summary": {
+        "main": "The startup says it grew its ARR by $70 million in just 20 months after launching an AI agent platform for marketers."
+      },
+      "sources": [
+        "TechCrunch AI"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "TechCrunch AI",
+          "link": "https://techcrunch.com/2026/04/15/hightouch-reaches-100m-arr-fueled-by-marketing-tools-powered-by-ai/"
+        }
+      ],
+      "published": "Wed, 15 Apr 2026 18:55:12 +0000"
+    },
+    {
+      "title": "LinkedIn data shows AI isn’t to blame for hiring decline… yet",
+      "category": "Other",
+      "summary": {
+        "main": "LinkedIn says hiring is down 20% since 2022, but blames higher interest rates — not AI — for the slowdown."
+      },
+      "sources": [
+        "TechCrunch AI"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "TechCrunch AI",
+          "link": "https://techcrunch.com/2026/04/15/linkedin-data-shows-ai-isnt-to-blame-for-hiring-decline-yet/"
+        }
+      ],
+      "published": "Wed, 15 Apr 2026 18:51:54 +0000"
+    },
+    {
+      "title": "AI learning app Gizmo levels up with 13M users and a $22M investment",
+      "category": "AI",
+      "summary": {
+        "main": "Gizmo, an AI-powered learning platform, has attracted more than 13 million users and just secured $22 million in Series A funding."
+      },
+      "sources": [
+        "TechCrunch AI"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "TechCrunch AI",
+          "link": "https://techcrunch.com/2026/04/15/ai-learning-app-gizmo-levels-up-with-13m-users-and-a-22m-investment/"
+        }
+      ],
+      "published": "Wed, 15 Apr 2026 18:38:10 +0000"
+    },
+    {
+      "title": "Can AI judge journalism? A Thiel-backed startup says yes, even if it risks chilling whistleblowers",
+      "category": "AI",
+      "summary": {
+        "main": "Objection, a Thiel-backed startup, aims to use AI to judge journalism, letting users pay to challenge stories. Critics warn it could chill whistleblowers and reshape how media accountability works."
+      },
+      "sources": [
+        "TechCrunch AI"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "TechCrunch AI",
+          "link": "https://techcrunch.com/2026/04/15/can-ai-judge-journalism-a-thiel-backed-startup-says-yes-even-if-it-risks-chilling-whistleblowers/"
+        }
+      ],
+      "published": "Wed, 15 Apr 2026 18:33:20 +0000"
+    },
+    {
+      "title": "Google rolls out a native Gemini app for Mac",
+      "category": "AI",
+      "summary": {
+        "main": "You can share anything on their screen with Gemini to get help with what they're looking at in the moment, including local files."
+      },
+      "sources": [
+        "TechCrunch AI"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "TechCrunch AI",
+          "link": "https://techcrunch.com/2026/04/15/google-rolls-out-a-native-gemini-app-for-mac/"
+        }
+      ],
+      "published": "Wed, 15 Apr 2026 18:22:13 +0000"
+    },
+    {
+      "title": "The musician-turned-biotech-founder waiting to fundraise",
+      "category": "Other",
+      "summary": {
+        "main": "When Grammy-nominated singer-songwriter&#160;Aloe Blacc&#160;got COVID despite being vaccinated and boosted, he tried to fund research for a better..."
+      },
+      "sources": [
+        "TechCrunch AI"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "TechCrunch AI",
+          "link": "https://techcrunch.com/podcast/the-musician-turned-biotech-founder-waiting-to-fundraise/"
+        }
+      ],
+      "published": "Wed, 15 Apr 2026 17:58:28 +0000"
+    },
+    {
+      "title": "India’s vibe-coding startup Emergent enters OpenClaw-like AI agent space",
+      "category": "AI",
+      "summary": {
+        "main": "Emergent's Wingman lets users manage and automate tasks through chat on platforms like WhatsApp and Telegram."
+      },
+      "sources": [
+        "TechCrunch AI"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "TechCrunch AI",
+          "link": "https://techcrunch.com/2026/04/15/indias-vibe-coding-startup-emergent-enters-openclaw-like-ai-agent-space/"
+        }
+      ],
+      "published": "Wed, 15 Apr 2026 17:24:18 +0000"
+    }
+  ]
 }

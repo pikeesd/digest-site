@@ -14,10 +14,22 @@ function App() {
   const [timeFilter, setTimeFilter] = useState(24);
   const [serverMessage, setServerMessage] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
+  const [briefing, setBriefing] = useState("");
 
   const [isNichesOpen, setIsNichesOpen] = useState(false);
   const [timeAgo, setTimeAgo] = useState("just now");
   const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    fetch("https://steadfast-beauty-production-9beb.up.railway.app/api/news")
+      .then((res) => res.json())
+      .then((data) => {
+        // Теперь эта строка будет работать, так как setBriefing существует!
+        setBriefing(data.metadata?.briefing || "");
+
+        setNews(data.news || []);
+      });
+  }, []);
 
   // --- 2. ЭФФЕКТЫ (ЗАГРУЗКА И ТАЙМЕРЫ) ---
   useEffect(() => {
@@ -31,6 +43,10 @@ function App() {
         if (data.metadata?.last_updated) {
           setLastUpdate(new Date(data.metadata.last_updated));
         }
+
+        // --- ВОТ ЭТА СТРОКА НУЖНА ---
+        setBriefing(data.metadata?.briefing || "");
+
         setNews(data.news || []);
         setServerMessage("");
       })
@@ -89,9 +105,10 @@ function App() {
 
   return (
     <div className={`app-layout ${isNichesOpen ? "dropdown-open" : ""}`}>
-
       {/* Оверлей затемнения при открытии выбора ниш */}
-      {isNichesOpen && <div className="page-overlay" onClick={() => setIsNichesOpen(false)}></div>}
+      {isNichesOpen && (
+        <div className="page-overlay" onClick={() => setIsNichesOpen(false)}></div>
+      )}
 
       {/* ЛЕВАЯ ПАНЕЛЬ (САЙДБАР) */}
       <aside className="sidebar">
@@ -101,17 +118,18 @@ function App() {
             <h1 className="brand-title">Peak Digest</h1>
             <div className="live-indicator">
               <span className="live-dot"></span>
-              {/* ✅ Теперь здесь живое время */}
               Live • {timeAgo}
             </div>
           </div>
         </div>
 
-
         <div className="side-nav">
           <button
             className={`button primary btn-large ${mode === "full" ? "active" : ""}`}
-            onClick={() => { setMode("full"); setIsNichesOpen(false); }}
+            onClick={() => {
+              setMode("full");
+              setIsNichesOpen(false);
+            }}
           >
             Show full digest
           </button>
@@ -120,14 +138,13 @@ function App() {
             <button
               className="button btn-large btn-secondary"
               onClick={() => {
-                // 1. Переключаем видимость меню ниш
                 setIsNichesOpen(!isNichesOpen);
-                // 2. 🔥 ГЛАВНОЕ: Сбрасываем ID открытой карточки, чтобы закрыть "Open source"
                 setOpenDropdownId(null);
               }}
             >
-              Generate by niches <svg
-                className={`icon ${isOpen ? "open" : ""}`}
+              Generate by niches
+              <svg
+                className={`icon ${isNichesOpen ? "open" : ""}`}
                 width="16"
                 height="16"
                 viewBox="0 0 24 24"
@@ -159,17 +176,32 @@ function App() {
               </div>
             )}
           </div>
+
+          {/* AI Briefing Block */}
+          <div className="sidebar-briefing">
+            <h3>AI Briefing</h3>
+            <p>
+              {briefing || "Distilling today's market chaos into insights..."}
+            </p>
+            <div className="briefing-status">
+              <span className="dot pulse"></span> Live Insight
+            </div>
+          </div>
         </div>
       </aside>
 
-
       {/* ПРАВАЯ ЧАСТЬ (КОНТЕНТ) */}
       <main className="main-content">
-
         {mode !== "idle" && (
           <div className="top-action-bar">
             {/* Левая часть: кнопка Back */}
-            <button className="back-button" onClick={() => { setMode("idle"); setTimeFilter(24); }}>
+            <button
+              className="back-button"
+              onClick={() => {
+                setMode("idle");
+                setTimeFilter(24);
+              }}
+            >
               ← Back
             </button>
 
@@ -184,7 +216,9 @@ function App() {
                 className="global-search-input"
               />
               {searchQuery && (
-                <button className="clear-search-btn" onClick={() => setSearchQuery("")}>✕</button>
+                <button className="clear-search-btn" onClick={() => setSearchQuery("")}>
+                  ✕
+                </button>
               )}
             </div>
 
@@ -203,10 +237,11 @@ function App() {
           </div>
         )}
 
-
         <div className="content-scroll">
           {serverMessage ? (
-            <div className="status-msg"><h2>{serverMessage}</h2></div>
+            <div className="status-msg">
+              <h2>{serverMessage}</h2>
+            </div>
           ) : mode === "idle" ? (
             <div className="empty-state">
               <h2>Ready to peak?</h2>
@@ -220,7 +255,7 @@ function App() {
           ) : (
             <div className="cards-container">
               <div className="top-block">
-                <h2 className="card-title" style={{ marginBottom: '20px', fontSize: '24px' }}>
+                <h2 className="card-title" style={{ marginBottom: "20px", fontSize: "24px" }}>
                   {mode === "full" ? "Top news today" : `${activeCategory} Top`}
                 </h2>
                 <div className="top-cards">
@@ -229,20 +264,24 @@ function App() {
                       key={`top-${i}`}
                       item={item}
                       isOpen={openDropdownId === `top-${i}`}
-                      onToggle={() => setOpenDropdownId(openDropdownId === `top-${i}` ? null : `top-${i}`)}
+                      onToggle={() =>
+                        setOpenDropdownId(openDropdownId === `top-${i}` ? null : `top-${i}`)
+                      }
                     />
                   ))}
                 </div>
               </div>
 
               {restGlobal.length > 0 && (
-                <div className="cards" style={{ marginTop: '40px' }}>
+                <div className="cards" style={{ marginTop: "40px" }}>
                   {restGlobal.map((item, i) => (
                     <NewsCard
                       key={`rest-${i}`}
                       item={item}
                       isOpen={openDropdownId === `rest-${i}`}
-                      onToggle={() => setOpenDropdownId(openDropdownId === `rest-${i}` ? null : `rest-${i}`)}
+                      onToggle={() =>
+                        setOpenDropdownId(openDropdownId === `rest-${i}` ? null : `rest-${i}`)
+                      }
                     />
                   ))}
                 </div>
@@ -254,5 +293,4 @@ function App() {
     </div>
   );
 }
-
 export default App;

@@ -775,3 +775,34 @@ body.dropdown-open::before {
   opacity: 0.5;
   cursor: pointer;
 }
+
+.sidebar-briefing {
+  margin: 20px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+}
+
+.sidebar-briefing h3 {
+  color: #ff9d00;
+  font-size: 12px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.sidebar-briefing p {
+  font-size: 13px;
+  color: #ccc;
+  line-height: 1.5;
+}
+
+.dot.pulse {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #00ff88;
+  border-radius: 50%;
+  margin-right: 5px;
+  box-shadow: 0 0 8px #00ff88;
+}

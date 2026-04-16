@@ -464,6 +464,38 @@ def build_digest(groups):
     return digest
 
 
+def generate_briefing(news_list):
+    """Генерирует общую сводку дня на основе топ-новостей."""
+    if not client or not news_list:
+        return "AI analysis is currently unavailable. Check back shortly for your market briefing."
+
+    # Берем заголовки первых 15 новостей (они уже отсортированы по важности)
+    titles = [n["title"] for n in news_list[:15]]
+    titles_str = "\n- ".join(titles)
+
+    prompt = f"""
+    Analyze these crypto/AI news headlines and provide a 3-sentence daily briefing.
+    Sentence 1: The most critical market or tech event.
+    Sentence 2: General sentiment or secondary trends.
+    Sentence 3: A brief forward-looking takeaway for the reader.
+    Tone: Professional, insider, concise. Language: English.
+    Headlines:
+    - {titles_str}
+    """
+
+    try:
+        response = client.chat.completions.create(
+            model="gpt-4o-mini",
+            messages=[{"role": "user", "content": prompt}],
+            max_tokens=200,
+            temperature=0.7,
+        )
+        return response.choices[0].message.content.strip()
+    except Exception as e:
+        print(f"⚠️ Briefing error: {e}")
+        return "Market briefing is being updated based on fresh data..."
+
+
 def main(argv: Optional[List[str]] = None) -> int:
     init_db()  # Инициализируем кэш
 
@@ -505,12 +537,16 @@ def main(argv: Optional[List[str]] = None) -> int:
     # Сортируем по важности (количеству источников)
     digest = sorted(digest, key=lambda x: x["count"], reverse=True)
 
-    # 5. Формируем финальный JSON для сайта с метаданными
+    # 5. Формируем финальный JSON для сайта
+    # ВАЖНО: сначала вызываем генерацию сводки
+    ai_briefing = generate_briefing(digest)
+
     final_output = {
         "metadata": {
             "last_updated": datetime.utcnow().isoformat() + "Z",
             "total_news": len(digest),
             "timeframe_hours": 24,
+            "briefing": ai_briefing,  # Добавляем сводку в метаданные
         },
         "news": digest,
     }
