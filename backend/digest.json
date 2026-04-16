@@ -1,22 +1,55 @@
 {
   "metadata": {
-    "last_updated": "2026-04-16T16:08:27.637063Z",
-    "total_news": 177,
+    "last_updated": "2026-04-16T16:55:46.944158Z",
+    "total_news": 175,
     "timeframe_hours": 24,
-    "briefing": "Bitcoin's surge to $76,000, driven by record performances in tech stocks, underscores a robust correlation between crypto and traditional market trends. Sentiment remains bullish, with institutional investments flowing into Bitcoin ETFs and significant movements in stablecoins, reflecting growing confidence in the crypto sector. As regulatory landscapes evolve, particularly in the UK, stakeholders should brace for potential shifts that could further shape market dynamics and opportunities."
+    "briefing": "Bitcoin's recent surge to $76,000, driven by bullish tech stocks, marks a significant milestone as Wall Street reaches fresh record highs. Amidst this optimism, Tether's CEO issued a $150 million ultimatum concerning Solana DeFi vulnerabilities, highlighting ongoing concerns about security in the crypto space. Looking ahead, the interplay between traditional finance and innovative crypto solutions will likely shape market dynamics, especially as developments in AI and blockchain continue to reshape industries."
   },
   "news": [
     {
+      "title": "Tether CEO Reacts to Drift Exploit With $150 Million Ultimatum for Solana DeFi",
+      "category": "DeFi",
+      "summary": {
+        "main": "Tether CEO Paolo Ardoino confirms a $150 million support plan for Drift Protocol, but it comes with a catch as Ardoino is demanding a shift to USDT from USDC."
+      },
+      "sources": [
+        "Decrypt",
+        "UToday",
+        "CoinDesk",
+        "TheBlock"
+      ],
+      "count": 4,
+      "links": [
+        {
+          "source": "UToday",
+          "link": "https://u.today/tether-ceo-reacts-to-drift-exploit-with-150-million-ultimatum-for-solana-defi"
+        },
+        {
+          "source": "TheBlock",
+          "link": "https://www.theblock.co/post/397735/drift-127-million-tether-recovery-pivots-circle-usdc-usdt-280-million-exploit?utm_source=rss&utm_medium=rss"
+        },
+        {
+          "source": "Decrypt",
+          "link": "https://decrypt.co/364589/drift-tether-148-million-recovery-plan-ditches-circle-usdc"
+        },
+        {
+          "source": "CoinDesk",
+          "link": "https://www.coindesk.com/business/2026/04/16/drift-gets-usd148-million-funding-from-tether-and-partners-as-it-replaces-circle-stablecoin-with-usdt-after-massive-exploit"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 15:53:00 +0000"
+    },
+    {
       "title": "Bitcoin Hits $76K As Tech Stocks Push Wall Street To Fresh Records",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "Fundstrat&#8217;s chief investment officer, Tom Lee, says the next big move in markets won&#8217;t be led by stocks — it&#8217;ll be driven by crypto. Speaking Wednesday on CNBC&#8217;s..."
       },
       "sources": [
-        "NewsBTC",
         "TheBlock",
+        "CoinDesk",
         "Cointelegraph",
-        "CoinDesk"
+        "NewsBTC"
       ],
       "count": 4,
       "links": [
@@ -40,43 +73,42 @@
       "published": "Thu, 16 Apr 2026 14:00:04 +0000"
     },
     {
-      "title": "Drift secures up to $127 million from Tether for user recovery, pivots from Circle’s USDC to USDT after $280 million exploit",
-      "category": "Other",
+      "title": "Runway CEO says AI could help Hollywood make 50 films instead of one $100M blockbuster",
+      "category": "AI",
       "summary": {
-        "main": "Drift Protocol said it has secured up to $127.5 million from Tether to support user recovery after the April 1 exploit."
+        "main": "Runway’s CEO says AI could help studios make dozens of films for the cost of one, betting volume will boost hit-making odds."
       },
       "sources": [
-        "TheBlock",
-        "Decrypt",
+        "TechCrunch AI",
         "CoinDesk"
       ],
       "count": 3,
       "links": [
         {
-          "source": "TheBlock",
-          "link": "https://www.theblock.co/post/397735/drift-127-million-tether-recovery-pivots-circle-usdc-usdt-280-million-exploit?utm_source=rss&utm_medium=rss"
-        },
-        {
-          "source": "Decrypt",
-          "link": "https://decrypt.co/364589/drift-tether-148-million-recovery-plan-ditches-circle-usdc"
+          "source": "TechCrunch AI",
+          "link": "https://techcrunch.com/2026/04/16/runway-ceo-says-ai-could-help-hollywood-make-50-films-instead-of-one-100m-blockbuster/"
         },
         {
           "source": "CoinDesk",
-          "link": "https://www.coindesk.com/business/2026/04/16/drift-gets-usd148-million-funding-from-tether-and-partners-as-it-replaces-circle-stablecoin-with-usdt-after-massive-exploit"
+          "link": "https://www.coindesk.com/policy/2026/04/16/u-s-cftc-s-selig-says-ai-has-helped-make-up-for-staffing-cuts-at-key-crypto-watchdog"
+        },
+        {
+          "source": "CoinDesk",
+          "link": "https://www.coindesk.com/policy/2026/04/15/jpmorgan-says-clarity-close-to-deal-as-stablecoin-fight-enters-final-stage"
         }
       ],
-      "published": "Thu, 16 Apr 2026 09:30:48 -0400"
+      "published": "Thu, 16 Apr 2026 14:14:29 +0000"
     },
     {
       "title": "South Korea to pilot blockchain-based deposit tokens for government spending",
-      "category": "Other",
+      "category": "DeFi",
       "summary": {
         "main": "South Korea's Ministry of Finance and Economy is launching a new pilot to substitute government expense credit cards with deposit tokens."
       },
       "sources": [
         "Cointelegraph",
-        "TheBlock",
-        "CoinDesk"
+        "CoinDesk",
+        "TheBlock"
       ],
       "count": 3,
       "links": [
@@ -97,14 +129,14 @@
     },
     {
       "title": "Circle CEO sees ‘tremendous opportunity’ for yuan stablecoin despite China curbs",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "Circle’s Jeremy Allaire sees “tremendous” room for a yuan stablecoin, despite China banning most private yuan tokens and pushing its CBDC to challenge US dollar stablecoins."
       },
       "sources": [
-        "Cointelegraph",
         "TheBlock",
-        "CoinDesk"
+        "CoinDesk",
+        "Cointelegraph"
       ],
       "count": 3,
       "links": [
@@ -124,41 +156,14 @@
       "published": "Thu, 16 Apr 2026 12:22:05 +0100"
     },
     {
-      "title": "Tech stocks push Nasdaq, S&P 500 to record highs as Bitcoin taps $75K",
-      "category": "Other",
-      "summary": {
-        "main": "Tech stocks helped drive the Nasdaq to 24,016 and the S&amp;P 500 to 7,022 as Bitcoin climbed nearly 10% over the past two weeks."
-      },
-      "sources": [
-        "Cointelegraph",
-        "CoinDesk"
-      ],
-      "count": 3,
-      "links": [
-        {
-          "source": "Cointelegraph",
-          "link": "https://cointelegraph.com/news/tech-stocks-push-nasdaq-sp500-record-highs-as-bitcoin-taps-75k?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
-        },
-        {
-          "source": "CoinDesk",
-          "link": "https://www.coindesk.com/markets/2026/04/16/bitcoin-steady-as-s-and-p-500-hits-record-but-options-market-isn-t-buying-the-peace-trade"
-        },
-        {
-          "source": "CoinDesk",
-          "link": "https://www.coindesk.com/markets/2026/04/15/bitcoin-capped-at-usd75-000-as-nasdaq-and-s-and-p-500-fly-to-new-record-highs"
-        }
-      ],
-      "published": "Thu, 16 Apr 2026 05:54:52 +0100"
-    },
-    {
       "title": "Morning Minute: Bitcoin Devs Propose New Quantum Solution",
-      "category": "AI",
+      "category": "Security",
       "summary": {
         "main": "BIP-361 would freeze the Bitcoin most at risk of seizure from quantum exploits. But will the community go for it?"
       },
       "sources": [
-        "UToday",
         "Decrypt",
+        "UToday",
         "CoinDesk"
       ],
       "count": 3,
@@ -179,14 +184,37 @@
       "published": "Thu, 16 Apr 2026 12:04:17 +0000"
     },
     {
+      "title": "'Have Fun Stealing Satoshi Coins': Cardano's Hoskinson Mocks Bitcoin Quantum Soft Fork, Warns About North Korea in 2033",
+      "category": "Markets",
+      "summary": {
+        "main": "Cardano's Charles Hoskinson slams BIP-361, warning that freezing 1.7 million BTC, including Satoshi's Bitcoin, to stop a 2033 North Korean quantum attack violates the core principles of sound money."
+      },
+      "sources": [
+        "UToday",
+        "CoinDesk"
+      ],
+      "count": 2,
+      "links": [
+        {
+          "source": "UToday",
+          "link": "https://u.today/have-fun-stealing-satoshi-coins-cardanos-hoskinson-mocks-bitcoin-quantum-soft-fork-warns-about"
+        },
+        {
+          "source": "CoinDesk",
+          "link": "https://www.coindesk.com/tech/2026/04/16/cardano-s-hoskinson-says-bitcoin-s-quantum-fix-is-a-hard-fork-that-can-t-save-satoshi-s-coins"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 09:44:00 +0000"
+    },
+    {
       "title": "DoubleZero rolls out Edge, a low-latency onchain data delivery service on its global fiber DePIN infrastructure",
-      "category": "AI",
+      "category": "DeFi",
       "summary": {
         "main": "Edge is a permissionless platform delivering ultra-fast onchain market data over DoubleZero's global fiber network."
       },
       "sources": [
-        "TheBlock",
-        "CoinDesk"
+        "CoinDesk",
+        "TheBlock"
       ],
       "count": 2,
       "links": [
@@ -203,7 +231,7 @@
     },
     {
       "title": "Bitcoin holds near $75,000 as short-term holders look for profit opportunities",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "Bitcoin holds near $75,000 as short-term holders look for profit opportunities"
       },
@@ -225,13 +253,13 @@
     },
     {
       "title": "Bitcoin ETFs add $186M as Morgan Stanley’s MSBT inflows top $100M in first six trading days",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "U.S. spot bitcoin ETFs added $186 million in their second straight day of positive flows, as Morgan Stanley's MSBT topped WisdomTree's fund."
       },
       "sources": [
-        "TheBlock",
-        "CoinDesk"
+        "CoinDesk",
+        "TheBlock"
       ],
       "count": 2,
       "links": [
@@ -248,13 +276,13 @@
     },
     {
       "title": "Crypto fund manager questioned in Zanzibar police probe into fiancee’s death: reports",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "Zanzibar police are investigating the death of influencer Ashly Robinson, with crypto fund manager Joe McCann reportedly being questioned."
       },
       "sources": [
-        "TheBlock",
-        "CoinDesk"
+        "CoinDesk",
+        "TheBlock"
       ],
       "count": 2,
       "links": [
@@ -271,7 +299,7 @@
     },
     {
       "title": "Adam Back Pushes for Optional Upgrades to Quantum-Proof Bitcoin",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "The Blockstream CEO’s approach contrasts with BIP-361, a proposal that would implement mandatory freezes of quantum-vulnerable Bitcoin."
       },
@@ -294,13 +322,13 @@
     },
     {
       "title": "Ripple taps Kyobo Life to enable real-time government bond settlements in Korea",
-      "category": "Other",
+      "category": "DeFi",
       "summary": {
         "main": "Partnership cuts bond settlement time from two days to near real-time. Bond settlements will use blockchain to reduce risk and remove intermediaries. Impact expands into payments, liquidity, and..."
       },
       "sources": [
-        "CoinDesk",
-        "CoinJournal"
+        "CoinJournal",
+        "CoinDesk"
       ],
       "count": 2,
       "links": [
@@ -316,37 +344,37 @@
       "published": "Thu, 16 Apr 2026 08:07:52 +0000"
     },
     {
-      "title": "Solana Institute-backed super PAC pours $8 million against Sherrod Brown in Ohio race",
-      "category": "Other",
+      "title": "Tech stocks push Nasdaq, S&P 500 to record highs as Bitcoin taps $75K",
+      "category": "Markets",
       "summary": {
-        "main": "Sentinel Action Fund has received backing from the Solana Institute and Multicoin Capital, a crypto-focused venture capital firm."
+        "main": "Tech stocks helped drive the Nasdaq to 24,016 and the S&amp;P 500 to 7,022 as Bitcoin climbed nearly 10% over the past two weeks."
       },
       "sources": [
-        "TheBlock",
-        "CoinDesk"
+        "CoinDesk",
+        "Cointelegraph"
       ],
       "count": 2,
       "links": [
         {
-          "source": "TheBlock",
-          "link": "https://www.theblock.co/post/397681/super-pac-8-million-sherrod-brown?utm_source=rss&utm_medium=rss"
+          "source": "Cointelegraph",
+          "link": "https://cointelegraph.com/news/tech-stocks-push-nasdaq-sp500-record-highs-as-bitcoin-taps-75k?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
         },
         {
           "source": "CoinDesk",
-          "link": "https://www.coindesk.com/policy/2026/04/15/solana-policy-institute-backed-pac-spends-millions-to-jam-sherrod-brown-s-senate-run"
+          "link": "https://www.coindesk.com/markets/2026/04/16/bitcoin-steady-as-s-and-p-500-hits-record-but-options-market-isn-t-buying-the-peace-trade"
         }
       ],
-      "published": "Thu, 16 Apr 2026 01:01:11 -0400"
+      "published": "Thu, 16 Apr 2026 05:54:52 +0100"
     },
     {
       "title": "Crypto PAC Fellowship discloses $11M from Cantor Fitzgerald and Anchorage Digital",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "The committee, led by Tether’s head of government affairs, reported spending $3 million on advertising through a company co-founded by Tether US CEO Bo Hines."
       },
       "sources": [
-        "Cointelegraph",
-        "TheBlock"
+        "TheBlock",
+        "Cointelegraph"
       ],
       "count": 2,
       "links": [
@@ -362,14 +390,37 @@
       "published": "Wed, 15 Apr 2026 22:52:26 +0100"
     },
     {
+      "title": "Meta raises Quest 3 and Quest 3S prices due to RAM shortage",
+      "category": "Markets",
+      "summary": {
+        "main": "Starting April 19, the price of the Meta Quest 3S (128GB) and Meta Quest 3S (256GB) will go up by $50 to $349.99 and $449.99, respectively. The price of the Meta Quest 3 is going up by $100 to..."
+      },
+      "sources": [
+        "Decrypt",
+        "TechCrunch AI"
+      ],
+      "count": 2,
+      "links": [
+        {
+          "source": "TechCrunch AI",
+          "link": "https://techcrunch.com/2026/04/16/meta-raises-quest-3-and-quest-3s-prices-due-to-ram-shortage/"
+        },
+        {
+          "source": "Decrypt",
+          "link": "https://decrypt.co/364599/meta-hikes-quest-vr-prices-ps5-ram-shortage"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 13:49:32 +0000"
+    },
+    {
       "title": "UK Sets Path to Crypto Regulation With FCA Consultation",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "The regulator is seeking feedback on its interpretation of regulated cryptoasset activities under rules set to take effect in October 2027."
       },
       "sources": [
-        "TheBlock",
-        "Decrypt"
+        "Decrypt",
+        "TheBlock"
       ],
       "count": 2,
       "links": [
@@ -386,7 +437,7 @@
     },
     {
       "title": "Here’s The Next Key Bitcoin Price Resistance To Worry About",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "The Bitcoin price is approaching a critical resistance zone as a crypto analyst warns of a potential volatility spike ahead. Apparently, an important liquidity cluster is stuck to this key level,..."
       },
@@ -405,29 +456,6 @@
         }
       ],
       "published": "Thu, 16 Apr 2026 12:30:04 +0000"
-    },
-    {
-      "title": "Bitcoin Double Bottom Formation Eyes $82,500 Rally – Breakout Or Rejection Next?",
-      "category": "Other",
-      "summary": {
-        "main": "As Bitcoin (BTC) attempts to hold the $74,000-$75,000 area, an analyst suggested that the flagship crypto could see another 10% rally toward a key area, but warned that this level could be the..."
-      },
-      "sources": [
-        "NewsBTC",
-        "CryptoSlate"
-      ],
-      "count": 2,
-      "links": [
-        {
-          "source": "NewsBTC",
-          "link": "https://www.newsbtc.com/news/bitcoin/bitcoin-double-bottom-formation-82500-rally/"
-        },
-        {
-          "source": "CryptoSlate",
-          "link": "https://cryptoslate.com/goldman-sachs-wants-to-turn-bitcoin-into-an-income-product/"
-        }
-      ],
-      "published": "Thu, 16 Apr 2026 07:00:09 +0000"
     },
     {
       "title": "Canva’s AI assistant can now call various tools to make designs for you",
@@ -453,7 +481,7 @@
     },
     {
       "title": "Crypto for Advisors: Tokenization’s evolution",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "Crypto for Advisors: Tokenization’s evolution"
       },
@@ -471,7 +499,7 @@
     },
     {
       "title": "Bitcoin slides back below $74,000 as breakout to higher levels fails again",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "Bitcoin slides back below $74,000 as breakout to higher levels fails again"
       },
@@ -489,7 +517,7 @@
     },
     {
       "title": "The 24-hour trap: Why the UK’s new crypto rules could catch some firms off guard",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "The 24-hour trap: Why the UK’s new crypto rules could catch some firms off guard"
       },
@@ -507,7 +535,7 @@
     },
     {
       "title": "VerifiedX brings privacy layer to Bitcoin as institutional demand for confidentiality grows",
-      "category": "Other",
+      "category": "DeFi",
       "summary": {
         "main": "VerifiedX brings privacy layer to Bitcoin as institutional demand for confidentiality grows"
       },
@@ -525,7 +553,7 @@
     },
     {
       "title": "CoinDesk 20 performance update: Ethereum (ETH) price drops 1.3% as index trades lower",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "CoinDesk 20 performance update: Ethereum (ETH) price drops 1.3% as index trades lower"
       },
@@ -543,7 +571,7 @@
     },
     {
       "title": "Keep an eye on XRP, Plasma, DOGE as bitcoin drifts",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "Keep an eye on XRP, Plasma, DOGE as bitcoin drifts"
       },
@@ -561,7 +589,7 @@
     },
     {
       "title": "Bitcoin funding rates hit most negative since 2023, history suggests bottom is in",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "Bitcoin funding rates hit most negative since 2023, history suggests bottom is in"
       },
@@ -579,7 +607,7 @@
     },
     {
       "title": "Buying coffee with bitcoin is easy, the resulting tax burden is not",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "Buying coffee with bitcoin is easy, the resulting tax burden is not"
       },
@@ -596,26 +624,8 @@
       "published": "Thu, 16 Apr 2026 08:48:30 +0000"
     },
     {
-      "title": "The CLARITY Act breakthrough: Why JPMorgan says the U.S. crypto rulebook is ‘close to completion’",
-      "category": "Other",
-      "summary": {
-        "main": "The CLARITY Act breakthrough: Why JPMorgan says the U.S. crypto rulebook is ‘close to completion’"
-      },
-      "sources": [
-        "CoinDesk"
-      ],
-      "count": 1,
-      "links": [
-        {
-          "source": "CoinDesk",
-          "link": "https://www.coindesk.com/policy/2026/04/15/jpmorgan-says-clarity-close-to-deal-as-stablecoin-fight-enters-final-stage"
-        }
-      ],
-      "published": "Thu, 16 Apr 2026 08:32:33 +0000"
-    },
-    {
       "title": "Dogecoin jumps 4.5% to nearly 10-cents, outperforming bitcoin and ether",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "Dogecoin jumps 4.5% to nearly 10-cents, outperforming bitcoin and ether"
       },
@@ -632,8 +642,44 @@
       "published": "Thu, 16 Apr 2026 05:32:40 +0000"
     },
     {
+      "title": "Bitcoin rebounds near $74.5K as US stocks chase after new all-time highs",
+      "category": "Markets",
+      "summary": {
+        "main": "Bitcoin attempted to recover the $75,000 level as US stocks chase after a second day of fresh all-time highs. Is the bull market back on?"
+      },
+      "sources": [
+        "Cointelegraph"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Cointelegraph",
+          "link": "https://cointelegraph.com/news/bitcoin-rebounds-near-dollar74-5k-as-us-stocks-chase-after-new-all-time-highs?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 17:17:04 +0100"
+    },
+    {
+      "title": "Zonda exchange says 4.5K BTC wallet inaccessible amid withdrawal crisis",
+      "category": "Security",
+      "summary": {
+        "main": "The CEO of the troubled Zonda exchange has disclosed a Bitcoin wallet holding around 4,500 BTC, but said the private keys were never transferred during a company handover."
+      },
+      "sources": [
+        "Cointelegraph"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Cointelegraph",
+          "link": "https://cointelegraph.com/news/zonda-crypto-4500-btc-wallet-inaccessible-withdrawal-crisis?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 16:48:12 +0100"
+    },
+    {
       "title": "Tether announces $150M recovery program for Drift Protocol",
-      "category": "Other",
+      "category": "Security",
       "summary": {
         "main": "The Drift Protocol will use the $150 million to relaunch and restore user funds following a $280 million exploit earlier in April."
       },
@@ -651,7 +697,7 @@
     },
     {
       "title": "UAE investors buy AI dip, keep crypto exposure despite conflict",
-      "category": "Other",
+      "category": "AI",
       "summary": {
         "main": "UAE investors are buying the AI and tech dip, keeping exposure to software, chips and crypto as the Iran conflict stress-tests the Gulf’s bid to be a global tech hub."
       },
@@ -669,7 +715,7 @@
     },
     {
       "title": "OneCoin’s fallout lingers as US victims get a shot at recovery",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "Investors in the cryptocurrency Ponzi scheme OneCoin may finally get some relief through a Department of Justice program, some 12 years after the project launched."
       },
@@ -687,7 +733,7 @@
     },
     {
       "title": "Why Australia’s $17B crypto opportunity depends on regulation",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "Australia’s A$24B digital asset opportunity hinges on regulation. Clear rules could drive tokenized markets, faster payments and institutional investment."
       },
@@ -705,7 +751,7 @@
     },
     {
       "title": "Naver-Dunamu filing sets IPO committee, listing timeline for fintech group",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "The corrected filing details timeline, caveats and conditions tied to a potential Naver Financial IPO after the Dunamu share swap deal."
       },
@@ -723,7 +769,7 @@
     },
     {
       "title": "Ukraine arrests FBI-wanted cybercrime suspect, seizes $11M in assets",
-      "category": "Other",
+      "category": "Security",
       "summary": {
         "main": "Ukrainian authorities detained a suspect linked to a $100 million cybercrime network targeting the US and Europe, seizing $11 million in assets, of which $3 million was in cryptocurrency."
       },
@@ -741,7 +787,7 @@
     },
     {
       "title": "AllUnity takes MiCA-regulated euro stablecoin EURAU further into DeFi",
-      "category": "Other",
+      "category": "DeFi",
       "summary": {
         "main": "AllUnity says it is expanding EURAU stablecoin liquidity pools across major DEXs such as Uniswap and Raydium, with trading pairs against USDT and USDT0."
       },
@@ -759,7 +805,7 @@
     },
     {
       "title": "Adam Back says Bitcoin’s post-quantum shift may reveal true Satoshi stash",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "Back said at Paris Blockchain Week that Bitcoin’s post-quantum shift may reveal the true size of the stash held by Satoshi Nakamoto, estimated at between 500,000 and 1 million BTC."
       },
@@ -777,7 +823,7 @@
     },
     {
       "title": "Europe’s Bitcoin treasury playbook won’t be a copy of Strategy: PBW 2026",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "Executives at Paris Blockchain Week said European firms interested in Bitcoin treasury strategies are working around shallower capital markets and tighter constraints than in the US."
       },
@@ -795,7 +841,7 @@
     },
     {
       "title": "French minister says new measures are coming after crypto kidnappings",
-      "category": "Other",
+      "category": "Security",
       "summary": {
         "main": "Jean-Didier Berger said at Paris Blockchain Week that France is preparing new steps to protect crypto holders as wrench attacks and kidnappings keep mounting."
       },
@@ -813,7 +859,7 @@
     },
     {
       "title": "Study finds almost no crypto protocols disclose market-maker terms",
-      "category": "Other",
+      "category": "DeFi",
       "summary": {
         "main": "A review of over 150 crypto protocols finds fewer than 1% disclose market-making arrangements, revealing a major transparency gap in token trading structures."
       },
@@ -831,7 +877,7 @@
     },
     {
       "title": "US should scrap crypto capital gains tax to fuel currency competition: Cato",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "Crypto users in the US are required to pay capital gains taxes on cryptocurrencies, stifling their usefulness as a currency, argued a Washington DC-based think tank."
       },
@@ -849,7 +895,7 @@
     },
     {
       "title": "Trump’s World Liberty under fire for ‘absurd’ token unlock plan",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "Major World Liberty Financial investor Justin Sun called a plan to lock tokens for up to four years “the most absurd governance scams I have ever seen.”"
       },
@@ -867,7 +913,7 @@
     },
     {
       "title": "Morgan Stanley’s Bitcoin fund overtakes WisdomTree after 6 trading days",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "The Morgan Stanley Bitcoin Trust is also within striking distance of overtaking three other US spot Bitcoin ETFs that launched in January 2024."
       },
@@ -903,7 +949,7 @@
     },
     {
       "title": "CFTC probes oil futures trades tied to Trump's moves in Iran: Report",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "The CFTC is investigating trades that took place before the US delayed strikes on Iranian energy infrastructure on March 23 and agreed to a ceasefire with Iran on April 7."
       },
@@ -921,7 +967,7 @@
     },
     {
       "title": "BitMEX pitches ‘canary fund’ alternative to Bitcoin quantum coin freeze",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "It may be appropriate to attempt to mitigate the extent of the freeze as much as possible, even at the cost of greater complexity, said BitMEX."
       },
@@ -939,7 +985,7 @@
     },
     {
       "title": "Bitcoin should prepare now, even if quantum is 'lab experiment,’ Adam Back says",
-      "category": "Other",
+      "category": "Security",
       "summary": {
         "main": "Back said the safest approach is to build optional upgrades that would allow Bitcoin to migrate to quantum-resistant cryptography once it's needed."
       },
@@ -957,7 +1003,7 @@
     },
     {
       "title": "Ether open interest sees 26% increase as markets rally: Are traders into ETH again?",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "Institutional investors are buying Ether again, but a handful of factors could slow market momentum and negatively impact ETH’s rally."
       },
@@ -975,7 +1021,7 @@
     },
     {
       "title": "Bitcoin traders cash out 63K BTC profit as price rallied above $76K: Will the market rebound?",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "Short-term Bitcoin traders took profit on 63,000 BTC over the past 24-hours. Will profit-taking continue to stall the rally?"
       },
@@ -993,7 +1039,7 @@
     },
     {
       "title": "Bitnomial launches Injective futures in US, with eyes on ETF eligibility",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "The contracts mark Injective’s first entry into US-regulated derivatives markets and could help support a spot ETF following a filing from Canary Capital."
       },
@@ -1028,44 +1074,8 @@
       "published": "Wed, 15 Apr 2026 21:44:41 +0100"
     },
     {
-      "title": "Bitwise debuts Avalanche ETP offering AVAX exposure and yield",
-      "category": "Other",
-      "summary": {
-        "main": "The product is designed to generate yield by participating in network validation, adding an income component to passive exposure."
-      },
-      "sources": [
-        "Cointelegraph"
-      ],
-      "count": 1,
-      "links": [
-        {
-          "source": "Cointelegraph",
-          "link": "https://cointelegraph.com/news/bitwise-launches-avalanche-etp-with-staking-feature?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
-        }
-      ],
-      "published": "Wed, 15 Apr 2026 21:07:42 +0100"
-    },
-    {
-      "title": "CoreWeave signs $6B deal with Jane Street to provide AI compute power",
-      "category": "AI",
-      "summary": {
-        "main": "Jane Street said it needs GPU-based computing power to keep its trading and research operations competitive amid growing adoption of AI."
-      },
-      "sources": [
-        "Cointelegraph"
-      ],
-      "count": 1,
-      "links": [
-        {
-          "source": "Cointelegraph",
-          "link": "https://cointelegraph.com/news/coreweave-6b-deal-jane-street-ai-compute?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
-        }
-      ],
-      "published": "Wed, 15 Apr 2026 20:30:52 +0100"
-    },
-    {
       "title": "Polkadot-Ethereum Bridge Hack Losses Were 10x Worse Than Reported, Team Admits",
-      "category": "Other",
+      "category": "Security",
       "summary": {
         "main": "Polkadot bridge protocol Hyperbridge said losses from this week's hack were 10x worse than originally reported, tallying about $2.5 million."
       },
@@ -1083,7 +1093,7 @@
     },
     {
       "title": "French Police Rescue Mother and Child After $400K Crypto Ransom Kidnapping",
-      "category": "Other",
+      "category": "Security",
       "summary": {
         "main": "Elite French police rescued a mother and child after kidnappers targeted the family's crypto wealth in the latest “wrench attack.”"
       },
@@ -1119,7 +1129,7 @@
     },
     {
       "title": "Exchange Inflows Spike as Bitcoin Faces $76K Headwinds",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "On-chain data show increased selling pressure, with Bitcoin exchange inflows and large-holder deposits spiking to multi-month highs."
       },
@@ -1155,7 +1165,7 @@
     },
     {
       "title": "Will Maine Governor Janet Mills Sign Nation's First AI Data Center Ban Into Law?",
-      "category": "Other",
+      "category": "AI",
       "summary": {
         "main": "Maine's moratorium on AI data centers would last for over a year. Will the governor, embroiled in a tough Senate primary, sign it into law?"
       },
@@ -1191,7 +1201,7 @@
     },
     {
       "title": "World Liberty Wants WLFI Locked Beyond Trump's Second Term—Investors Aren't Thrilled",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "World Liberty Financial's early supporters vented frustrations after the Trump-backed crypto venture released a four-year vesting schedule."
       },
@@ -1281,7 +1291,7 @@
     },
     {
       "title": "Tom Lee's BitMine Posts $3.8 Billion Quarterly Loss Due to Ethereum Price Plunge",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "Leading Ethereum treasury firm BitMine Immersion Technologies posted a major loss thanks to unrealized losses on its ETH."
       },
@@ -1298,44 +1308,8 @@
       "published": "Wed, 15 Apr 2026 17:17:41 +0000"
     },
     {
-      "title": "eToro Acquires Self-Custody Crypto Wallet Firm Zengo for $70 Million",
-      "category": "Other",
-      "summary": {
-        "main": "The deal signals eToro's strategic push into self-custody solutions amid growing demand for non-custodial crypto infrastructure."
-      },
-      "sources": [
-        "Decrypt"
-      ],
-      "count": 1,
-      "links": [
-        {
-          "source": "Decrypt",
-          "link": "https://decrypt.co/364464/etoro-acquires-self-custody-crypto-wallet-firm-70-million"
-        }
-      ],
-      "published": "Wed, 15 Apr 2026 16:40:20 +0000"
-    },
-    {
-      "title": "Pakistan Lifts 8-Year Crypto Banking Ban Following Trump Family, Binance Deals",
-      "category": "Other",
-      "summary": {
-        "main": "Banks in Pakistan can now provide services to registered crypto firms—but not trade crypto themselves—after a 2018 ban was rescinded."
-      },
-      "sources": [
-        "Decrypt"
-      ],
-      "count": 1,
-      "links": [
-        {
-          "source": "Decrypt",
-          "link": "https://decrypt.co/364463/pakistan-lifts-8-year-crypto-banking-ban-trump-binance-deals"
-        }
-      ],
-      "published": "Wed, 15 Apr 2026 16:15:48 +0000"
-    },
-    {
       "title": "Elon Musk’s X Money stands to disrupt payments and pressure PayPal, but crypto plans may hit regulatory hurdles: Mizuho",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "X launched a new feature this week where users can view financial data on stocks and cryptocurrencies directly."
       },
@@ -1353,7 +1327,7 @@
     },
     {
       "title": "Ethereum Foundation exec Josh Stark is stepping down",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "The move comes amid ongoing changes at the EF, including a renewed focus on scaling and developing the Ethereum mainnet."
       },
@@ -1371,7 +1345,7 @@
     },
     {
       "title": "Polkadot-based Hyperbridge revises exploit losses to $2.5 million, ten times initial estimate",
-      "category": "Other",
+      "category": "Security",
       "summary": {
         "main": "Hyperbridge has raised its loss estimate from $237,000 to $2.5 million after a Token Gateway exploit, with some funds traced to Binance."
       },
@@ -1407,7 +1381,7 @@
     },
     {
       "title": "Charles Schwab begins rollout of spot bitcoin, ethereum trading platform",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "The new platform, called Schwab Crypto, will roll out over the coming weeks and will only support bitcoin and ethereum at first."
       },
@@ -1425,7 +1399,7 @@
     },
     {
       "title": "‘Bitcoin taxes make no sense’: Washington think tank argues US rules hinder everyday payments",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "The Cato Institute says U.S. bitcoin tax rules are overly complex and discourage everyday use despite growing crypto adoption."
       },
@@ -1460,8 +1434,26 @@
       "published": "Thu, 16 Apr 2026 06:18:21 -0400"
     },
     {
+      "title": "Solana Institute-backed super PAC pours $8 million against Sherrod Brown in Ohio race",
+      "category": "Markets",
+      "summary": {
+        "main": "Sentinel Action Fund has received backing from the Solana Institute and Multicoin Capital, a crypto-focused venture capital firm."
+      },
+      "sources": [
+        "TheBlock"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "TheBlock",
+          "link": "https://www.theblock.co/post/397681/super-pac-8-million-sherrod-brown?utm_source=rss&utm_medium=rss"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 01:01:11 -0400"
+    },
+    {
       "title": "‘Absurd governance scam’: World Liberty Financial’s new proposal prompts harsh criticism from Justin Sun and other holders",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "Tron Founder Justin Sun issued harsh criticism of the new proposal, calling it one of the 'most absurd governance scams.'"
       },
@@ -1478,44 +1470,8 @@
       "published": "Wed, 15 Apr 2026 23:19:37 -0400"
     },
     {
-      "title": "Tether backs Stablecoin Development Corporation’s $134 million private placement used to acquire SKY tokens",
-      "category": "Other",
-      "summary": {
-        "main": "The Stablecoin Development Corporation is a publicly-traded holding company with an approximately 2.15 billion SKY token treasury."
-      },
-      "sources": [
-        "TheBlock"
-      ],
-      "count": 1,
-      "links": [
-        {
-          "source": "TheBlock",
-          "link": "https://www.theblock.co/post/397654/tether-stablecoin-development-corporation-134-million-private-placement-acquire-sky-tokens?utm_source=rss&utm_medium=rss"
-        }
-      ],
-      "published": "Wed, 15 Apr 2026 16:44:33 -0400"
-    },
-    {
-      "title": "Ethereum DEX aggregator market grows more competitive as Kyber, CowSwap rise",
-      "category": "Other",
-      "summary": {
-        "main": "Kyber currently leads with ~30% market share, followed by CowSwap at 22%, while 1inch has seen its share decline to 15% over the same period."
-      },
-      "sources": [
-        "TheBlock"
-      ],
-      "count": 1,
-      "links": [
-        {
-          "source": "TheBlock",
-          "link": "https://www.theblock.co/post/397278/ethereum-dex-aggregator-competitive-kyber-cowswap-gain?utm_source=rss&utm_medium=rss"
-        }
-      ],
-      "published": "Wed, 15 Apr 2026 16:30:35 -0400"
-    },
-    {
       "title": "Hyperliquid’s HIP‑3 Open Interest Skyrockets— Is 24/7 Tokenized Equity About To Rewrite Wall Street?",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "Hyperliquid’s HIP‑3 open interest is pushing toward the multi‑billion mark, led by not just crypto perps but synthetic equities and index products. Hyperliquid’s HIP-3 New ATH Following Bitget Wallet..."
       },
@@ -1533,7 +1489,7 @@
     },
     {
       "title": "Bitcoin Bulls Eye $78,000, But Glassnode Urges Caution",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "Bitcoin has climbed back toward a key on-chain resistance zone, but Glassnode says the move still looks more like a fragile rebound than the start of a fully convincing trend shift. In its latest The..."
       },
@@ -1551,7 +1507,7 @@
     },
     {
       "title": "Ethereum Retail Hands Still In Disbelief, Keep Selling Into Strength",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "On-chain data shows the small Ethereum hands have sold into the latest price surge, a sign that retail traders don&#8217;t believe that the rally will last. Ethereum Retail Supply Has Seen A Notable..."
       },
@@ -1568,8 +1524,26 @@
       "published": "Thu, 16 Apr 2026 08:00:04 +0000"
     },
     {
+      "title": "Bitcoin Double Bottom Formation Eyes $82,500 Rally – Breakout Or Rejection Next?",
+      "category": "Markets",
+      "summary": {
+        "main": "As Bitcoin (BTC) attempts to hold the $74,000-$75,000 area, an analyst suggested that the flagship crypto could see another 10% rally toward a key area, but warned that this level could be the..."
+      },
+      "sources": [
+        "NewsBTC"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "NewsBTC",
+          "link": "https://www.newsbtc.com/news/bitcoin/bitcoin-double-bottom-formation-82500-rally/"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 07:00:09 +0000"
+    },
+    {
       "title": "Bitcoin Policy Institute Maps Out Strategy For US Stablecoin Supremacy Across 5 Policy Areas",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "The Bitcoin Policy Institute (BPI) has released a new policy proposal for the United States aimed at establishing what it calls “stablecoin supremacy.” The proposal, published on Wednesday, is..."
       },
@@ -1587,7 +1561,7 @@
     },
     {
       "title": "Solana (SOL) Upside Builds, $90 Now Key Battleground",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "Solana found support at $82.50 and corrected some losses. SOL price is now consolidating above $85 and might aim for a steady increase. SOL price started a decent recovery wave above $84 and $85..."
       },
@@ -1605,7 +1579,7 @@
     },
     {
       "title": "WLFI Moves To Unlock 62B Tokens While Tightening Supply With Burns",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "World Liberty Financial has put 4.52 billion WLFI tokens on the table for an immediate burn if a new unlock plan passes, a move tied to the founder, team, adviser and partner pool. Related Reading:..."
       },
@@ -1623,7 +1597,7 @@
     },
     {
       "title": "Solana’s Economic Activity Surpasses $1 Trillion for the First Time in History — Details",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "Solana’s economic activity surpassed $1 trillion in the first quarter of 2026, marking the first time the network has reached that threshold."
       },
@@ -1641,7 +1615,7 @@
     },
     {
       "title": "Bitcoin Bull Score Index Reaches Highest Level Since October 2025. Here’s More",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "Within 72 hours, several on-chain metrics flagged as red drivers have flipped, fueling the market resurgence."
       },
@@ -1659,7 +1633,7 @@
     },
     {
       "title": "Cardano’s Network Usage Soars, Suggesting ADA Likely on the Verge of a Mega Price Bump",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "This development could help lift its native token ADA from recent weakness, according to one of the network’s largest staking providers."
       },
@@ -1677,7 +1651,7 @@
     },
     {
       "title": "Expert Says Ethereum Technically Ready for Bull Rally After Reclaiming Key Moving Average",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "‬Ethereum could be set for a bull rally, with technical indicators pointing to a critical juncture, according to a prominent market analyst."
       },
@@ -1695,7 +1669,7 @@
     },
     {
       "title": "Venezuela’s sanctions are stablecoins’ proof of concept",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "Banned from the dollar system, the country uses digital dollars instead"
       },
@@ -1713,7 +1687,7 @@
     },
     {
       "title": "The Strategy playbook looks different in 2026",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "The treasury company now holds 673,783 BTC, but flow is more likely to be episodic in this year’s financial climate"
       },
@@ -1731,7 +1705,7 @@
     },
     {
       "title": "Ranger’s ICO starts today, and MetaDAO eyes a reset",
-      "category": "Other",
+      "category": "DeFi",
       "summary": {
         "main": "Ranger’s Jan 6–10 sale could re-accelerate MetaDAO volumes and revenue"
       },
@@ -1749,7 +1723,7 @@
     },
     {
       "title": "ETH derivatives reset and the next retail trade",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "ETH derivatives show a disciplined rebuild of risk, with rising open interest pointing to healthier leverage"
       },
@@ -1767,7 +1741,7 @@
     },
     {
       "title": "Friday charts: Finding good news, in spite of bad headlines",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "2025 was far from perfect, but much better than we think it was."
       },
@@ -1785,7 +1759,7 @@
     },
     {
       "title": "DePIN and crypto gaming led a surprising end-of-year rebound",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "BTC finished the week up 1.6%, while L2s, RWAs and the treasury trade continued to grind lower"
       },
@@ -1803,7 +1777,7 @@
     },
     {
       "title": "Canton’s $6T RWA rails and Lighter’s Hyperliquid multiple",
-      "category": "Other",
+      "category": "DeFi",
       "summary": {
         "main": "DTCC moves DTC-custodied Treasuries onchain via Canton, while Lighter’s LIT launches trading at a fees multiple in Hyperliquid territory"
       },
@@ -1821,7 +1795,7 @@
     },
     {
       "title": "The long wait for crypto’s “coffee pot” moment",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "In the 90s, rapt audiences worldwide watched a coffee pot — will that fascination ever turn to crypto?"
       },
@@ -1839,7 +1813,7 @@
     },
     {
       "title": "Failure is an option in crypto finance",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "Some systems improve by failing — and crypto has no choice"
       },
@@ -1857,7 +1831,7 @@
     },
     {
       "title": "Yield Basis is making native BTC yield a reality",
-      "category": "Other",
+      "category": "DeFi",
       "summary": {
         "main": "Yield Basis introduces an IL-free AMM design that already dominates BTC DEX liquidity"
       },
@@ -1875,7 +1849,7 @@
     },
     {
       "title": "Users are the best investors to have",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "Maybe tokenholders don’t need the rights that corporate shareholders have come to expect"
       },
@@ -1893,7 +1867,7 @@
     },
     {
       "title": "A sleeper in the perps category",
-      "category": "Other",
+      "category": "DeFi",
       "summary": {
         "main": "As Hyperliquid and Lighter battle for perps DEX dominance, Boros could capture the structural upside"
       },
@@ -1911,7 +1885,7 @@
     },
     {
       "title": "The old story of investing in new technology",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "Investors are often right about the future, but wrong about the returns"
       },
@@ -1929,7 +1903,7 @@
     },
     {
       "title": "2025 Reflections",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "A look back at 2025, reflections on our industry, and what it means for Blockworks in 2026"
       },
@@ -1947,7 +1921,7 @@
     },
     {
       "title": "The perps wars are heating up",
-      "category": "Other",
+      "category": "DeFi",
       "summary": {
         "main": "Hyperliquid’s weekly volume trails newer rivals as a Lighter airdrop looms"
       },
@@ -1965,7 +1939,7 @@
     },
     {
       "title": "Gold and silver won 2025",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "Gold is having its best year since 1979, while many DeFi names are trading near multi-year lows"
       },
@@ -1983,7 +1957,7 @@
     },
     {
       "title": "Maple’s fundamentals are driving outperformance",
-      "category": "Other",
+      "category": "DeFi",
       "summary": {
         "main": "Maple is outperforming peers on growth, yield, and revenue — while benefiting from limited supply overhang and clear value accrual"
       },
@@ -2001,7 +1975,7 @@
     },
     {
       "title": "The incredible, incomprehensible, possibly impossible world of trillion-dollar tech valuations",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "Will mega-unicorns collectively earn the trillions of dollars of revenue required to justify their valuations?"
       },
@@ -2019,7 +1993,7 @@
     },
     {
       "title": "The year new tokens died",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "2025 saw a huge compression in the valuation of new tokens, with the steepest losses in infrastructure and gaming"
       },
@@ -2037,7 +2011,7 @@
     },
     {
       "title": "Grinch rally: Crypto indices track lower through the week",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "The AI sector was the top loser on the week, trading down -26%"
       },
@@ -2055,7 +2029,7 @@
     },
     {
       "title": "A holiday guide to explaining crypto to your relatives",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "Spoiler alert: talking about crypto to normies is still really hard"
       },
@@ -2073,7 +2047,7 @@
     },
     {
       "title": "Coinbase embeds Solana trading",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "The platform turns to onchain rails for Solana assets while crypto M&amp;A and fundraising surge to cycle highs"
       },
@@ -2091,7 +2065,7 @@
     },
     {
       "title": "Robinhood’s leap shows the prediction-market arms race is underway",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "Robinhood is pushing deeper into high-margin market design, joining competitors like Kalshi and DraftKings"
       },
@@ -2109,7 +2083,7 @@
     },
     {
       "title": "The competitive advantage of not knowing you’re wrong",
-      "category": "Other",
+      "category": "AI",
       "summary": {
         "main": "When not knowing the odds improves your chances"
       },
@@ -2127,7 +2101,7 @@
     },
     {
       "title": "The network is the innovation",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "What Thomas Edison actually invented — and what it tells us about the future of crypto"
       },
@@ -2145,7 +2119,7 @@
     },
     {
       "title": "Another week, another MetaDAO advertisement",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "Meanwhile, recent acquisitions continue to neglect tokenholders"
       },
@@ -2163,7 +2137,7 @@
     },
     {
       "title": "A man’s blockchain is his castle",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "But who gets a key to the gate?"
       },
@@ -2181,7 +2155,7 @@
     },
     {
       "title": "Capital gets selective",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "Unit economics inflect, institutional capital shows up onchain, and market structure continues to evolve"
       },
@@ -2217,7 +2191,7 @@
     },
     {
       "title": "BTC is up and L1s are down as flows turn messy again",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "The Nasdaq slipped yesterday after disappointing Q3 revenue from Oracle"
       },
@@ -2235,7 +2209,7 @@
     },
     {
       "title": "Links: Trading, valuations, and the end of crypto’s ‘golden age’",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "It’s getting harder and harder to trade crypto like the good ol’ days"
       },
@@ -2253,7 +2227,7 @@
     },
     {
       "title": "Fixing crypto’s broken investor relations",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "Lightspeed IR, launched with the Solana Foundation, aims to give allocators a single surface for diligence and communication"
       },
@@ -2271,7 +2245,7 @@
     },
     {
       "title": "Dollar dominance can’t be manufactured",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "Stablecoins are no substitute for what makes the dollar dominant"
       },
@@ -2289,7 +2263,7 @@
     },
     {
       "title": "Blockworks launches investor relations platform with Solana",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "Crypto tokens need better investor relations infrastructure; today, Blockworks solves that."
       },
@@ -2307,7 +2281,7 @@
     },
     {
       "title": "ETFs flash a bid, HumidiFi tokenizes",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "BTC leads a broad crypto bid as ETFs post their strongest inflow in weeks"
       },
@@ -2343,7 +2317,7 @@
     },
     {
       "title": "Analyzing Jup Lend vs. Kamino",
-      "category": "Other",
+      "category": "DeFi",
       "summary": {
         "main": "The exchange between Kamino and Jupiter has escalated from healthy competition to a clear public dispute"
       },
@@ -2361,7 +2335,7 @@
     },
     {
       "title": "Rangebound markets, resilient onchain lending",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "Crypto lags behind TradFi benchmarks, but trends in stablecoins, deposits and loans point to durable multi-year growth"
       },
@@ -2379,7 +2353,7 @@
     },
     {
       "title": "The productivity bull case for almost everything",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "And the bear case for bitcoin"
       },
@@ -2397,7 +2371,7 @@
     },
     {
       "title": "Risk back on the table as crypto ETFs bounce back",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "Kalshi raises a billion dollars, and Trump’s new Fed Chair pick is imminent"
       },
@@ -2415,7 +2389,7 @@
     },
     {
       "title": "Illuminating progress: Is a $140K income ‘poor’?",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "Bad math makes headlines: real progress, a history of candlelight, and “the worst poverty analysis…ever seen”"
       },
@@ -2433,7 +2407,7 @@
     },
     {
       "title": "Solana tokens see gains amidst weeklong crypto slump",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "Despite a soft market backdrop, Solana DeFi tokens showed relative strength, with Sanctum leading the pack"
       },
@@ -2451,7 +2425,7 @@
     },
     {
       "title": "Thursday links: Prediction markets, agent hackers, quantum risks",
-      "category": "AI",
+      "category": "Security",
       "summary": {
         "main": "Anthropic researchers report that their AI agents successfully exploited 56% of vulnerable smart contracts"
       },
@@ -2469,7 +2443,7 @@
     },
     {
       "title": "Hyperliquid: The frontend wars",
-      "category": "Other",
+      "category": "DeFi",
       "summary": {
         "main": "Nearly 40% of Hyperliquid’s daily active users trade through third-party frontends rather than the native UI"
       },
@@ -2487,7 +2461,7 @@
     },
     {
       "title": "After Monad’s TGE, can the chain turn hype into long-term conversion?",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "The data paint a complicated picture about user activity and the Monad ecosystem"
       },
@@ -2505,7 +2479,7 @@
     },
     {
       "title": "Too funded to fail: Crypto needs a forest fire",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "For new growth, crypto may need to shed tired norms like over-raising and the hoarding of investment resources"
       },
@@ -2523,7 +2497,7 @@
     },
     {
       "title": "Ethereum’s Fusaka upgrade lands today",
-      "category": "Other",
+      "category": "DeFi",
       "summary": {
         "main": "Ethereum rolls out Fusaka, setting the stage for a stronger blob fee market and renewed deflationary potential"
       },
@@ -2541,7 +2515,7 @@
     },
     {
       "title": "The sci-fi future of onchain assets and smart locks",
-      "category": "Other",
+      "category": "DeFi",
       "summary": {
         "main": "Futuristic DeFi is stuck inside the computer. An old idea might be its escape hatch"
       },
@@ -2559,7 +2533,7 @@
     },
     {
       "title": "Strategy stress, liquidity strain",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "Money market indicators are flashing liquidity stress again as crypto underperforms equities"
       },
@@ -2577,7 +2551,7 @@
     },
     {
       "title": "Privacy is not a ‘natural’ right — it’s an invention",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "From passageways to penumbras: a history of private life"
       },
@@ -2595,7 +2569,7 @@
     },
     {
       "title": "Chiliz price surges amid adoption in South Korea and UEFA Champions League excitement",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "Chiliz price rose more than 13% to above $0.0433. Korea&#8217;s Naver Pay has onboarded nearly 1 million users to the Chiliz Chain. Top European teams with fan tokens have advanced in the UEFA..."
       },
@@ -2613,7 +2587,7 @@
     },
     {
       "title": "BNB price outlook as quarterly burn cuts supply to 134.7M",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "BNB price hovers near $620 as bulls target a fresh short-term rally. The 35th quarterly burn has reduced BNB supply to 134.7 million. A shift in macro and geopolitical conditions could bolster BNB..."
       },
@@ -2631,7 +2605,7 @@
     },
     {
       "title": "WLFI token outlook as 4.52B burn, 62.28B unlock reshape tokenomics",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "World Liberty Financial is reshaping WLFI token supply. About 4.52 billion insider tokens may be burned if the vote passes. WLFI token price stays volatile, driven by governance vote expectations...."
       },
@@ -2649,7 +2623,7 @@
     },
     {
       "title": "(CAKE) tops $1.60, bullish sentiment grows amid rising Open Interest",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "Key takeaways PancakeSwap is holding above the key support level at $1.55, hinting at an upside move ahead. Rising open interest alongside positive funding rates signals increasing participation...."
       },
@@ -2667,7 +2641,7 @@
     },
     {
       "title": "Pepe (PEPE) surges 9%, drawing interest from whales",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "Key takeaways PEPE is up 9% in the last 24 hours, making it one of the best performers among the top 50 cryptocurrencies by market cap. The rally comes amid renewed interest from whales and retail..."
       },
@@ -2685,7 +2659,7 @@
     },
     {
       "title": "Bitcoin’s recovery hits a Fed ceiling with no sign of cheaper money",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "Bitcoin's latest recovery has pushed the flagship digital asset back toward the $75,000 level, tracking a broader return in risk appetite as hopes for de-escalation in the Middle East lifted global..."
       },
@@ -2703,7 +2677,7 @@
     },
     {
       "title": "Why S&P 500’s $6 trillion melt up rally exposes Bitcoin amid range-bound weakness",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "Traditional equities like the S&#038;P 500 are staging a historic comeback, shaking off weeks of geopolitical anxiety to chart new all-time highs. Yet Bitcoin, which has historically been a..."
       },
@@ -2721,7 +2695,7 @@
     },
     {
       "title": "Bitcoin’s quantum migration plan forces the network to choose between frozen and stolen coins",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "Bitcoin's debate about quantum computers produced a published draft with real political consequences on Apr. 14. Bitcoin Improvement Proposal 361 (BIP 361), titled &#8220;Post Quantum Migration and..."
       },
@@ -2739,7 +2713,7 @@
     },
     {
       "title": "Why the SEC just gave self custody crypto apps 5 years to get traditional broker licenses",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "The SEC moved the crypto market structure forward on Apr. 13 without waiting for Congress to act. The agency's Division of Trading and Markets published a staff statement on Covered User Interfaces,..."
       },
@@ -2757,7 +2731,7 @@
     },
     {
       "title": "Bitcoin is squeezing into the $78k ‘True Market Mean’ with Fed and retail data set to decide next move",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "Bitcoin is pushing up against a patch of resistance right as the bigger economic picture gets trickier. The price is pushing toward $75,000, with some important on-chain sellers stepping in and two..."
       },
@@ -2775,7 +2749,7 @@
     },
     {
       "title": "Trump family’s WLFI starts damage control but its new plan leaves holders who refuse the new terms locked indefinitely",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "WLFI’s new unlock proposal feels like a move to contain a crisis, but the bigger issue is still about who actually holds the reins and how governance really works. World Liberty Financial is back on..."
       },
@@ -2792,8 +2766,26 @@
       "published": "Wed, 15 Apr 2026 18:30:22 +0000"
     },
     {
+      "title": "Three Billion Dogecoin Exit Robinhood: On-Chain Data Shows Major Whale Move Four Days Before 'Doge Day'",
+      "category": "Markets",
+      "summary": {
+        "main": "Robinhood records three billion Dogecoin (DOGE) withdrawal worth $294 million into an unknown new wallet just four days before \"Doge Day\" (4/20)."
+      },
+      "sources": [
+        "UToday"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "UToday",
+          "link": "https://u.today/three-billion-dogecoin-exit-robinhood-on-chain-data-shows-major-whale-move-four-days-before-doge"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 16:03:00 +0000"
+    },
+    {
       "title": "Ripple's RLUSD Listed on Leading Crypto Exchange",
-      "category": "Other",
+      "category": "DeFi",
       "summary": {
         "main": "Ripple's stablecoin, RLUSD, is listed on major crypto exchange Bitrue, allowing users to use the stablecoin as collateral on the platform."
       },
@@ -2811,7 +2803,7 @@
     },
     {
       "title": "Sui (SUI) Market Position Improves After 37% Spike in Volume: Reviewing the Project's Prospects",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "Sui's market performance is getting better following the recovery of trading volume."
       },
@@ -2829,7 +2821,7 @@
     },
     {
       "title": "61,000 BTC Sold Amid Miner Sell-Off, Trend Raises Questions",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "Bitcoin miner reserves have fallen by 61,000 BTC since the start of this cycle."
       },
@@ -2847,7 +2839,7 @@
     },
     {
       "title": "BlackRock Adds $505 Million of Bitcoin in New Buying Spree",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "BlackRock has purchased over half a million dollars worth of Bitcoin as institutional demand returns and the BlackRock IBIT begins to thrive again."
       },
@@ -2865,7 +2857,7 @@
     },
     {
       "title": "Ripple Developers React to Solana's XRP Post, Something to Watch Out For?",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "Solana tweeted \"XRP\" in a new post, catching the attention of the crypto community."
       },
@@ -2883,7 +2875,7 @@
     },
     {
       "title": "82.5 Billion Shiba Inu (SHIB) Removed in 24 Hours After Price Paints It Green",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "Shiba Inu is rapidly descending on the market, with a solid removal of capital from exchanges."
       },
@@ -2900,26 +2892,8 @@
       "published": "Thu, 16 Apr 2026 10:12:00 +0000"
     },
     {
-      "title": "'Have Fun Stealing Satoshi Coins': Cardano's Hoskinson Mocks Bitcoin Quantum Soft Fork, Warns About North Korea in 2033",
-      "category": "Other",
-      "summary": {
-        "main": "Cardano's Charles Hoskinson slams BIP-361, warning that freezing 1.7 million BTC, including Satoshi's Bitcoin, to stop a 2033 North Korean quantum attack violates the core principles of sound money."
-      },
-      "sources": [
-        "UToday"
-      ],
-      "count": 1,
-      "links": [
-        {
-          "source": "UToday",
-          "link": "https://u.today/have-fun-stealing-satoshi-coins-cardanos-hoskinson-mocks-bitcoin-quantum-soft-fork-warns-about"
-        }
-      ],
-      "published": "Thu, 16 Apr 2026 09:44:00 +0000"
-    },
-    {
       "title": "Ethereum-Based NFT Platform Halts Operations",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "Prominent Ethereum-based NFT platform Foundation has suddenly halted operations after digital art gallery Blackdove unexpectedly reversed its recent acquisition."
       },
@@ -2937,7 +2911,7 @@
     },
     {
       "title": "XRP Finally Breaks $1.40 Mark: Is It Finally Bullish?",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "XRP has finally regained some strength on the market, which helped it cross the $1.40 price mark."
       },
@@ -2955,7 +2929,7 @@
     },
     {
       "title": "Hayes Questions If Bitcoin Bottom Is In",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "Arthur Hayes has noted that the flagship cryptocurrency is showing massive strength by decoupling from the U.S. SaaS sector."
       },
@@ -2973,7 +2947,7 @@
     },
     {
       "title": "Bitcoin's Failed $75,000 Entry: What's Next? XRP's Silent Uptrend Originates, Zcash (ZEC) Adds 166% in Key Flow Metric: Crypto Market Review",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "Despite the lack of bearish pressure on the market, top-tier assets are seeing the possibility of a proper price recovery."
       },
@@ -2991,7 +2965,7 @@
     },
     {
       "title": "XRP Signals Breakout Setup, Shiba Inu (SHIB) Crosses 1 Trillion Threshold, Ethereum Outpaces Bitcoin — U.Today Crypto Digest",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "Crypto news digest: XRP whales accumulate 20 million coins; SHIB just crossed one trillion threshold; Ethereum outpaces Bitcoin."
       },
@@ -3009,7 +2983,7 @@
     },
     {
       "title": "Mow: Strategy's Purchasing Price to Be New BTC Floor",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "Corporate whale Strategy Inc.'s $75,577 average purchase price will serve as the new permanent price floor for Bitcoin, according to the prominent analyst.."
       },
@@ -3027,7 +3001,7 @@
     },
     {
       "title": "Ripple Tests Out XRP Cashtag",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "Ripple is flexing its massive social media muscle to test drive X's highly anticipated financial overhaul."
       },
@@ -3045,7 +3019,7 @@
     },
     {
       "title": "Cardano Founder Questions Bitcoins Post Quantum Defense Plan",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "The ongoing debate over Bitcoin's vulnerability to quantum computing has sparked a high-profile clash between two of the cryptocurrency industry's most prominent figures.."
       },
@@ -3080,8 +3054,44 @@
       "published": "Thu, 16 Apr 2026 00:00:00 GMT"
     },
     {
+      "title": "InsightFinder raises $15M to help companies figure out where AI agents go wrong",
+      "category": "AI",
+      "summary": {
+        "main": "According to CEO Helen Gu, the biggest problem facing the industry today is not just monitoring and diagnosing where AI models go wrong, it's diagnosing how the entire tech stack operates now that AI..."
+      },
+      "sources": [
+        "TechCrunch AI"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "TechCrunch AI",
+          "link": "https://techcrunch.com/2026/04/16/insightfinder-raises-15m-to-help-companies-figure-out-where-ai-agents-go-wrong/"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 16:15:00 +0000"
+    },
+    {
+      "title": "AI traffic to US retailers rose 393% in Q1, and it’s boosting their revenue too",
+      "category": "AI",
+      "summary": {
+        "main": "Adobe says AI traffic to U.S. retail sites also jumped 269% in March, with visitors converting better and generating more revenue than non-AI shoppers."
+      },
+      "sources": [
+        "TechCrunch AI"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "TechCrunch AI",
+          "link": "https://techcrunch.com/2026/04/16/ai-traffic-to-us-retailers-rose-393-in-q1-and-its-boosting-their-revenue-too/"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 16:14:03 +0000"
+    },
+    {
       "title": "Google is now targeting bad ads over bad actors",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "Google blocked 8.3 billion ads in 2025 but suspended fewer advertisers."
       },
@@ -3096,42 +3106,6 @@
         }
       ],
       "published": "Thu, 16 Apr 2026 15:00:00 +0000"
-    },
-    {
-      "title": "Runway CEO says AI could help Hollywood make 50 films instead of one $100M blockbuster",
-      "category": "AI",
-      "summary": {
-        "main": "Runway’s CEO says AI could help studios make dozens of films for the cost of one, betting volume will boost hit-making odds."
-      },
-      "sources": [
-        "TechCrunch AI"
-      ],
-      "count": 1,
-      "links": [
-        {
-          "source": "TechCrunch AI",
-          "link": "https://techcrunch.com/2026/04/16/runway-ceo-says-ai-could-help-hollywood-make-50-films-instead-of-one-100m-blockbuster/"
-        }
-      ],
-      "published": "Thu, 16 Apr 2026 14:14:29 +0000"
-    },
-    {
-      "title": "Meta raises Quest 3 and Quest 3S prices due to RAM shortage",
-      "category": "Other",
-      "summary": {
-        "main": "Starting April 19, the price of the Meta Quest 3S (128GB) and Meta Quest 3S (256GB) will go up by $50 to $349.99 and $449.99, respectively. The price of the Meta Quest 3 is going up by $100 to..."
-      },
-      "sources": [
-        "TechCrunch AI"
-      ],
-      "count": 1,
-      "links": [
-        {
-          "source": "TechCrunch AI",
-          "link": "https://techcrunch.com/2026/04/16/meta-raises-quest-3-and-quest-3s-prices-due-to-ram-shortage/"
-        }
-      ],
-      "published": "Thu, 16 Apr 2026 13:49:32 +0000"
     },
     {
       "title": "This simulation startup wants to be the Cursor for physical AI",
@@ -3207,7 +3181,7 @@
     },
     {
       "title": "LinkedIn data shows AI isn’t to blame for hiring decline… yet",
-      "category": "Other",
+      "category": "AI",
       "summary": {
         "main": "LinkedIn says hiring is down 20% since 2022, but blames higher interest rates — not AI — for the slowdown."
       },
@@ -3279,7 +3253,7 @@
     },
     {
       "title": "The musician-turned-biotech-founder waiting to fundraise",
-      "category": "Other",
+      "category": "Markets",
       "summary": {
         "main": "When Grammy-nominated singer-songwriter&#160;Aloe Blacc&#160;got COVID despite being vaccinated and boosted, he tried to fund research for a better..."
       },

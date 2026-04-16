@@ -20,17 +20,6 @@ function App() {
   const [timeAgo, setTimeAgo] = useState("just now");
   const [isOpen, setIsOpen] = useState(false);
 
-  useEffect(() => {
-    fetch("https://steadfast-beauty-production-9beb.up.railway.app/api/news")
-      .then((res) => res.json())
-      .then((data) => {
-        // Теперь эта строка будет работать, так как setBriefing существует!
-        setBriefing(data.metadata?.briefing || "");
-
-        setNews(data.news || []);
-      });
-  }, []);
-
   // --- 2. ЭФФЕКТЫ (ЗАГРУЗКА И ТАЙМЕРЫ) ---
   useEffect(() => {
     fetch("https://steadfast-beauty-production-9beb.up.railway.app/api/news")
@@ -43,9 +32,10 @@ function App() {
         if (data.metadata?.last_updated) {
           setLastUpdate(new Date(data.metadata.last_updated));
         }
-
+        console.log("Что пришло с сервера:", data);
+        console.log("А есть ли там брифинг:", data.metadata?.briefing);
         // --- ВОТ ЭТА СТРОКА НУЖНА ---
-        setBriefing(data.metadata?.briefing || "");
+        setBriefing(data.metadata?.briefing || "Брифинг не найден в ответе сервера");
 
         setNews(data.news || []);
         setServerMessage("");

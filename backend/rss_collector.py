@@ -309,6 +309,7 @@ def detect_category_fallback(text: str) -> str:
         "bitcoin",
         "btc",
         "eth",
+        "ethereum",
         "market",
         "trading",
         "analyst",
@@ -320,6 +321,11 @@ def detect_category_fallback(text: str) -> str:
         "buy",
         "bullish",
         "bearish",
+        "hit",
+        "new high",
+        "surge",
+        "drop",
+        "liquidated",
     ]
     if any(w in text for w in market_keywords):
         return "Markets"
@@ -357,7 +363,7 @@ def detect_category_fallback(text: str) -> str:
 
 def get_category_hybrid(title: str, summary: str) -> str:
     """Гибридная классификация: Кэш -> AI -> Fallback."""
-    combined_text = f"Title: {title}\nSummary: {summary}"
+    combined_text = f"Title: {title}\nSummary: {summary[:300]}"
     text_hash = get_hash(title)  # Хешируем только тайтл, он обычно уникален для группы
 
     # 1. Проверяем кэш
@@ -373,35 +379,21 @@ def get_category_hybrid(title: str, summary: str) -> str:
 
     # 3. Запрос к OpenAI
     system_prompt = """
-    Identify and classify crypto/tech news into EXACTLY ONE category. 
-    Focus on the CORE INTENT of the article, not just mentioned keywords.
+    You are a professional crypto analyst. Classify news into EXACTLY one of these categories:
+    - Markets
+    - DeFi
+    - AI
+    - Security
 
-    1. SECURITY: Hacks, smart contract exploits, stolen funds, and major vulnerabilities. 
-       - EXCLUDE: Legal lawsuits against hackers (that is Regulation).
+    RULES:
+    1. DO NOT use 'Other' or 'Regulation'.
+    2. If the news is about prices, ETFs, or general crypto updates -> 'Markets'.
+    3. If it's about hacking or exploits -> 'Security'.
+    4. If it's about OpenAI, NVIDIA, or AI tech -> 'AI'.
+    5. If it's about DEX, staking, or protocols -> 'DeFi'.
 
-    2. REGULATION: SEC/CFTC actions, court cases, crypto-laws, taxes, and government policy.
-       - RULE: If it's a legal battle, it's Regulation, even if it involves an AI or DeFi company.
-
-    3. AI (Artificial Intelligence): Use the "Technology First" rule.
-       - INCLUDE: Large Language Models (LLMs), AI Agents, Neural Networks, AI-specific hardware (NVIDIA/ASIC for AI), Decentralized Compute (DePIN for AI), and AI-Blockchain integration.
-       - STRICT EXCLUSION (The "Finance Hole"): DO NOT classify as AI if the news is about:
-         a) Financial reports of AI companies (earnings, stock price, selling BTC).
-         b) General layoffs in tech companies (like the MARA case).
-         c) Pure price speculation or "AI-coin" rallies without technical updates.
-         d) Using "algorithms" for simple trading or prediction markets.
-
-    4. DEFI: Liquid staking, DEX updates, lending protocols, and yield strategies.
-       - EXCLUDE: If a DeFi protocol is hacked, it's Security.
-
-    5. MARKETS: Price action, Bitcoin/Ethereum ETFs, macro-economics, and institutional trading.
-       - RULE: This is the default for any news about prices, market rallies, or "death crosses".
-
-    6. OTHER: General news, branding, and partnerships not fitting above.
-
-    OUTPUT RULES:
-    - Return ONLY valid JSON: {"category": "CategoryName"}
-    - PRIORITY: If a news piece fits multiple categories, choose the one with the LOWEST number in the list.
-    - If unsure between Markets and AI, choose Markets.
+    If you are unsure, ALWAYS choose 'Markets'. 
+    Return ONLY JSON: {"category": "CategoryName"}
     """
 
     try:
@@ -419,9 +411,9 @@ def get_category_hybrid(title: str, summary: str) -> str:
         category = result.get("category", "Other")
 
         # Валидация
-        valid_categories = ["Security", "Regulation", "AI", "DeFi", "Markets", "Other"]
+        valid_categories = ["Markets", "DeFi", "AI", "Security"]
         if category not in valid_categories:
-            category = "Other"
+            category = "Markets"  # Вместо Other ставим Markets по умолчанию
 
         # Сохраняем в кэш
         save_to_cache(text_hash, category)
