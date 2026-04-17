@@ -12,6 +12,7 @@ import re
 import requests
 import sqlite3
 import hashlib
+import time
 from difflib import SequenceMatcher
 from pathlib import Path
 from typing import Any, Dict, Iterable, List, Optional
@@ -299,9 +300,9 @@ def shorten(text, max_len=200):
 
 
 def detect_category_fallback(text: str) -> str:
-    """Улучшенный безопасный fallback с жестким приоритетом важных ниш."""
     text = text.lower()
 
+    # 1. ПРИОРИТЕТ: REGULATION & SECURITY (Оставляем как есть)
     regulation_keywords = [
         "sec ",
         "law ",
@@ -311,25 +312,46 @@ def detect_category_fallback(text: str) -> str:
         "court",
         "legal",
         "hearing",
-        "framework",
-        "settlement",
     ]
     if any(w in text for w in regulation_keywords):
         return "Regulation"
 
-    security_keywords = [
-        "hack",
-        "exploit",
-        "breach",
-        "attack",
-        "stolen",
-        "scam",
-        "fraud",
-        "exploit",
-    ]
-    if any(w in text for w in security_keywords):
+    if any(
+        w in text for w in ["hack", "exploit", "breach", "attack", "stolen", "scam"]
+    ):
         return "Security"
 
+    # 2. ЖЕСТКИЙ ПРИОРИТЕТ: DEFI (Добавляем конкретные бренды)
+    # Если мы видим эти слова, игнорируем всё остальное и ставим DeFi
+    defi_brands = [
+        "uniswap",
+        "aave",
+        "lido",
+        "curve",
+        "pancakeswap",
+        "makerdao",
+        "compound",
+        "eigenlayer",
+    ]
+    defi_terms = [
+        "defi",
+        "dex ",
+        "staking",
+        "yield",
+        "lending",
+        "liquidity",
+        "liquid staking",
+        "protocol",
+    ]
+
+    if any(w in text for w in defi_brands + defi_terms):
+        return "DeFi"
+
+    # 3. AI
+    if " ai " in text or any(w in text for w in ["openai", "gpt", "llm", "nvidia"]):
+        return "AI"
+
+    # 4. MARKETS (Только если ничего из списка выше не подошло)
     market_keywords = [
         "price",
         "bitcoin",
@@ -338,34 +360,10 @@ def detect_category_fallback(text: str) -> str:
         "ethereum",
         "market",
         "trading",
-        "analyst",
         "rally",
-        "surge",
-        "drop",
     ]
     if any(w in text for w in market_keywords):
         return "Markets"
-
-    ai_keywords = [
-        "artificial intelligence",
-        "openai",
-        "gpt",
-        "llm",
-        "nvidia",
-        "neural",
-    ]
-
-    if "bitcoin" in text:
-        return "Regulation"
-
-    if " ai " in text or any(w in text for w in ai_keywords):
-        return "AI"
-
-    # 4. DEFI
-    if any(
-        w in text for w in ["defi", "dex ", "staking", "yield", "lending", "protocol"]
-    ):
-        return "DeFi"
 
     return "Markets"
 
@@ -439,8 +437,14 @@ def build_digest(groups):
         clean_summ = clean_html(main.get("summary", ""))
         short_summary = shorten(clean_summ)
 
+        print(
+            f"📊 Processing article {len(digest) + 1}/{len(groups)}: {main['title'][:50]}..."
+        )
+
         # Вызываем гибридную систему!
         category = get_category_hybrid(main.get("title", ""), clean_summ)
+
+        time.sleep(0.2)
 
         item = {
             "title": main["title"],
