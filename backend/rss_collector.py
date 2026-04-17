@@ -302,45 +302,35 @@ def shorten(text, max_len=200):
 def detect_category_fallback(text: str) -> str:
     text = text.lower()
 
-    # Сначала проверяем самые важные ниши
+    # 1. Сначала Критическое (Regulation/Security)
     if any(
-        w in text
-        for w in ["sec ", "law", "regulation", "legal", "court", "cftc", "sue"]
+        w in text for w in ["sec ", "law", "regulation", "court", "hack", "exploit"]
     ):
+        if any(w in text for w in ["hack", "exploit", "scam", "attack"]):
+            return "Security"
         return "Regulation"
 
-    if any(
-        w in text
-        for w in ["hack", "exploit", "scam", "attack", "vulnerability", "drain"]
-    ):
-        return "Security"
-
-    # DeFi теперь ВЫШЕ Markets
-    defi_keywords = [
+    # 2. Потом DeFi (теперь он ВЫШЕ рынков)
+    defi_keys = [
         "defi",
         "dex",
+        "staking",
+        "yield",
+        "lending",
+        "protocol",
         "uniswap",
         "aave",
         "lido",
-        "staking",
-        "yield",
-        "liquidity",
-        "pancakeswap",
         "curve",
-        "makerdao",
-        "compound",
-        "protocol",
-        "swapped",
-        "re-staking",
     ]
-    if any(w in text for w in defi_keywords):
+    if any(w in text for w in defi_keys):
         return "DeFi"
 
-    if any(
-        w in text for w in [" ai ", "openai", "gpt", "nvidia", "intelligence", "llm"]
-    ):
+    # 3. Потом AI
+    if any(w in text for w in [" ai ", "openai", "gpt", "nvidia"]):
         return "AI"
 
+    # 4. И только в самом конце — Markets
     return "Markets"
 
 
@@ -362,7 +352,9 @@ def get_category_hybrid(title: str, summary: str) -> str:
 
     # 3. Запрос к OpenAI
     system_prompt = f"""
-    Strictly classify this crypto news into ONE category.
+    Strictly classify this crypto news into ONE category and return the result in JSON format.
+    JSON structure: {{"category": "CategoryName"}}
+
     PRIORITY RULES:
     1. If news is about laws, SEC, court, taxes, or government - category: Regulation.
     2. If news is about hacks, scams, exploits, or security audits - category: Security.
@@ -372,7 +364,7 @@ def get_category_hybrid(title: str, summary: str) -> str:
 
     Title: {title}
     Summary: {summary}
-    Category:"""
+    """
 
     try:
         response = client.chat.completions.create(

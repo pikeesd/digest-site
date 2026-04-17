@@ -1,11 +1,49 @@
 {
   "metadata": {
-    "last_updated": "2026-04-17T13:52:44.527660Z",
-    "total_news": 163,
+    "last_updated": "2026-04-17T14:34:36.251749Z",
+    "total_news": 157,
     "timeframe_hours": 24,
-    "briefing": "In a significant market development, the Russia-linked crypto exchange Grinex has halted trading following a $14 million hack, highlighting ongoing security vulnerabilities in the sector. Despite Bitcoin breaking above $75K, market sentiment remains cautious as extreme fear and macroeconomic uncertainties continue to cloud the outlook, prompting profit-taking among traders. Looking ahead, participants should monitor the evolving regulatory landscape and security measures as the crypto market grapples with these challenges."
+    "briefing": "Bitcoin has surged past $77, reaching new highs as geopolitical tensions ease with Iran's reopening of the Strait of Hormuz. Despite this bullish momentum, market sentiment remains cautious, with analysts highlighting ongoing fears and profit-taking that could dampen further gains. Looking ahead, investors should stay vigilant as macroeconomic factors and regulatory developments continue to influence the volatility of the crypto landscape."
   },
   "news": [
+    {
+      "title": "BREAKING – Bitcoin Breaks $77K As Iran Reopens Strait Of Hormuz",
+      "category": "Markets",
+      "summary": {
+        "main": "US President Donald Trump took to Truth Social to announce that the Strait of Hormuz is now fully open for passage — a declaration that came hours after Iran&#8217;s Foreign Minister, Abbas Araghchi,..."
+      },
+      "sources": [
+        "NewsBTC",
+        "Cointelegraph",
+        "Decrypt",
+        "CryptoSlate",
+        "CoinDesk"
+      ],
+      "count": 5,
+      "links": [
+        {
+          "source": "NewsBTC",
+          "link": "https://www.newsbtc.com/news/bitcoin/breaking-bitcoin-breaks-76k-as-iran-reopens-strait-of-hormuz/"
+        },
+        {
+          "source": "CryptoSlate",
+          "link": "https://cryptoslate.com/bitcoin-jumps-towards-80000-after-strait-of-hormuz-shipping-route-declared-open/"
+        },
+        {
+          "source": "Cointelegraph",
+          "link": "https://cointelegraph.com/news/bitcoin-rallies-76k-iran-strait-of-hormuz-open?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+        },
+        {
+          "source": "Decrypt",
+          "link": "https://decrypt.co/364725/bitcoin-stocks-surge-iran-strait-hormuz-completely-open"
+        },
+        {
+          "source": "CoinDesk",
+          "link": "https://www.coindesk.com/markets/2026/04/17/bitcoin-rises-past-usd76-000-aiming-at-major-breakout-as-oil-plunges-on-iran-cooldown"
+        }
+      ],
+      "published": "Fri, 17 Apr 2026 14:00:10 +0000"
+    },
     {
       "title": "Russia-linked crypto exchange Grinex halts trading after $14M hack",
       "category": "Security",
@@ -14,9 +52,9 @@
       },
       "sources": [
         "Decrypt",
-        "TheBlock",
+        "Cointelegraph",
         "CoinDesk",
-        "Cointelegraph"
+        "TheBlock"
       ],
       "count": 4,
       "links": [
@@ -40,8 +78,36 @@
       "published": "Fri, 17 Apr 2026 04:20:00 +0100"
     },
     {
+      "title": "Kraken parent Payward agrees to acquire Bitnomial for up to $550 million",
+      "category": "Markets",
+      "summary": {
+        "main": "Kraken parent Payward has agreed to buy Bitnomial for up to $550 million, securing a fully CFTC-licensed U.S. crypto derivatives venue."
+      },
+      "sources": [
+        "Decrypt",
+        "CoinDesk",
+        "TheBlock"
+      ],
+      "count": 3,
+      "links": [
+        {
+          "source": "TheBlock",
+          "link": "https://www.theblock.co/post/397890/kraken-parent-payward-agrees-to-acquire-bitnomial-for-up-to-550-million?utm_source=rss&utm_medium=rss"
+        },
+        {
+          "source": "Decrypt",
+          "link": "https://decrypt.co/364723/kraken-parent-payward-acquire-derivatives-exchange-bitnomial-550-million"
+        },
+        {
+          "source": "CoinDesk",
+          "link": "https://www.coindesk.com/business/2026/04/17/kraken-s-parent-company-payward-to-acquire-derivatives-exchange-bitnomial-for-usd550-million-in-cash-and-stock"
+        }
+      ],
+      "published": "Fri, 17 Apr 2026 09:40:00 -0400"
+    },
+    {
       "title": "Circle Internet Group faces class action over failure to stop Drift Protocol exploit funds",
-      "category": "Regulation",
+      "category": "Security",
       "summary": {
         "main": "Circle is accused of failing to freeze exploit-linked transfers. Approximately $230 million in stolen funds was routed through Circle&#8217;s USDC. Drift plans $147.5 million recovery backed by..."
       },
@@ -129,8 +195,8 @@
         "main": "Bitcoin climbed toward $76,000 as ETF demand improves and Wall Street hits record highs, but analysts say the rally still looks fragile."
       },
       "sources": [
-        "TheBlock",
-        "CoinDesk"
+        "CoinDesk",
+        "TheBlock"
       ],
       "count": 2,
       "links": [
@@ -221,8 +287,8 @@
         "main": "Bloomberg reported Flow Capital plans to tokenize its private credit fund to raise additional capital, but crypto execs warn tokenization doesn’t magically make hard-to-trade assets liquid."
       },
       "sources": [
-        "TheBlock",
-        "Cointelegraph"
+        "Cointelegraph",
+        "TheBlock"
       ],
       "count": 2,
       "links": [
@@ -244,8 +310,8 @@
         "main": "Meta-1 Coin was sold and marketed from 2018 to 2023 as an investment backed by $44 billion in gold and $1 billion in artworks, which turned out to be fictional."
       },
       "sources": [
-        "TheBlock",
-        "Cointelegraph"
+        "Cointelegraph",
+        "TheBlock"
       ],
       "count": 2,
       "links": [
@@ -284,83 +350,14 @@
       "published": "Fri, 17 Apr 2026 06:20:39 +0100"
     },
     {
-      "title": "Solana-Based Drift Protocol Announces $150M Recovery Fund, New Token Following Tether Collab",
-      "category": "Security",
-      "summary": {
-        "main": "Solana-based decentralized exchange (DEX) Drift Protocol has shared the highly anticipated user recovery plan alongside Tether and other collaborators. This move follows the major exploit that..."
-      },
-      "sources": [
-        "NewsBTC",
-        "Cointelegraph"
-      ],
-      "count": 2,
-      "links": [
-        {
-          "source": "NewsBTC",
-          "link": "https://www.newsbtc.com/news/solana-drift-protocol-150m-fund-token-tether-collab/"
-        },
-        {
-          "source": "Cointelegraph",
-          "link": "https://cointelegraph.com/news/tether-150m-recovery-drift-protocol?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
-        }
-      ],
-      "published": "Fri, 17 Apr 2026 05:00:41 +0000"
-    },
-    {
-      "title": "CFTC Chair Mike Selig Faces Bipartisan Pushback on Prediction Markets, Hyperliquid Perps",
-      "category": "Regulation",
-      "summary": {
-        "main": "Sports and war prediction markets and crypto-backed perpetual futures came under fire during a House committee hearing Thursday."
-      },
-      "sources": [
-        "Decrypt",
-        "TheBlock"
-      ],
-      "count": 2,
-      "links": [
-        {
-          "source": "Decrypt",
-          "link": "https://decrypt.co/364611/cftc-chair-mike-selig-bipartisan-pushback-prediction-markets-hyperliquid"
-        },
-        {
-          "source": "TheBlock",
-          "link": "https://www.theblock.co/post/397800/this-is-nuts-cftc-chair-selig-grilled-by-lawmakers-on-prediction-markets-hyperliquid-and-staffing?utm_source=rss&utm_medium=rss"
-        }
-      ],
-      "published": "Thu, 16 Apr 2026 16:57:52 +0000"
-    },
-    {
-      "title": "Meta raises Quest 3 and Quest 3S prices due to RAM shortage",
-      "category": "Markets",
-      "summary": {
-        "main": "Starting April 19, the price of the Meta Quest 3S (128GB) and Meta Quest 3S (256GB) will go up by $50 to $349.99 and $449.99, respectively. The price of the Meta Quest 3 is going up by $100 to..."
-      },
-      "sources": [
-        "Decrypt",
-        "TechCrunch AI"
-      ],
-      "count": 2,
-      "links": [
-        {
-          "source": "TechCrunch AI",
-          "link": "https://techcrunch.com/2026/04/16/meta-raises-quest-3-and-quest-3s-prices-due-to-ram-shortage/"
-        },
-        {
-          "source": "Decrypt",
-          "link": "https://decrypt.co/364599/meta-hikes-quest-vr-prices-ps5-ram-shortage"
-        }
-      ],
-      "published": "Thu, 16 Apr 2026 13:49:32 +0000"
-    },
-    {
       "title": "Tether CEO Reacts to Drift Exploit With $150 Million Ultimatum for Solana DeFi",
-      "category": "Security",
+      "category": "DeFi",
       "summary": {
         "main": "Tether CEO Paolo Ardoino confirms a $150 million support plan for Drift Protocol, but it comes with a catch as Ardoino is demanding a shift to USDT from USDC."
       },
       "sources": [
-        "UToday",
-        "Decrypt"
+        "Decrypt",
+        "UToday"
       ],
       "count": 2,
       "links": [
@@ -376,14 +373,36 @@
       "published": "Thu, 16 Apr 2026 15:53:00 +0000"
     },
     {
+      "title": "Polish PM says crypto firm tied to Russian mafia and secret service backed political rivals",
+      "category": "Regulation",
+      "summary": {
+        "main": "The comments came during a parliamentary vote to overrule the Polish president's vetoing of crypto legislation."
+      },
+      "sources": [
+        "TheBlock"
+      ],
+      "count": 2,
+      "links": [
+        {
+          "source": "TheBlock",
+          "link": "https://www.theblock.co/post/397889/polish-pm-says-crypto-firm-tied-to-russian-mafia-and-secret-service-backed-political-rivals?utm_source=rss&utm_medium=rss"
+        },
+        {
+          "source": "TheBlock",
+          "link": "https://www.theblock.co/post/397764/morgan-stanley-amy-oldenburg-crypto-daily-business-operations-across-firm?utm_source=rss&utm_medium=rss"
+        }
+      ],
+      "published": "Fri, 17 Apr 2026 10:01:48 -0400"
+    },
+    {
       "title": "CNBC’s Expert Analyst Reveals the Most Hated Crypto Rally is on the Verge of Unfolding",
       "category": "Markets",
       "summary": {
         "main": "Bitcoin’s latest advance is one of the most widely dismissed rallies in years. Yet the very skepticism surrounding it may be the fuel that keeps it alive, according to prominent crypto commentator..."
       },
       "sources": [
-        "UToday",
-        "ZyCrypto"
+        "ZyCrypto",
+        "UToday"
       ],
       "count": 2,
       "links": [
@@ -397,6 +416,24 @@
         }
       ],
       "published": "Fri, 17 Apr 2026 13:11:13 +0000"
+    },
+    {
+      "title": "Back in the black: Strategy surges 8% as bitcoin's rise to $77,000 puts holdings in profit",
+      "category": "Markets",
+      "summary": {
+        "main": "Back in the black: Strategy surges 8% as bitcoin's rise to $77,000 puts holdings in profit"
+      },
+      "sources": [
+        "CoinDesk"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "CoinDesk",
+          "link": "https://www.coindesk.com/markets/2026/04/17/strategy-back-in-profit-as-bitcoin-hits-two-and-a-half-month-high-above-usd76-300"
+        }
+      ],
+      "published": "Fri, 17 Apr 2026 13:38:00 +0000"
     },
     {
       "title": "CoinDesk 20 performance update: Stellar (XLM) gains 1.5%, leading index higher",
@@ -417,24 +454,6 @@
       "published": "Fri, 17 Apr 2026 13:18:08 +0000"
     },
     {
-      "title": "Bitcoin rises past $76,000, aiming at major breakout as oil plunges on Iran cooldown",
-      "category": "Markets",
-      "summary": {
-        "main": "Bitcoin rises past $76,000, aiming at major breakout as oil plunges on Iran cooldown"
-      },
-      "sources": [
-        "CoinDesk"
-      ],
-      "count": 1,
-      "links": [
-        {
-          "source": "CoinDesk",
-          "link": "https://www.coindesk.com/markets/2026/04/17/bitcoin-rises-past-usd76-000-aiming-at-major-breakout-as-oil-plunges-on-iran-cooldown"
-        }
-      ],
-      "published": "Fri, 17 Apr 2026 13:08:50 +0000"
-    },
-    {
       "title": "France's finance minister calls for more euro stablecoins in sign of government policy shift",
       "category": "Regulation",
       "summary": {
@@ -451,24 +470,6 @@
         }
       ],
       "published": "Fri, 17 Apr 2026 12:33:27 +0000"
-    },
-    {
-      "title": "Kraken's parent company Payward to acquire derivatives exchange Bitnomial for $550 million in cash and stock",
-      "category": "Markets",
-      "summary": {
-        "main": "Kraken's parent company Payward to acquire derivatives exchange Bitnomial for $550 million in cash and stock"
-      },
-      "sources": [
-        "CoinDesk"
-      ],
-      "count": 1,
-      "links": [
-        {
-          "source": "CoinDesk",
-          "link": "https://www.coindesk.com/business/2026/04/17/kraken-s-parent-company-payward-to-acquire-derivatives-exchange-bitnomial-for-usd550-million-in-cash-and-stock"
-        }
-      ],
-      "published": "Fri, 17 Apr 2026 12:15:00 +0000"
     },
     {
       "title": "Bitcoin’s ceasefire boost is starting to fizzle out as investors look for real-world results",
@@ -615,22 +616,58 @@
       "published": "Thu, 16 Apr 2026 14:40:02 +0000"
     },
     {
-      "title": "VerifiedX brings privacy layer to Bitcoin as institutional demand for confidentiality grows",
-      "category": "Markets",
+      "title": "Crypto execs ramp up security as wrench attacks increase",
+      "category": "Security",
       "summary": {
-        "main": "VerifiedX brings privacy layer to Bitcoin as institutional demand for confidentiality grows"
+        "main": "Notable crypto execs descended on Paris Blockchain Week, bringing more attention to personal security as kidnapping and ransom attempts skyrocket."
       },
       "sources": [
-        "CoinDesk"
+        "Cointelegraph"
       ],
       "count": 1,
       "links": [
         {
-          "source": "CoinDesk",
-          "link": "https://www.coindesk.com/tech/2026/04/16/verifiedx-brings-privacy-layer-to-bitcoin-as-institutional-demand-for-confidentiality-grows"
+          "source": "Cointelegraph",
+          "link": "https://cointelegraph.com/news/crypto-execs-ramp-security-wrench-attacks-increase?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
         }
       ],
-      "published": "Thu, 16 Apr 2026 14:00:00 +0000"
+      "published": "Fri, 17 Apr 2026 14:45:01 +0100"
+    },
+    {
+      "title": "Telegram CEO Durov warns EU age-verification app could enable wider tracking",
+      "category": "Security",
+      "summary": {
+        "main": "Telegram CEO Pavel Durov cited claims the EU’s new age-check app was hacked in minutes, warning it could expand into wider online identity controls."
+      },
+      "sources": [
+        "Cointelegraph"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Cointelegraph",
+          "link": "https://cointelegraph.com/news/eu-age-app-verification-surveillance-risk-durov?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+        }
+      ],
+      "published": "Fri, 17 Apr 2026 14:15:23 +0100"
+    },
+    {
+      "title": "Ramp Network rolls out multichain wallet for simpler self-custody",
+      "category": "Markets",
+      "summary": {
+        "main": "The crypto infrastructure company said its new wallet lets users buy, sell, swap and cash out digital assets in one app without relying on outside providers."
+      },
+      "sources": [
+        "Cointelegraph"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Cointelegraph",
+          "link": "https://cointelegraph.com/news/ramp-network-self-custodial-wallet-third-party-dependencies?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+        }
+      ],
+      "published": "Fri, 17 Apr 2026 14:00:00 +0100"
     },
     {
       "title": "Tempo’s ‘Zones’ sparks debate over privacy in crypto infrastructure",
@@ -742,7 +779,7 @@
     },
     {
       "title": "Zanzibar police probe crypto exec Joe McCann after fiancée’s death",
-      "category": "Markets",
+      "category": "Regulation",
       "summary": {
         "main": "Zanzibar police are reportedly holding Asymmetric founder Joe McCann for questioning after the death of his fiancée, Ashly Robinson."
       },
@@ -921,60 +958,6 @@
       "published": "Thu, 16 Apr 2026 17:55:36 +0100"
     },
     {
-      "title": "Bitcoin rebounds near $74.5K as US stocks chase after new all-time highs",
-      "category": "Markets",
-      "summary": {
-        "main": "Bitcoin attempted to recover the $75,000 level as US stocks chase after a second day of fresh all-time highs. Is the bull market back on?"
-      },
-      "sources": [
-        "Cointelegraph"
-      ],
-      "count": 1,
-      "links": [
-        {
-          "source": "Cointelegraph",
-          "link": "https://cointelegraph.com/news/bitcoin-rebounds-near-dollar74-5k-as-us-stocks-chase-after-new-all-time-highs?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
-        }
-      ],
-      "published": "Thu, 16 Apr 2026 17:17:04 +0100"
-    },
-    {
-      "title": "Zonda exchange says 4.5K BTC wallet inaccessible amid withdrawal crisis",
-      "category": "Security",
-      "summary": {
-        "main": "The CEO of the troubled Zonda exchange has disclosed a Bitcoin wallet holding around 4,500 BTC, but said the private keys were never transferred during a company handover."
-      },
-      "sources": [
-        "Cointelegraph"
-      ],
-      "count": 1,
-      "links": [
-        {
-          "source": "Cointelegraph",
-          "link": "https://cointelegraph.com/news/zonda-crypto-4500-btc-wallet-inaccessible-withdrawal-crisis?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
-        }
-      ],
-      "published": "Thu, 16 Apr 2026 16:48:12 +0100"
-    },
-    {
-      "title": "UAE investors buy AI dip, keep crypto exposure despite conflict",
-      "category": "AI",
-      "summary": {
-        "main": "UAE investors are buying the AI and tech dip, keeping exposure to software, chips and crypto as the Iran conflict stress-tests the Gulf’s bid to be a global tech hub."
-      },
-      "sources": [
-        "Cointelegraph"
-      ],
-      "count": 1,
-      "links": [
-        {
-          "source": "Cointelegraph",
-          "link": "https://cointelegraph.com/news/uae-investors-double-down-on-ai-digital-assets?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
-        }
-      ],
-      "published": "Thu, 16 Apr 2026 14:59:12 +0100"
-    },
-    {
       "title": "SEC Officials Push US Crypto Ambitions in Debut Podcast Episode",
       "category": "Regulation",
       "summary": {
@@ -1137,6 +1120,42 @@
       "published": "Thu, 16 Apr 2026 17:42:43 +0000"
     },
     {
+      "title": "CFTC Chair Mike Selig Faces Bipartisan Pushback on Prediction Markets, Hyperliquid Perps",
+      "category": "Regulation",
+      "summary": {
+        "main": "Sports and war prediction markets and crypto-backed perpetual futures came under fire during a House committee hearing Thursday."
+      },
+      "sources": [
+        "Decrypt"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Decrypt",
+          "link": "https://decrypt.co/364611/cftc-chair-mike-selig-bipartisan-pushback-prediction-markets-hyperliquid"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 16:57:52 +0000"
+    },
+    {
+      "title": "Meta Hikes Quest VR Prices Following PS5 Bump as RAM Shortage Rocks Tech World",
+      "category": "Markets",
+      "summary": {
+        "main": "The global RAM shortage claims another victim, with Meta boosting Quest 3 and Quest 3S prices following other gadget price hikes."
+      },
+      "sources": [
+        "Decrypt"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "Decrypt",
+          "link": "https://decrypt.co/364599/meta-hikes-quest-vr-prices-ps5-ram-shortage"
+        }
+      ],
+      "published": "Thu, 16 Apr 2026 16:47:45 +0000"
+    },
+    {
       "title": "Polkadot-Ethereum Bridge Hack Losses Were 10x Worse Than Reported, Team Admits",
       "category": "Security",
       "summary": {
@@ -1171,24 +1190,6 @@
         }
       ],
       "published": "Thu, 16 Apr 2026 14:46:38 +0000"
-    },
-    {
-      "title": "Snap Cuts 1,000 Jobs, Aims to Save $500 Million as AI Reshapes Operations",
-      "category": "AI",
-      "summary": {
-        "main": "Social media company Snap is restructuring operations to focus on profitability as AI tools reshape how teams work across key initiatives."
-      },
-      "sources": [
-        "Decrypt"
-      ],
-      "count": 1,
-      "links": [
-        {
-          "source": "Decrypt",
-          "link": "https://decrypt.co/364581/snap-cuts-1000-jobs-save-500-million-ai-reshapes-operations"
-        }
-      ],
-      "published": "Thu, 16 Apr 2026 14:28:33 +0000"
     },
     {
       "title": "Citadel Securities president says firm could enter prediction markets, eyes non-sports use cases",
@@ -1299,6 +1300,24 @@
       "published": "Thu, 16 Apr 2026 16:20:45 -0400"
     },
     {
+      "title": "Dogecoin Breakout Mirrors Past Trend — Bigger Move Coming?",
+      "category": "Markets",
+      "summary": {
+        "main": "Dogecoin is showing signs of history repeating itself as a recent breakout begins to mirror a previous trend that led to a major rally. With structure aligning and momentum slowly building, the..."
+      },
+      "sources": [
+        "NewsBTC"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "NewsBTC",
+          "link": "https://www.newsbtc.com/news/dogecoin/dogecoin-mirrors-past-trend/"
+        }
+      ],
+      "published": "Fri, 17 Apr 2026 14:00:37 +0000"
+    },
+    {
       "title": "Pundit Says This Chart Paints The Clearest Macro Picture For XRP",
       "category": "Markets",
       "summary": {
@@ -1407,26 +1426,8 @@
       "published": "Fri, 17 Apr 2026 05:08:37 +0000"
     },
     {
-      "title": "XRP Price Surges Above Key Level, Bulls Take Full Control",
-      "category": "Markets",
-      "summary": {
-        "main": "XRP price started a decent increase above $1.40. The price is now consolidating gains and might aim for more gains above the $1.4650 zone. XRP price started a steady increase above the $1.4120 zone...."
-      },
-      "sources": [
-        "NewsBTC"
-      ],
-      "count": 1,
-      "links": [
-        {
-          "source": "NewsBTC",
-          "link": "https://www.newsbtc.com/analysis/xrp/xrp-price-surges-above-1-420/"
-        }
-      ],
-      "published": "Fri, 17 Apr 2026 04:08:41 +0000"
-    },
-    {
       "title": "XRPL Gets Massive Adoption Boost As Crypto Wallet Provider Exodus Teams Up With Ripple in Strategic Push",
-      "category": "Markets",
+      "category": "DeFi",
       "summary": {
         "main": "The rollout equips users with enhanced tools to send and manage XRP while also paving the way for Ripple USD (RLUSD) stablecoin."
       },
@@ -1552,7 +1553,7 @@
     },
     {
       "title": "Ranger’s ICO starts today, and MetaDAO eyes a reset",
-      "category": "Markets",
+      "category": "DeFi",
       "summary": {
         "main": "Ranger’s Jan 6–10 sale could re-accelerate MetaDAO volumes and revenue"
       },
@@ -1624,7 +1625,7 @@
     },
     {
       "title": "Canton’s $6T RWA rails and Lighter’s Hyperliquid multiple",
-      "category": "Markets",
+      "category": "DeFi",
       "summary": {
         "main": "DTCC moves DTC-custodied Treasuries onchain via Canton, while Lighter’s LIT launches trading at a fees multiple in Hyperliquid territory"
       },
@@ -1678,7 +1679,7 @@
     },
     {
       "title": "Yield Basis is making native BTC yield a reality",
-      "category": "Markets",
+      "category": "DeFi",
       "summary": {
         "main": "Yield Basis introduces an IL-free AMM design that already dominates BTC DEX liquidity"
       },
@@ -1714,7 +1715,7 @@
     },
     {
       "title": "A sleeper in the perps category",
-      "category": "Markets",
+      "category": "DeFi",
       "summary": {
         "main": "As Hyperliquid and Lighter battle for perps DEX dominance, Boros could capture the structural upside"
       },
@@ -1804,7 +1805,7 @@
     },
     {
       "title": "Maple’s fundamentals are driving outperformance",
-      "category": "Markets",
+      "category": "DeFi",
       "summary": {
         "main": "Maple is outperforming peers on growth, yield, and revenue — while benefiting from limited supply overhang and clear value accrual"
       },
@@ -1894,7 +1895,7 @@
     },
     {
       "title": "Coinbase embeds Solana trading",
-      "category": "Markets",
+      "category": "DeFi",
       "summary": {
         "main": "The platform turns to onchain rails for Solana assets while crypto M&amp;A and fundraising surge to cycle highs"
       },
@@ -2164,7 +2165,7 @@
     },
     {
       "title": "Analyzing Jup Lend vs. Kamino",
-      "category": "Markets",
+      "category": "DeFi",
       "summary": {
         "main": "The exchange between Kamino and Jupiter has escalated from healthy competition to a clear public dispute"
       },
@@ -2182,7 +2183,7 @@
     },
     {
       "title": "Rangebound markets, resilient onchain lending",
-      "category": "Markets",
+      "category": "DeFi",
       "summary": {
         "main": "Crypto lags behind TradFi benchmarks, but trends in stablecoins, deposits and loans point to durable multi-year growth"
       },
@@ -2254,7 +2255,7 @@
     },
     {
       "title": "Solana tokens see gains amidst weeklong crypto slump",
-      "category": "Markets",
+      "category": "DeFi",
       "summary": {
         "main": "Despite a soft market backdrop, Solana DeFi tokens showed relative strength, with Sanctum leading the pack"
       },
@@ -2272,7 +2273,7 @@
     },
     {
       "title": "Thursday links: Prediction markets, agent hackers, quantum risks",
-      "category": "AI",
+      "category": "Security",
       "summary": {
         "main": "Anthropic researchers report that their AI agents successfully exploited 56% of vulnerable smart contracts"
       },
@@ -2290,7 +2291,7 @@
     },
     {
       "title": "Hyperliquid: The frontend wars",
-      "category": "Markets",
+      "category": "DeFi",
       "summary": {
         "main": "Nearly 40% of Hyperliquid’s daily active users trade through third-party frontends rather than the native UI"
       },
@@ -2344,7 +2345,7 @@
     },
     {
       "title": "Ethereum’s Fusaka upgrade lands today",
-      "category": "Markets",
+      "category": "DeFi",
       "summary": {
         "main": "Ethereum rolls out Fusaka, setting the stage for a stronger blob fee market and renewed deflationary potential"
       },
@@ -2380,7 +2381,7 @@
     },
     {
       "title": "Strategy stress, liquidity strain",
-      "category": "DeFi",
+      "category": "Markets",
       "summary": {
         "main": "Money market indicators are flashing liquidity stress again as crypto underperforms equities"
       },
@@ -2416,7 +2417,7 @@
     },
     {
       "title": "PI steadies at $0.1770 amid core team’s mainnet upgrade plans",
-      "category": "Markets",
+      "category": "DeFi",
       "summary": {
         "main": "Key takeaways&#160; Pi Network&#8217;s PI token holds steady at $0.1730, up 4.5% from the previous day.&#160; The Pi Core Team&#8217;s upgrade to enable smart contracts, with a deadline set for April..."
       },
@@ -2433,26 +2434,8 @@
       "published": "Fri, 17 Apr 2026 06:26:44 +0000"
     },
     {
-      "title": "Chiliz price surges amid adoption in South Korea and UEFA Champions League excitement",
-      "category": "Markets",
-      "summary": {
-        "main": "Chiliz price rose more than 13% to above $0.0433. Korea&#8217;s Naver Pay has onboarded nearly 1 million users to the Chiliz Chain. Top European teams with fan tokens have advanced in the UEFA..."
-      },
-      "sources": [
-        "CoinJournal"
-      ],
-      "count": 1,
-      "links": [
-        {
-          "source": "CoinJournal",
-          "link": "https://coinjournal.net/news/chiliz-price-surges-amid-adoption-in-south-korea-and-uefa-champions-league-excitement/"
-        }
-      ],
-      "published": "Thu, 16 Apr 2026 14:04:30 +0000"
-    },
-    {
       "title": "Clarity Act deadlock fails to stop Stablecoins smashing $320B and yield-bearing tokens surging",
-      "category": "Markets",
+      "category": "Regulation",
       "summary": {
         "main": "Stablecoin supply climbed to a record $320 billion this week, extending the continued surge in dollar-linked digital assets. This comes as one of the biggest questions hanging over the sector remains..."
       },
@@ -2470,7 +2453,7 @@
     },
     {
       "title": "Tether uses $127M Drift rescue to challenge Circle’s grip on Solana payments",
-      "category": "Security",
+      "category": "DeFi",
       "summary": {
         "main": "USDT stablecoin issuer Tether has stepped in to anchor a massive recovery plan for Drift Protocol, the Solana-based decentralized exchange (DEX) that was crippled by a $286 million exploit earlier..."
       },
@@ -2557,24 +2540,6 @@
         }
       ],
       "published": "Thu, 16 Apr 2026 16:00:02 +0000"
-    },
-    {
-      "title": "Why S&P 500’s $6 trillion melt up rally exposes Bitcoin amid range-bound weakness",
-      "category": "Markets",
-      "summary": {
-        "main": "Traditional equities like the S&#038;P 500 are staging a historic comeback, shaking off weeks of geopolitical anxiety to chart new all-time highs. Yet Bitcoin, which has historically been a..."
-      },
-      "sources": [
-        "CryptoSlate"
-      ],
-      "count": 1,
-      "links": [
-        {
-          "source": "CryptoSlate",
-          "link": "https://cryptoslate.com/ai-stock-rally-leaves-bitcoin-behind/"
-        }
-      ],
-      "published": "Thu, 16 Apr 2026 14:05:22 +0000"
     },
     {
       "title": "Hyperliquid (HYPE) Hits 60-Day High as Arthur Hayes Announces HIP4",
@@ -2758,7 +2723,7 @@
     },
     {
       "title": "One of Leading Software Wallets Throws Weight Behind XRPL",
-      "category": "Markets",
+      "category": "DeFi",
       "summary": {
         "main": "The publicly traded developer behind the popular non-custodial software wallet, has announced a massive expansion of its XRP Ledger (XRPL) capabilities."
       },
@@ -2809,42 +2774,6 @@
         }
       ],
       "published": "Thu, 16 Apr 2026 15:44:00 +0000"
-    },
-    {
-      "title": "Sui (SUI) Market Position Improves After 37% Spike in Volume: Reviewing the Project's Prospects",
-      "category": "Markets",
-      "summary": {
-        "main": "Sui's market performance is getting better following the recovery of trading volume."
-      },
-      "sources": [
-        "UToday"
-      ],
-      "count": 1,
-      "links": [
-        {
-          "source": "UToday",
-          "link": "https://u.today/sui-sui-market-position-improves-after-37-spike-in-volume-reviewing-the-projects-prospects"
-        }
-      ],
-      "published": "Thu, 16 Apr 2026 14:05:00 +0000"
-    },
-    {
-      "title": "61,000 BTC Sold Amid Miner Sell-Off, Trend Raises Questions",
-      "category": "Markets",
-      "summary": {
-        "main": "Bitcoin miner reserves have fallen by 61,000 BTC since the start of this cycle."
-      },
-      "sources": [
-        "UToday"
-      ],
-      "count": 1,
-      "links": [
-        {
-          "source": "UToday",
-          "link": "https://u.today/61000-btc-sold-amid-miner-sell-off-trend-raises-questions"
-        }
-      ],
-      "published": "Thu, 16 Apr 2026 13:42:00 +0000"
     },
     {
       "title": "Factory hits $1.5B valuation to build AI coding for enterprises",
@@ -2920,7 +2849,7 @@
     },
     {
       "title": "Anthropic CPO leaves Figma’s board after reports he will offer a competing product",
-      "category": "Markets",
+      "category": "AI",
       "summary": {
         "main": "Krieger's departure and any forthcoming design tools will be another data point for investors who fear the SaaSpocalypse — that the largest AI labs will come to dominate software businesses, a thesis..."
       },
@@ -2992,7 +2921,7 @@
     },
     {
       "title": "Roblox’s AI assistant gets new agentic tools to plan, build, and test games",
-      "category": "Markets",
+      "category": "AI",
       "summary": {
         "main": "The new tools are designed to help creators throughout the entire development process."
       },
@@ -3025,24 +2954,6 @@
         }
       ],
       "published": "Thu, 16 Apr 2026 15:00:00 +0000"
-    },
-    {
-      "title": "Runway CEO says AI could help Hollywood make 50 films instead of one $100M blockbuster",
-      "category": "AI",
-      "summary": {
-        "main": "Runway’s CEO says AI could help studios make dozens of films for the cost of one, betting volume will boost hit-making odds."
-      },
-      "sources": [
-        "TechCrunch AI"
-      ],
-      "count": 1,
-      "links": [
-        {
-          "source": "TechCrunch AI",
-          "link": "https://techcrunch.com/2026/04/16/runway-ceo-says-ai-could-help-hollywood-make-50-films-instead-of-one-100m-blockbuster/"
-        }
-      ],
-      "published": "Thu, 16 Apr 2026 14:14:29 +0000"
     }
   ]
 }
