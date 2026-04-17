@@ -299,11 +299,37 @@ def shorten(text, max_len=200):
 
 
 def detect_category_fallback(text: str) -> str:
-    """Улучшенный безопасный fallback с приоритетом рынков над ИИ."""
+    """Улучшенный безопасный fallback с жестким приоритетом важных ниш."""
     text = text.lower()
 
-    # 1. Сначала отсекаем MARKETS (цены, биткоин, майнеры, финансы)
-    # Это уберет MARA и новости про падение BTC из раздела AI
+    regulation_keywords = [
+        "sec ",
+        "law ",
+        "regulation",
+        "cftc",
+        "sues",
+        "court",
+        "legal",
+        "hearing",
+        "framework",
+        "settlement",
+    ]
+    if any(w in text for w in regulation_keywords):
+        return "Regulation"
+
+    security_keywords = [
+        "hack",
+        "exploit",
+        "breach",
+        "attack",
+        "stolen",
+        "scam",
+        "fraud",
+        "exploit",
+    ]
+    if any(w in text for w in security_keywords):
+        return "Security"
+
     market_keywords = [
         "price",
         "bitcoin",
@@ -314,50 +340,33 @@ def detect_category_fallback(text: str) -> str:
         "trading",
         "analyst",
         "rally",
-        "slashes",
-        "miner",
-        "stock",
-        "sell",
-        "buy",
-        "bullish",
-        "bearish",
-        "hit",
-        "new high",
         "surge",
         "drop",
-        "liquidated",
     ]
     if any(w in text for w in market_keywords):
         return "Markets"
 
-    # 2. Потом REGULATION (законы, суды)
-    if any(w in text for w in ["sec ", "law ", "regulation", "cftc", "sues", "court"]):
-        return "Regulation"
-
-    # 3. Только ТЕПЕРЬ проверяем на AI (строго)
-    # Ищем упоминания технологий, а не просто буквы 'ai'
     ai_keywords = [
         "artificial intelligence",
         "openai",
-        "gpt-4",
+        "gpt",
         "llm",
-        "neural network",
-        "anthropic",
-        "claud",
+        "nvidia",
+        "neural",
     ]
-    # Проверка на ' ai ' с пробелами, чтобы не поймать 'chain' или 'main'
+
+    if "bitcoin" in text:
+        return "Regulation"
+
     if " ai " in text or any(w in text for w in ai_keywords):
         return "AI"
 
-    # 4. SECURITY
-    if any(w in text for w in ["hack", "exploit", "breach", "attack", "stolen"]):
-        return "Security"
-
-    # 5. DEFI
-    if any(w in text for w in ["defi", "dex ", "staking", "yield", "lending"]):
+    # 4. DEFI
+    if any(
+        w in text for w in ["defi", "dex ", "staking", "yield", "lending", "protocol"]
+    ):
         return "DeFi"
 
-    # По умолчанию — Markets, так как это самая частая тема в крипте
     return "Markets"
 
 
@@ -379,21 +388,15 @@ def get_category_hybrid(title: str, summary: str) -> str:
 
     # 3. Запрос к OpenAI
     system_prompt = """
-    You are a professional crypto analyst. Classify news into EXACTLY one of these categories:
-    - Markets
-    - DeFi
-    - AI
-    - Security
+    Identify and classify crypto news into EXACTLY one category.
+    You must return JSON: {"category": "CategoryName"}
 
-    RULES:
-    1. DO NOT use 'Other' or 'Regulation'.
-    2. If the news is about prices, ETFs, or general crypto updates -> 'Markets'.
-    3. If it's about hacking or exploits -> 'Security'.
-    4. If it's about OpenAI, NVIDIA, or AI tech -> 'AI'.
-    5. If it's about DEX, staking, or protocols -> 'DeFi'.
-
-    If you are unsure, ALWAYS choose 'Markets'. 
-    Return ONLY JSON: {"category": "CategoryName"}
+    HIERARCHY RULES (CRITICAL):
+    1. If the news mentions SEC, CFTC, Lawsuits, Courts, or Government Policy -> category is ALWAYS 'Regulation'.
+    2. If the news mentions Hacks, Exploits, or Scams -> category is 'Security'.
+    3. If the news is about Prices, ETFs, or Schwab/Banks -> category is 'Markets'.
+    4. If the news is about AI technology (OpenAI, Nvidia) -> category is 'AI'.
+    5. If unsure, choose 'Markets'.
     """
 
     try:
@@ -411,7 +414,7 @@ def get_category_hybrid(title: str, summary: str) -> str:
         category = result.get("category", "Other")
 
         # Валидация
-        valid_categories = ["Markets", "DeFi", "AI", "Security"]
+        valid_categories = ["Markets", "DeFi", "AI", "Security", "Regulation"]
         if category not in valid_categories:
             category = "Markets"  # Вместо Other ставим Markets по умолчанию
 
@@ -491,8 +494,8 @@ def generate_briefing(news_list):
 def main(argv: Optional[List[str]] = None) -> int:
     init_db()  # Инициализируем кэш
 
-    if os.path.exists(DB_FILE):
-        os.remove(DB_FILE)
+    # if os.path.exists(DB_FILE):
+    # os.remove(DB_FILE)
 
     args = argv or sys.argv[1:]
     sources_path = Path(args[0]) if args else Path("sources.json")

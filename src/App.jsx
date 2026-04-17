@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import NewsCard from "./components/NewsCard.jsx";
 import Fuse from 'fuse.js';
 
-const categories = ["Markets", "DeFi", "AI", "Regulation", "Security"];
+const categories = ["Markets", "DeFi", "AI", "Security", "Regulation"];
 
 function App() {
   // --- 1. ВСЕ СОСТОЯНИЯ (STATE) ---
@@ -70,7 +70,9 @@ function App() {
   // Б. Фильтр по категориям и базовая сортировка
   const sortedNews = useMemo(() => {
     const filtered = mode === "niches"
-      ? timeFilteredNews.filter(item => item.category === activeCategory)
+      ? timeFilteredNews.filter(item =>
+        item.category?.toLowerCase() === activeCategory?.toLowerCase()
+      )
       : timeFilteredNews;
     return [...filtered].sort((a, b) => (b.count ?? 0) - (a.count ?? 0));
   }, [timeFilteredNews, mode, activeCategory]);
@@ -153,7 +155,7 @@ function App() {
                 {categories.map((cat) => (
                   <button
                     key={cat}
-                    className={`menu-item ${activeCategory === cat ? "selected" : ""}`}
+                    className={`menu-item ${activeCategory?.toLowerCase() === cat?.toLowerCase() ? "selected" : ""}`}
                     onClick={() => {
                       setActiveCategory(cat);
                       setMode("niches");
