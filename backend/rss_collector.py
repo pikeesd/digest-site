@@ -302,68 +302,44 @@ def shorten(text, max_len=200):
 def detect_category_fallback(text: str) -> str:
     text = text.lower()
 
-    # 1. ПРИОРИТЕТ: REGULATION & SECURITY (Оставляем как есть)
-    regulation_keywords = [
-        "sec ",
-        "law ",
-        "regulation",
-        "cftc",
-        "sues",
-        "court",
-        "legal",
-        "hearing",
-    ]
-    if any(w in text for w in regulation_keywords):
+    # Сначала проверяем самые важные ниши
+    if any(
+        w in text
+        for w in ["sec ", "law", "regulation", "legal", "court", "cftc", "sue"]
+    ):
         return "Regulation"
 
     if any(
-        w in text for w in ["hack", "exploit", "breach", "attack", "stolen", "scam"]
+        w in text
+        for w in ["hack", "exploit", "scam", "attack", "vulnerability", "drain"]
     ):
         return "Security"
 
-    # 2. ЖЕСТКИЙ ПРИОРИТЕТ: DEFI (Добавляем конкретные бренды)
-    # Если мы видим эти слова, игнорируем всё остальное и ставим DeFi
-    defi_brands = [
+    # DeFi теперь ВЫШЕ Markets
+    defi_keywords = [
+        "defi",
+        "dex",
         "uniswap",
         "aave",
         "lido",
-        "curve",
-        "pancakeswap",
-        "makerdao",
-        "compound",
-        "eigenlayer",
-    ]
-    defi_terms = [
-        "defi",
-        "dex ",
         "staking",
         "yield",
-        "lending",
         "liquidity",
-        "liquid staking",
+        "pancakeswap",
+        "curve",
+        "makerdao",
+        "compound",
         "protocol",
+        "swapped",
+        "re-staking",
     ]
-
-    if any(w in text for w in defi_brands + defi_terms):
+    if any(w in text for w in defi_keywords):
         return "DeFi"
 
-    # 3. AI
-    if " ai " in text or any(w in text for w in ["openai", "gpt", "llm", "nvidia"]):
+    if any(
+        w in text for w in [" ai ", "openai", "gpt", "nvidia", "intelligence", "llm"]
+    ):
         return "AI"
-
-    # 4. MARKETS (Только если ничего из списка выше не подошло)
-    market_keywords = [
-        "price",
-        "bitcoin",
-        "btc",
-        "eth",
-        "ethereum",
-        "market",
-        "trading",
-        "rally",
-    ]
-    if any(w in text for w in market_keywords):
-        return "Markets"
 
     return "Markets"
 
@@ -385,17 +361,18 @@ def get_category_hybrid(title: str, summary: str) -> str:
         return cat
 
     # 3. Запрос к OpenAI
-    system_prompt = """
-    Identify and classify crypto news into EXACTLY one category.
-    You must return JSON: {"category": "CategoryName"}
+    system_prompt = f"""
+    Strictly classify this crypto news into ONE category.
+    PRIORITY RULES:
+    1. If news is about laws, SEC, court, taxes, or government - category: Regulation.
+    2. If news is about hacks, scams, exploits, or security audits - category: Security.
+    3. If news is about Uniswap, Aave, staking, DEX, yield, or DeFi protocols - category: DeFi.
+    4. If news is about OpenAI, Nvidia, or AI-tokens - category: AI.
+    5. ONLY if none of the above apply - category: Markets.
 
-    HIERARCHY RULES (CRITICAL):
-    1. If the news mentions SEC, CFTC, Lawsuits, Courts, or Government Policy -> category is ALWAYS 'Regulation'.
-    2. If the news mentions Hacks, Exploits, or Scams -> category is 'Security'.
-    3. If the news is about Prices, ETFs, or Schwab/Banks -> category is 'Markets'.
-    4. If the news is about AI technology (OpenAI, Nvidia) -> category is 'AI'.
-    5. If unsure, choose 'Markets'.
-    """
+    Title: {title}
+    Summary: {summary}
+    Category:"""
 
     try:
         response = client.chat.completions.create(
