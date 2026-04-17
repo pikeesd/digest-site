@@ -178,7 +178,10 @@ function App() {
             <h3>AI Briefing</h3>
             <p>
               {animatedBriefing}
-              <span className="typewriter-cursor">|</span>
+              {/* Курсор исчезнет сам, как только последняя буква будет напечатана */}
+              {briefing && animatedBriefing.length < briefing.length && (
+                <span className="typewriter-cursor">|</span>
+              )}
             </p>
             <div className="briefing-status">
               <span className="dot pulse"></span> Live Insight
