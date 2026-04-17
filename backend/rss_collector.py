@@ -411,7 +411,7 @@ def get_category_hybrid(title: str, summary: str) -> str:
         result = json.loads(response.choices[0].message.content)
         category = result.get("category", "Other")
 
-        # Валидация
+        # Валидациыя
         valid_categories = ["Markets", "DeFi", "AI", "Security", "Regulation"]
         if category not in valid_categories:
             category = "Markets"  # Вместо Other ставим Markets по умолчанию

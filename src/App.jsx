@@ -32,9 +32,8 @@ function App() {
         if (data.metadata?.last_updated) {
           setLastUpdate(new Date(data.metadata.last_updated));
         }
-        console.log("Что пришло с сервера:", data);
-        console.log("А есть ли там брифинг:", data.metadata?.briefing);
-        // --- ВОТ ЭТА СТРОКА НУЖНА ---
+
+
         setBriefing(data.metadata?.briefing || "Брифинг не найден в ответе сервера");
 
         setNews(data.news || []);
