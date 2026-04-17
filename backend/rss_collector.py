@@ -442,11 +442,14 @@ def generate_briefing(news_list):
     titles_str = "\n- ".join(titles)
 
     prompt = f"""
-    Analyze these crypto/AI news headlines and provide a 3-sentence daily briefing.
-    Sentence 1: The most critical market or tech event.
-    Sentence 2: General sentiment or secondary trends.
-    Sentence 3: A brief forward-looking takeaway for the reader.
-    Tone: Professional, insider, concise. Language: English.
+    Analyze these crypto/AI news headlines and provide a 3-sentence market pulse. 
+    Strictly NO predictions, NO price targets, and NO future advice.
+
+    Sentence 1: Identify the most critical event and explain the immediate 'Why' behind it.
+    Sentence 2: Synthesize secondary trends (DeFi, Regs, or Tech) and how they relate to the main event.
+    Sentence 3: Define the current market regime or sentiment based only on these headlines (e.g., 'cautious due to liquidity' or 'bullish on institutional adoption').
+
+    Tone: Senior Analyst, objective, punchy. Language: English.
     Headlines:
     - {titles_str}
     """
