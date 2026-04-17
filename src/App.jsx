@@ -9,13 +9,15 @@ export const useTypewriter = (text, speed = 25) => {
   const [displayedText, setDisplayedText] = useState("");
 
   useEffect(() => {
-    if (!text) return;
+    if (!text) {
+      setDisplayedText("");
+      return;
+    }
 
-    setDisplayedText(""); // Сбрасываем при новом тексте
+    setDisplayedText("");
     let i = 0;
 
     const timer = setInterval(() => {
-      // Используем колбэк, чтобы всегда брать актуальное значение
       setDisplayedText(text.slice(0, i + 1));
       i++;
 
@@ -112,7 +114,6 @@ function App() {
 
   return (
     <div className={`app-layout ${isNichesOpen ? "dropdown-open" : ""}`}>
-      {/* Оверлей затемнения при открытии выбора ниш */}
       {isNichesOpen && (
         <div className="page-overlay" onClick={() => setIsNichesOpen(false)}></div>
       )}
@@ -176,14 +177,14 @@ function App() {
           <div className="sidebar-briefing">
             <h3>AI Briefing</h3>
             <p>
-              {animatedBriefing || "Distilling market chaos..."}
+              {animatedBriefing}
               <span className="typewriter-cursor">|</span>
             </p>
             <div className="briefing-status">
               <span className="dot pulse"></span> Live Insight
             </div>
           </div>
-        </div>
+        </div> {/* Закрытие side-nav было пропущено здесь */}
       </aside>
 
       <main className="main-content">
