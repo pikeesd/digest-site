@@ -9,15 +9,19 @@ export const useTypewriter = (text, speed = 25) => {
   const [displayedText, setDisplayedText] = useState("");
 
   useEffect(() => {
-    let i = 0;
-    setDisplayedText("");
-
     if (!text) return;
 
+    setDisplayedText(""); // Сбрасываем при новом тексте
+    let i = 0;
+
     const timer = setInterval(() => {
-      setDisplayedText((prev) => prev + text.charAt(i));
+      // Используем колбэк, чтобы всегда брать актуальное значение
+      setDisplayedText(text.slice(0, i + 1));
       i++;
-      if (i >= text.length) clearInterval(timer);
+
+      if (i >= text.length) {
+        clearInterval(timer);
+      }
     }, speed);
 
     return () => clearInterval(timer);
@@ -108,6 +112,7 @@ function App() {
 
   return (
     <div className={`app-layout ${isNichesOpen ? "dropdown-open" : ""}`}>
+      {/* Оверлей затемнения при открытии выбора ниш */}
       {isNichesOpen && (
         <div className="page-overlay" onClick={() => setIsNichesOpen(false)}></div>
       )}

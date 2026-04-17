@@ -809,10 +809,10 @@ body.dropdown-open::before {
 
 .typewriter-cursor {
   display: inline-block;
-  width: 2px;
-  background-color: #ff9d00;
-  /* или твой основной цвет */
-  margin-left: 4px;
+  color: #ff9d00;
+  /* Твой оранжевый цвет */
+  margin-left: 2px;
+  font-weight: bold;
   animation: blink 0.8s infinite;
   vertical-align: middle;
 }
@@ -827,4 +827,13 @@ body.dropdown-open::before {
   50% {
     opacity: 0;
   }
+}
+
+/* Это чтобы блок не "прыгал" при появлении текста */
+.sidebar-briefing p {
+  min-height: 120px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  /* Важно: сохраняет структуру текста от ИИ */
 }
