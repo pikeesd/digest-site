@@ -4,11 +4,32 @@ import Fuse from 'fuse.js';
 
 const categories = ["Markets", "DeFi", "AI", "Security", "Regulation"];
 
+// Хук для эффекта печатания (Typewriter)
+export const useTypewriter = (text, speed = 25) => {
+  const [displayedText, setDisplayedText] = useState("");
+
+  useEffect(() => {
+    let i = 0;
+    setDisplayedText("");
+
+    if (!text) return;
+
+    const timer = setInterval(() => {
+      setDisplayedText((prev) => prev + text.charAt(i));
+      i++;
+      if (i >= text.length) clearInterval(timer);
+    }, speed);
+
+    return () => clearInterval(timer);
+  }, [text, speed]);
+
+  return displayedText;
+};
+
 function App() {
-  // --- 1. ВСЕ СОСТОЯНИЯ (STATE) ---
   const [lastUpdate, setLastUpdate] = useState(new Date());
   const [news, setNews] = useState([]);
-  const [mode, setMode] = useState("idle"); // idle, full, niches
+  const [mode, setMode] = useState("idle");
   const [activeCategory, setActiveCategory] = useState("");
   const [openDropdownId, setOpenDropdownId] = useState(null);
   const [timeFilter, setTimeFilter] = useState(24);
@@ -18,9 +39,10 @@ function App() {
 
   const [isNichesOpen, setIsNichesOpen] = useState(false);
   const [timeAgo, setTimeAgo] = useState("just now");
-  const [isOpen, setIsOpen] = useState(false);
 
-  // --- 2. ЭФФЕКТЫ (ЗАГРУЗКА И ТАЙМЕРЫ) ---
+  // Подключаем анимацию для брифинга
+  const animatedBriefing = useTypewriter(briefing, 20);
+
   useEffect(() => {
     fetch("https://steadfast-beauty-production-9beb.up.railway.app/api/news")
       .then((res) => res.json())
@@ -33,9 +55,7 @@ function App() {
           setLastUpdate(new Date(data.metadata.last_updated));
         }
 
-
-        setBriefing(data.metadata?.briefing || "Брифинг не найден в ответе сервера");
-
+        setBriefing(data.metadata?.briefing || "");
         setNews(data.news || []);
         setServerMessage("");
       })
@@ -57,16 +77,12 @@ function App() {
     return () => clearInterval(interval);
   }, [lastUpdate]);
 
-  // --- 3. ВЫЧИСЛЕНИЯ (ЦЕПОЧКА ФИЛЬТРАЦИИ) ---
-
-  // А. Фильтр по времени
   const timeFilteredNews = useMemo(() => {
     if (timeFilter === 24) return news;
     const cutoff = new Date().getTime() - timeFilter * 60 * 60 * 1000;
     return news.filter(item => new Date(item.published).getTime() >= cutoff);
   }, [news, timeFilter]);
 
-  // Б. Фильтр по категориям и базовая сортировка
   const sortedNews = useMemo(() => {
     const filtered = mode === "niches"
       ? timeFilteredNews.filter(item =>
@@ -76,32 +92,26 @@ function App() {
     return [...filtered].sort((a, b) => (b.count ?? 0) - (a.count ?? 0));
   }, [timeFilteredNews, mode, activeCategory]);
 
-  // В. Инициализация поискового движка на базе отфильтрованных новостей
   const fuse = useMemo(() => new Fuse(sortedNews, {
     keys: ["title", "summary.main"],
     threshold: 0.3,
-    distance: 100,
   }), [sortedNews]);
 
-  // Г. Финальный результат с учетом поиска
   const finalNews = useMemo(() => {
     if (!searchQuery) return sortedNews;
     return fuse.search(searchQuery).map(result => result.item);
   }, [searchQuery, sortedNews, fuse]);
 
-  // Д. Разделение на ТОП и остальные (используем finalNews для живого поиска)
   const topCount = timeFilter === 24 ? 3 : 1;
   const topGlobal = finalNews.slice(0, topCount);
   const restGlobal = finalNews.slice(topCount);
 
   return (
     <div className={`app-layout ${isNichesOpen ? "dropdown-open" : ""}`}>
-      {/* Оверлей затемнения при открытии выбора ниш */}
       {isNichesOpen && (
         <div className="page-overlay" onClick={() => setIsNichesOpen(false)}></div>
       )}
 
-      {/* ЛЕВАЯ ПАНЕЛЬ (САЙДБАР) */}
       <aside className="sidebar">
         <div className="brand">
           <img src="/mountain.png" alt="logo" className="logo" />
@@ -134,18 +144,8 @@ function App() {
               }}
             >
               Generate by niches
-              <svg
-                className={`icon ${isNichesOpen ? "open" : ""}`}
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M6 9l6 6 6-6"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  fill="none"
-                />
+              <svg className={`icon ${isNichesOpen ? "open" : ""}`} width="16" height="16" viewBox="0 0 24 24">
+                <path d="M6 9l6 6 6-6" stroke="currentColor" strokeWidth="2" fill="none" />
               </svg>
             </button>
 
@@ -168,11 +168,11 @@ function App() {
             )}
           </div>
 
-          {/* AI Briefing Block */}
           <div className="sidebar-briefing">
             <h3>AI Briefing</h3>
             <p>
-              {briefing || "Distilling today's market chaos into insights..."}
+              {animatedBriefing || "Distilling market chaos..."}
+              <span className="typewriter-cursor">|</span>
             </p>
             <div className="briefing-status">
               <span className="dot pulse"></span> Live Insight
@@ -181,22 +181,13 @@ function App() {
         </div>
       </aside>
 
-      {/* ПРАВАЯ ЧАСТЬ (КОНТЕНТ) */}
       <main className="main-content">
         {mode !== "idle" && (
           <div className="top-action-bar">
-            {/* Левая часть: кнопка Back */}
-            <button
-              className="back-button"
-              onClick={() => {
-                setMode("idle");
-                setTimeFilter(24);
-              }}
-            >
+            <button className="back-button" onClick={() => { setMode("idle"); setTimeFilter(24); }}>
               ← Back
             </button>
 
-            {/* ЦЕНТРАЛЬНАЯ ЧАСТЬ: ПОИСК */}
             <div className="search-wrapper">
               <span className="search-icon">🔍</span>
               <input
@@ -206,21 +197,12 @@ function App() {
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="global-search-input"
               />
-              {searchQuery && (
-                <button className="clear-search-btn" onClick={() => setSearchQuery("")}>
-                  ✕
-                </button>
-              )}
+              {searchQuery && <button className="clear-search-btn" onClick={() => setSearchQuery("")}>✕</button>}
             </div>
 
-            {/* Правая часть: фильтры времени */}
             <div className="tabs">
               {[2, 10, 24].map((h) => (
-                <button
-                  key={h}
-                  className={`tab ${timeFilter === h ? "active" : ""}`}
-                  onClick={() => setTimeFilter(h)}
-                >
+                <button key={h} className={`tab ${timeFilter === h ? "active" : ""}`} onClick={() => setTimeFilter(h)}>
                   {h}h
                 </button>
               ))}
@@ -230,18 +212,15 @@ function App() {
 
         <div className="content-scroll">
           {serverMessage ? (
-            <div className="status-msg">
-              <h2>{serverMessage}</h2>
-            </div>
+            <div className="status-msg"><h2>{serverMessage}</h2></div>
           ) : mode === "idle" ? (
             <div className="empty-state">
               <h2>Ready to peak?</h2>
               <span>Choose your digest type on the left to start.</span>
             </div>
-          ) : sortedNews.length === 0 ? (
+          ) : finalNews.length === 0 ? (
             <div className="empty-category">
               <p>No news in this timeframe yet</p>
-              <span>Try selecting a longer period (e.g., 24h) or check back later.</span>
             </div>
           ) : (
             <div className="cards-container">
@@ -255,9 +234,7 @@ function App() {
                       key={`top-${i}`}
                       item={item}
                       isOpen={openDropdownId === `top-${i}`}
-                      onToggle={() =>
-                        setOpenDropdownId(openDropdownId === `top-${i}` ? null : `top-${i}`)
-                      }
+                      onToggle={() => setOpenDropdownId(openDropdownId === `top-${i}` ? null : `top-${i}`)}
                     />
                   ))}
                 </div>
@@ -270,9 +247,7 @@ function App() {
                       key={`rest-${i}`}
                       item={item}
                       isOpen={openDropdownId === `rest-${i}`}
-                      onToggle={() =>
-                        setOpenDropdownId(openDropdownId === `rest-${i}` ? null : `rest-${i}`)
-                      }
+                      onToggle={() => setOpenDropdownId(openDropdownId === `rest-${i}` ? null : `rest-${i}`)}
                     />
                   ))}
                 </div>
@@ -284,4 +259,5 @@ function App() {
     </div>
   );
 }
+
 export default App;

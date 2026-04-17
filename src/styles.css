@@ -806,3 +806,25 @@ body.dropdown-open::before {
   margin-right: 5px;
   box-shadow: 0 0 8px #00ff88;
 }
+
+.typewriter-cursor {
+  display: inline-block;
+  width: 2px;
+  background-color: #ff9d00;
+  /* или твой основной цвет */
+  margin-left: 4px;
+  animation: blink 0.8s infinite;
+  vertical-align: middle;
+}
+
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
