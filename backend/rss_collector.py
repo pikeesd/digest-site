@@ -537,3 +537,7 @@ if __name__ == "__main__":
     except KeyboardInterrupt:
         print("\nПрерывание пользователем.")
         sys.exit(0)
+
+
+def main(*args, **kwargs):
+    return run_full_collector(*args, **kwargs)

@@ -7,7 +7,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 # Импортируем только главную функцию из коллектора
-from rss_collector import main as run_collector
+from rss_collector import run_full_collector as run_collector
 
 app = FastAPI()
 
