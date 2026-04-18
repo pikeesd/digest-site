@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "last_updated": "2026-04-18T10:20:21.536921Z",
-    "total_news": 140,
+    "last_updated": "2026-04-18T11:08:38.219396Z",
+    "total_news": 138,
     "timeframe_hours": 24,
-    "briefing": "The critical event driving current market sentiment is the geopolitical tension surrounding Iran's closure of the Strait of Hormuz, which has prompted significant market reactions, including a wave of liquidations totaling $820 million as Bitcoin price approaches $78K. This situation intertwines with secondary trends in regulation and technology, notably Kraken's acquisition of Bitnomial and increasing institutional interest exemplified by Rep. Sheri Biggs' substantial investment in a Bitcoin ETF, indicating a maturation of the crypto landscape amidst external pressures. Overall, the market sentiment appears cautious, balancing the ramifications of geopolitical events with a burgeoning institutional adoption narrative, hinting at volatility ahead."
+    "briefing": "The most critical event is the closure of the Strait of Hormuz by Iran, which adds geopolitical tension and uncertainty that could impact global markets, including cryptocurrencies like Bitcoin. This is compounded by a wave of market liquidations and significant inflows into Bitcoin ETFs, indicating a volatile atmosphere that highlights investor reactions to both regulatory developments and technological advancements in the crypto space. Overall, the market sentiment appears cautious, driven by external geopolitical risks and a turbulent trading environment, despite some bullish trends in institutional adoption and innovative financial products."
   },
   "news": [
     {
@@ -13,11 +13,11 @@
         "main": "UPDATE Saturday 9 am UTC: After markets closed Friday, the Speaker of Iran's parliament announced that the Strait of Hormuz would not remain open while the US blockade remained in place. So far,..."
       },
       "sources": [
-        "Cointelegraph",
         "Decrypt",
-        "TheBlock",
+        "CryptoSlate",
+        "Cointelegraph",
         "CoinDesk",
-        "CryptoSlate"
+        "TheBlock"
       ],
       "count": 6,
       "links": [
@@ -55,9 +55,9 @@
         "main": "Nearly a billion dollars in leveraged crypto positions were liquidated in the past 24 hours as the Bitcoin price rallied above $78,000."
       },
       "sources": [
-        "UToday",
         "Cointelegraph",
-        "CoinDesk"
+        "CoinDesk",
+        "UToday"
       ],
       "count": 3,
       "links": [
@@ -167,8 +167,8 @@
         "main": "STRC is a perpetual preferred stock designed to trade near a $100 par value that currently pays a dividend at an annualized rate of 11.5%."
       },
       "sources": [
-        "TheBlock",
-        "CoinDesk"
+        "CoinDesk",
+        "TheBlock"
       ],
       "count": 2,
       "links": [
@@ -190,8 +190,8 @@
         "main": "World, which has raised eyebrows (but also a lot of interest) with its Orb-centered anonymous verification project, is looking to expand its influence via a bevy of new partnerships."
       },
       "sources": [
-        "TechCrunch AI",
-        "CoinDesk"
+        "CoinDesk",
+        "TechCrunch AI"
       ],
       "count": 2,
       "links": [
@@ -328,8 +328,8 @@
         "main": "The US government has moved around $606,000 worth of BTC to a Coinbase Prime wallet, research from on-chain intelligence portal Arkham shows."
       },
       "sources": [
-        "Decrypt",
-        "ZyCrypto"
+        "ZyCrypto",
+        "Decrypt"
       ],
       "count": 2,
       "links": [
@@ -451,24 +451,6 @@
         }
       ],
       "published": "Fri, 17 Apr 2026 11:16:56 +0000"
-    },
-    {
-      "title": "Bitcoin stalls below $76,000 as sell wall caps rally despite rising derivatives activity",
-      "category": "Markets",
-      "summary": {
-        "main": "Bitcoin stalls below $76,000 as sell wall caps rally despite rising derivatives activity"
-      },
-      "sources": [
-        "CoinDesk"
-      ],
-      "count": 1,
-      "links": [
-        {
-          "source": "CoinDesk",
-          "link": "https://www.coindesk.com/markets/2026/04/17/bitcoin-stalls-below-usd76-000-as-sell-wall-caps-rally-despite-rising-derivatives-activity"
-        }
-      ],
-      "published": "Fri, 17 Apr 2026 10:48:09 +0000"
     },
     {
       "title": "SEC charges Donald Basile in $16M crypto fraud tied to ‘insured’ token",
@@ -739,24 +721,6 @@
         }
       ],
       "published": "Fri, 17 Apr 2026 11:26:23 +0100"
-    },
-    {
-      "title": "Tokenization doesn’t ‘magically’ fix illiquid assets: PBW 2026",
-      "category": "Markets",
-      "summary": {
-        "main": "Industry speakers at Paris Blockchain Week said tokenization can broaden access and issuance, but it does not by itself create active secondary markets for illiquid assets."
-      },
-      "sources": [
-        "Cointelegraph"
-      ],
-      "count": 1,
-      "links": [
-        {
-          "source": "Cointelegraph",
-          "link": "https://cointelegraph.com/news/tokenization-illiquid-assets-liquidity-rwa-panel-pbw?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
-        }
-      ],
-      "published": "Fri, 17 Apr 2026 11:04:36 +0100"
     },
     {
       "title": "Bitcoin Cracks 7-Month Ceiling. Can Bulls Push It Higher?",
@@ -2325,6 +2289,42 @@
       "published": "Fri, 17 Apr 2026 11:30:41 +0000"
     },
     {
+      "title": "Crypto Winter Is Coming, Says CoinGecko",
+      "category": "Markets",
+      "summary": {
+        "main": "The crypto market entered a deeper downturn in Q1 2026, with total capitalization falling over 20% to $2.4 trillion as macro pressure and policy shifts weighed on risk assets."
+      },
+      "sources": [
+        "UToday"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "UToday",
+          "link": "https://u.today/crypto-winter-is-coming-says-coingecko"
+        }
+      ],
+      "published": "Sat, 18 Apr 2026 10:48:46 +0000"
+    },
+    {
+      "title": "'XRP Keeps Growing,' Ripple CEO Says Amid Solana Milestone",
+      "category": "Markets",
+      "summary": {
+        "main": "XRP utility has expanded on Solana in a recent milestone, sparking a response from Ripple CEO Brad Garlinghouse."
+      },
+      "sources": [
+        "UToday"
+      ],
+      "count": 1,
+      "links": [
+        {
+          "source": "UToday",
+          "link": "https://u.today/xrp-keeps-growing-ripple-ceo-says-amid-solana-milestone"
+        }
+      ],
+      "published": "Sat, 18 Apr 2026 10:15:00 +0000"
+    },
+    {
       "title": "+400 Billion Shiba Inu (SHIB) Added on Exchanges: Rally Faith Fades",
       "category": "Markets",
       "summary": {
@@ -2485,42 +2485,6 @@
         }
       ],
       "published": "Fri, 17 Apr 2026 12:37:00 +0000"
-    },
-    {
-      "title": "Dogecoin Nears $0.10 Dream as Whales Add 330 Million DOGE in Days",
-      "category": "Markets",
-      "summary": {
-        "main": "Dogecoin whales have accumulated about 330 million DOGE over the past few days."
-      },
-      "sources": [
-        "UToday"
-      ],
-      "count": 1,
-      "links": [
-        {
-          "source": "UToday",
-          "link": "https://u.today/dogecoin-nears-010-dream-as-whales-add-330-million-doge-in-days"
-        }
-      ],
-      "published": "Fri, 17 Apr 2026 11:06:00 +0000"
-    },
-    {
-      "title": "+30,000 New XRP Ledger Users Recorded: Could It Be Foundation for Recovery?",
-      "category": "Markets",
-      "summary": {
-        "main": "XRP Ledger is growing faster than it seems, as Ledger reports an increase in the number of active users."
-      },
-      "sources": [
-        "UToday"
-      ],
-      "count": 1,
-      "links": [
-        {
-          "source": "UToday",
-          "link": "https://u.today/30000-new-xrp-ledger-users-recorded-could-it-be-foundation-for-recovery"
-        }
-      ],
-      "published": "Fri, 17 Apr 2026 10:38:00 +0000"
     },
     {
       "title": "Kevin Weil and Bill Peebles exit OpenAI as company continues to shed ‘side quests’",
