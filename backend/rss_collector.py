@@ -467,49 +467,46 @@ def generate_briefing(news_list):
         return "Market briefing is being updated based on fresh data..."
 
 
-def main(argv: Optional[List[str]] = None) -> int:
+def run_full_collector(argv: Optional[List[str]] = None) -> int:
+    """Полный цикл сбора, классификации и генерации брифинга."""
     init_db()  # Инициализируем кэш
 
-    # if os.path.exists(DB_FILE):
-    # os.remove(DB_FILE)
-
     args = argv or sys.argv[1:]
-    sources_path = Path(args[0]) if args else Path("sources.json")
+    # Исправляем путь, чтобы скрипт находил sources.json, даже если запущен монитором
+    default_sources = os.path.join(BASE_DIR, "sources.json")
+    sources_path = Path(args[0]) if args else Path(default_sources)
 
     try:
         sources = load_sources(sources_path)
     except Exception as exc:
-        print(f"error: {exc}")
+        print(f"❌ Ошибка загрузки источников: {exc}")
         return 1
 
-    print("Fetching feeds...")
+    print(f"[{datetime.now().strftime('%H:%M:%S')}] Fetching feeds...")
     raw_articles = collect_all(sources)
 
-    # 1. Фильтр по времени (оставляем только за последние 24 часа для свежести)
+    # 1. Фильтр за последние 24 часа
     articles = filter_recent(raw_articles, hours=24)
     raw_count = len(articles)
 
     # 2. Группировка
     groups = group_articles(articles)
 
-    # 3. ОТСЕВ МУСОРА: Выбрасываем группы-агрегаторы до отправки в AI
+    # 3. Отсев мусора
     clean_groups = [
         g
         for g in groups
         if not g["main"].get("is_aggregate", False) and g["main"]["title"]
     ]
 
-    print(f"Raw (last 24h): {raw_count}")
-    print(f"Grouped & Cleaned (no aggregates): {len(clean_groups)}")
+    print(f"✅ Raw (24h): {raw_count} | Cleaned groups: {len(clean_groups)}")
 
     # 4. Классификация и сборка дайджеста
     digest = build_digest(clean_groups)
-
-    # Сортируем по важности (количеству источников)
     digest = sorted(digest, key=lambda x: x["count"], reverse=True)
 
-    # 5. Формируем финальный JSON для сайта
-    # ВАЖНО: сначала вызываем генерацию сводки
+    # 5. Генерация AI Briefing
+    print("🤖 Generating AI market briefing...")
     ai_briefing = generate_briefing(digest)
 
     final_output = {
@@ -517,20 +514,26 @@ def main(argv: Optional[List[str]] = None) -> int:
             "last_updated": datetime.utcnow().isoformat() + "Z",
             "total_news": len(digest),
             "timeframe_hours": 24,
-            "briefing": ai_briefing,  # Добавляем сводку в метаданные
+            "briefing": ai_briefing,
         },
         "news": digest,
     }
 
-    # Сохраняем для фронтенда
-    with open("digest.json", "w", encoding="utf-8") as f:
+    # Сохраняем результат в файл
+    output_path = os.path.join(BASE_DIR, "digest.json")
+    with open(output_path, "w", encoding="utf-8") as f:
         json.dump(final_output, f, indent=2, ensure_ascii=False)
 
-    print("\n Файл digest.json обновлен.")
-    print(f"Время обновления (UTC): {final_output['metadata']['last_updated']}")
-
+    print(
+        f"✨ digest.json успешно обновлен в {final_output['metadata']['last_updated']}"
+    )
     return 0
 
 
+# Точка входа для ручного запуска
 if __name__ == "__main__":
-    raise SystemExit(main())
+    try:
+        sys.exit(run_full_collector())
+    except KeyboardInterrupt:
+        print("\nПрерывание пользователем.")
+        sys.exit(0)

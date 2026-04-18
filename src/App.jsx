@@ -100,7 +100,7 @@ function App() {
 
   const fuse = useMemo(() => new Fuse(sortedNews, {
     keys: ["title", "summary.main"],
-    threshold: 0.3,
+    threshold: 0.1, // Чем меньше число, тем строже поиск
   }), [sortedNews]);
 
   const finalNews = useMemo(() => {
@@ -187,7 +187,7 @@ function App() {
               <span className="dot pulse"></span> Live Insight
             </div>
           </div>
-        </div> {/* Закрытие side-nav было пропущено здесь */}
+        </div>
       </aside>
 
       <main className="main-content">
