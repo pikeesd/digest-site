@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "last_updated": "2026-04-18T11:08:38.219396Z",
-    "total_news": 138,
+    "last_updated": "2026-04-18T11:45:31.844370Z",
+    "total_news": 133,
     "timeframe_hours": 24,
-    "briefing": "The most critical event is the closure of the Strait of Hormuz by Iran, which adds geopolitical tension and uncertainty that could impact global markets, including cryptocurrencies like Bitcoin. This is compounded by a wave of market liquidations and significant inflows into Bitcoin ETFs, indicating a volatile atmosphere that highlights investor reactions to both regulatory developments and technological advancements in the crypto space. Overall, the market sentiment appears cautious, driven by external geopolitical risks and a turbulent trading environment, despite some bullish trends in institutional adoption and innovative financial products."
+    "briefing": "The most critical event is Bitcoin's struggle against geopolitical tensions, particularly following Iran's closure of the Strait of Hormuz, which has immediate implications for market stability amidst rising prices. This geopolitical risk intertwines with a growing trend in the crypto market, where Bitcoin miners are diversifying into AI, raising concerns about network security even as institutional interest in Bitcoin ETFs surges and liquidity tightens. Overall, the market sentiment appears cautious, with participants closely monitoring external factors while navigating significant liquidations and regulatory scrutiny."
   },
   "news": [
     {
@@ -13,13 +13,13 @@
         "main": "UPDATE Saturday 9 am UTC: After markets closed Friday, the Speaker of Iran's parliament announced that the Strait of Hormuz would not remain open while the US blockade remained in place. So far,..."
       },
       "sources": [
-        "Decrypt",
-        "CryptoSlate",
-        "Cointelegraph",
+        "TheBlock",
         "CoinDesk",
-        "TheBlock"
+        "Cointelegraph",
+        "Decrypt",
+        "CryptoSlate"
       ],
-      "count": 6,
+      "count": 7,
       "links": [
         {
           "source": "CryptoSlate",
@@ -40,6 +40,10 @@
         {
           "source": "TheBlock",
           "link": "https://www.theblock.co/post/397898/bitcoin-retakes-78000-trump-hormuz-open-ready-business?utm_source=rss&utm_medium=rss"
+        },
+        {
+          "source": "CoinDesk",
+          "link": "https://www.coindesk.com/markets/2026/04/18/bearish-bets-lose-usd593-million-as-bitcoin-jumps-with-iran-fully-opening-hormuz"
         },
         {
           "source": "CoinDesk",
@@ -140,8 +144,8 @@
       },
       "sources": [
         "Decrypt",
-        "UToday",
-        "CryptoSlate"
+        "CryptoSlate",
+        "UToday"
       ],
       "count": 3,
       "links": [
@@ -167,8 +171,8 @@
         "main": "STRC is a perpetual preferred stock designed to trade near a $100 par value that currently pays a dividend at an annualized rate of 11.5%."
       },
       "sources": [
-        "CoinDesk",
-        "TheBlock"
+        "TheBlock",
+        "CoinDesk"
       ],
       "count": 2,
       "links": [
@@ -190,8 +194,8 @@
         "main": "World, which has raised eyebrows (but also a lot of interest) with its Orb-centered anonymous verification project, is looking to expand its influence via a bevy of new partnerships."
       },
       "sources": [
-        "CoinDesk",
-        "TechCrunch AI"
+        "TechCrunch AI",
+        "CoinDesk"
       ],
       "count": 2,
       "links": [
@@ -236,8 +240,8 @@
         "main": "The USDC Bridge adds to Circle's Cross-Chain Transfer Protocol, which often sees over $500 million worth of USDC transfers each day."
       },
       "sources": [
-        "Cointelegraph",
-        "TheBlock"
+        "TheBlock",
+        "Cointelegraph"
       ],
       "count": 2,
       "links": [
@@ -259,8 +263,8 @@
         "main": "X’s Cashtags feature has been integrated into Canadian-based online brokerage Wealthsimple, but has not yet been adopted by a US trading platform."
       },
       "sources": [
-        "Cointelegraph",
-        "TheBlock"
+        "TheBlock",
+        "Cointelegraph"
       ],
       "count": 2,
       "links": [
@@ -282,8 +286,8 @@
         "main": "A letter from US Senator Richard Blumenthal said he was concerned about “mounting allegations of dangerously lax anti-money laundering prevention by Binance.”"
       },
       "sources": [
-        "Cointelegraph",
-        "TheBlock"
+        "TheBlock",
+        "Cointelegraph"
       ],
       "count": 2,
       "links": [
@@ -435,24 +439,6 @@
       "published": "Fri, 17 Apr 2026 12:33:27 +0000"
     },
     {
-      "title": "Bitcoin’s ceasefire boost is starting to fizzle out as investors look for real-world results",
-      "category": "Markets",
-      "summary": {
-        "main": "Bitcoin’s ceasefire boost is starting to fizzle out as investors look for real-world results"
-      },
-      "sources": [
-        "CoinDesk"
-      ],
-      "count": 1,
-      "links": [
-        {
-          "source": "CoinDesk",
-          "link": "https://www.coindesk.com/daybook-us/2026/04/17/bitcoin-s-ceasefire-boost-is-starting-to-fizzle-out-as-investors-look-for-real-world-results"
-        }
-      ],
-      "published": "Fri, 17 Apr 2026 11:16:56 +0000"
-    },
-    {
       "title": "SEC charges Donald Basile in $16M crypto fraud tied to ‘insured’ token",
       "category": "Regulation",
       "summary": {
@@ -598,7 +584,7 @@
     },
     {
       "title": "Neo co-founder proposes $461M treasury overhaul to end ‘trust me’ governance",
-      "category": "Regulation",
+      "category": "Markets",
       "summary": {
         "main": "Neo’s proposed overhaul would restructure its foundation, return tokens to the community and impose formal oversight, as co-founders clash over governance and control."
       },
@@ -703,24 +689,6 @@
         }
       ],
       "published": "Fri, 17 Apr 2026 12:22:35 +0100"
-    },
-    {
-      "title": "Ethereum NFT platform Foundation shuts down after failed Blackdove sale",
-      "category": "Markets",
-      "summary": {
-        "main": "Foundation is shutting down after a failed sale to Blackdove, having processed about $230 million in NFT primary sales since its launch in 2021."
-      },
-      "sources": [
-        "Cointelegraph"
-      ],
-      "count": 1,
-      "links": [
-        {
-          "source": "Cointelegraph",
-          "link": "https://cointelegraph.com/news/foundation-nft-marketplace-shutdown-failed-sale?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
-        }
-      ],
-      "published": "Fri, 17 Apr 2026 11:26:23 +0100"
     },
     {
       "title": "Bitcoin Cracks 7-Month Ceiling. Can Bulls Push It Higher?",
@@ -921,24 +889,6 @@
       "published": "Fri, 17 Apr 2026 12:04:10 +0000"
     },
     {
-      "title": "Circle Hit With Class Action Lawsuit Over $285M Drift Protocol Hack",
-      "category": "Regulation",
-      "summary": {
-        "main": "Lawyers allege Circle failed to freeze stolen USDC during an eight-hour window as hackers moved funds from the exploited trading platform."
-      },
-      "sources": [
-        "Decrypt"
-      ],
-      "count": 1,
-      "links": [
-        {
-          "source": "Decrypt",
-          "link": "https://decrypt.co/364710/circle-hit-with-class-action-lawsuit-over-285m-drift-protocol-hack"
-        }
-      ],
-      "published": "Fri, 17 Apr 2026 11:10:35 +0000"
-    },
-    {
       "title": "Judge says Caitlyn Jenner’s JENNER memecoin is not a security in class action lawsuit",
       "category": "Regulation",
       "summary": {
@@ -1029,22 +979,22 @@
       "published": "Fri, 17 Apr 2026 13:00:00 -0400"
     },
     {
-      "title": "French minister urges banks to expand euro stablecoins, tokenized deposits: report",
-      "category": "Regulation",
+      "title": "Bitcoin Could See Short-Term Pullback Following Price Rebound — Analyst",
+      "category": "Markets",
       "summary": {
-        "main": "French minister urges European banks to expand euro stablecoins and tokenized deposits as dollar-pegged supply tops $300 billion."
+        "main": "On April 17th, Bitcoin rose by 2.77%, after Iran declared the Strait of Hormuz commercially open for the rest of its 10-day ceasefire with the US. With the market anticipating further upward..."
       },
       "sources": [
-        "TheBlock"
+        "NewsBTC"
       ],
       "count": 1,
       "links": [
         {
-          "source": "TheBlock",
-          "link": "https://www.theblock.co/post/397902/french-minister-urges-banks-to-expand-euro-stablecoins-tokenized-deposits-report?utm_source=rss&utm_medium=rss"
+          "source": "NewsBTC",
+          "link": "https://www.newsbtc.com/news/bitcoin/bitcoin-could-see-short-term-pullback-following-price-rebound-analyst/"
         }
       ],
-      "published": "Fri, 17 Apr 2026 11:18:43 -0400"
+      "published": "Sat, 18 Apr 2026 11:30:11 +0000"
     },
     {
       "title": "When Will The Ethereum Price Hit $5,000 And $10,000?",
@@ -1209,24 +1159,6 @@
       "published": "Sat, 18 Apr 2026 00:00:19 +0000"
     },
     {
-      "title": "Dogecoin Could Shock Traders With A Run To $5, Analyst Says",
-      "category": "Markets",
-      "summary": {
-        "main": "A crypto market commentator behind the High Altitude Investing YouTube channel says Dogecoin may be setting up for a sharp upside move, pointing to a mix of short-term technical signals and a..."
-      },
-      "sources": [
-        "NewsBTC"
-      ],
-      "count": 1,
-      "links": [
-        {
-          "source": "NewsBTC",
-          "link": "https://www.newsbtc.com/news/dogecoin/dogecoin-shock-traders-run-to-5-analyst/"
-        }
-      ],
-      "published": "Fri, 17 Apr 2026 23:00:13 +0000"
-    },
-    {
       "title": "Cardano Founder Challenges Bitcoin Recovery Claims In BIP-361 Plan",
       "category": "Markets",
       "summary": {
@@ -1300,7 +1232,7 @@
     },
     {
       "title": "XRPL Gets Massive Adoption Boost As Crypto Wallet Provider Exodus Teams Up With Ripple in Strategic Push",
-      "category": "DeFi",
+      "category": "Markets",
       "summary": {
         "main": "The rollout equips users with enhanced tools to send and manage XRP while also paving the way for Ripple USD (RLUSD) stablecoin."
       },
@@ -1948,7 +1880,7 @@
     },
     {
       "title": "Analyzing Jup Lend vs. Kamino",
-      "category": "DeFi",
+      "category": "Markets",
       "summary": {
         "main": "The exchange between Kamino and Jupiter has escalated from healthy competition to a clear public dispute"
       },
@@ -2074,7 +2006,7 @@
     },
     {
       "title": "Hyperliquid: The frontend wars",
-      "category": "DeFi",
+      "category": "Markets",
       "summary": {
         "main": "Nearly 40% of Hyperliquid’s daily active users trade through third-party frontends rather than the native UI"
       },
@@ -2269,24 +2201,6 @@
         }
       ],
       "published": "Fri, 17 Apr 2026 13:11:38 +0000"
-    },
-    {
-      "title": "Tether uses $127M Drift rescue to challenge Circle’s grip on Solana payments",
-      "category": "DeFi",
-      "summary": {
-        "main": "USDT stablecoin issuer Tether has stepped in to anchor a massive recovery plan for Drift Protocol, the Solana-based decentralized exchange (DEX) that was crippled by a $286 million exploit earlier..."
-      },
-      "sources": [
-        "CryptoSlate"
-      ],
-      "count": 1,
-      "links": [
-        {
-          "source": "CryptoSlate",
-          "link": "https://cryptoslate.com/tether-uses-127m-drift-rescue-to-challenge-circles-grip-on-solana-payments/"
-        }
-      ],
-      "published": "Fri, 17 Apr 2026 11:30:41 +0000"
     },
     {
       "title": "Crypto Winter Is Coming, Says CoinGecko",
