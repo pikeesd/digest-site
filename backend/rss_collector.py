@@ -457,15 +457,15 @@ def generate_briefing(news_list):
     3. Total length: under 120 words.
     4. Format strictly as follows:
 
-    🔥 **Market Pulse**
+    ➤ Market Pulse
     - [Single sentence explaining the dominant theme]
 
-    🚀 **Key Highlights**
+    ➤ Key Highlights
     - [Key event 1]
     - [Key event 2]
     - [Key event 3]
 
-    💡 **Analyst Note**
+    ➤ Analyst Note
     - [One unique insight on sentiment or infrastructure]
 
     News Data:
