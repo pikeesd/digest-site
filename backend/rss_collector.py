@@ -433,11 +433,11 @@ def build_digest(groups):
 
 
 def generate_briefing(news_list):
-    """Генерирует структурированную сводку дня в стиле Market Pulse."""
+    """Генерирует чистую структурированную сводку без лишних символов."""
     if not client or not news_list:
-        return "AI analysis is currently unavailable. Check back shortly for your market briefing."
+        return "AI analysis is currently unavailable. Check back shortly."
 
-    # Берем топ-12 новостей — этого достаточно для качественного среза и экономит токены
+    # Собираем контекст из топ-12
     top_content = []
     for n in news_list[:12]:
         title = n.get("main", {}).get("title", n.get("title", "No title"))
@@ -446,49 +446,52 @@ def generate_briefing(news_list):
 
     titles_str = "\n".join(top_content)
 
-    # Улучшенный системный промпт для структуры и экономии
     prompt = f"""
-    You are a Senior Crypto Analyst for Peak Digest. 
-    Summarize these headlines into a concise Markdown report.
+    Summarize these headlines for a crypto dashboard.
     
     Rules:
-    1. STRICTLY NO price targets or financial advice.
-    2. Use short, punchy bullet points.
-    3. Total length: under 120 words.
-    4. Format strictly as follows:
+    1. Output RAW TEXT only. DO NOT use blocks like ```markdown or ```.
+    2. NO financial advice or price targets.
+    3. Use exactly this structure with the '➤' symbol:
 
     ➤ Market Pulse
-    - [Single sentence explaining the dominant theme]
+    - [One sentence on the main trend]
 
     ➤ Key Highlights
-    - [Key event 1]
-    - [Key event 2]
-    - [Key event 3]
+    - [Event 1]
+    - [Event 2]
+    - [Event 3]
 
     ➤ Analyst Note
-    - [One unique insight on sentiment or infrastructure]
+    - [One sharp insight]
 
-    News Data:
+    News:
     {titles_str}
     """
 
     try:
         response = client.chat.completions.create(
-            model="gpt-4o-mini",  # Самая дешевая и быстрая модель
+            model="gpt-4o-mini",
             messages=[
                 {
                     "role": "system",
-                    "content": "You provide structured, objective crypto analysis in Markdown.",
+                    "content": "You are a precise news aggregator. You provide plain text summaries using Markdown bullet points. Never wrap your response in code blocks.",
                 },
                 {"role": "user", "content": prompt},
             ],
-            max_tokens=250,
-            temperature=0.5,  # Снижаем температуру для более стабильной структуры
+            max_tokens=200,
+            temperature=0.3,  # Понизил до 0.3 для еще большей четкости
         )
-        return response.choices[0].message.content.strip()
+        # Очищаем на всякий случай от возможных кавычек или лишних пробелов
+        return (
+            response.choices[0]
+            .message.content.strip()
+            .replace("```markdown", "")
+            .replace("```", "")
+        )
     except Exception as e:
         print(f"⚠️ Briefing error: {e}")
-        return "Market briefing is being updated based on fresh data..."
+        return "Market briefing is updating..."
 
 
 def run_full_collector(argv: Optional[List[str]] = None) -> int:
