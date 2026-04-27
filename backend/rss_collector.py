@@ -433,33 +433,57 @@ def build_digest(groups):
 
 
 def generate_briefing(news_list):
-    """Генерирует общую сводку дня на основе топ-новостей."""
+    """Генерирует структурированную сводку дня в стиле Market Pulse."""
     if not client or not news_list:
         return "AI analysis is currently unavailable. Check back shortly for your market briefing."
 
-    # Берем заголовки первых 15 новостей (они уже отсортированы по важности)
-    titles = [n["title"] for n in news_list[:15]]
-    titles_str = "\n- ".join(titles)
+    # Берем топ-12 новостей — этого достаточно для качественного среза и экономит токены
+    top_content = []
+    for n in news_list[:12]:
+        title = n.get("main", {}).get("title", n.get("title", "No title"))
+        category = n.get("category", "General")
+        top_content.append(f"[{category}] {title}")
 
+    titles_str = "\n".join(top_content)
+
+    # Улучшенный системный промпт для структуры и экономии
     prompt = f"""
-    Analyze these crypto/AI news headlines and provide a 3-sentence market pulse. 
-    Strictly NO predictions, NO price targets, and NO future advice.
+    You are a Senior Crypto Analyst for Peak Digest. 
+    Summarize these headlines into a concise Markdown report.
+    
+    Rules:
+    1. STRICTLY NO price targets or financial advice.
+    2. Use short, punchy bullet points.
+    3. Total length: under 120 words.
+    4. Format strictly as follows:
 
-    Sentence 1: Identify the most critical event and explain the immediate 'Why' behind it.
-    Sentence 2: Synthesize secondary trends (DeFi, Regs, or Tech) and how they relate to the main event.
-    Sentence 3: Define the current market regime or sentiment based only on these headlines (e.g., 'cautious due to liquidity' or 'bullish on institutional adoption').
+    🔥 **Market Pulse**
+    - [Single sentence explaining the dominant theme]
 
-    Tone: Senior Analyst, objective, punchy. Language: English.
-    Headlines:
-    - {titles_str}
+    🚀 **Key Highlights**
+    - [Key event 1]
+    - [Key event 2]
+    - [Key event 3]
+
+    💡 **Analyst Note**
+    - [One unique insight on sentiment or infrastructure]
+
+    News Data:
+    {titles_str}
     """
 
     try:
         response = client.chat.completions.create(
-            model="gpt-4o-mini",
-            messages=[{"role": "user", "content": prompt}],
-            max_tokens=200,
-            temperature=0.7,
+            model="gpt-4o-mini",  # Самая дешевая и быстрая модель
+            messages=[
+                {
+                    "role": "system",
+                    "content": "You provide structured, objective crypto analysis in Markdown.",
+                },
+                {"role": "user", "content": prompt},
+            ],
+            max_tokens=250,
+            temperature=0.5,  # Снижаем температуру для более стабильной структуры
         )
         return response.choices[0].message.content.strip()
     except Exception as e:
